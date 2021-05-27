@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Reaction Timer</title>
+    </head>
+
+    <body>
+        <div id="firstSection">
+            <h1>Test Your Reflexes</h1>
+            <p style="font-size: 18px">Click on the boxes and circles as quickly as you can.</p>
+            <button id="startButton">Start!</button>
+            <button id="stopButton" style="display: none;">Stop!</button>
+            <h3>Your Time: <span id="timerText">0.00</span>s</h3>
+            <h3>Last Round: <span id="lastRoundText">0.00</span>s</h3>
+            <div id="shape" style="position: relative;"></div>
+        </div>
+
+        <script>
+
+            /*----------Variables----------*/
+
+            "use strict";
+            var squareOrCircleCalculator = Math.floor(Math.random() * 2);
+            var maxViewportHeight = window.innerHeight - firstSectionHeight;
+            var firstSectionHeight = document.getElementById("firstSection").offsetHeight + 40;
+            var shapeDiv = document.getElementById("shape");
+            var start = document.getElementById("startButton");
+            var stop = document.getElementById("stopButton");
+            var timer = null, wait = null;
+            var shapeDivHeight = 0;
+            var shapeDivWidth = 0;
+
+            /*----------Functions----------*/
+
+            // Timer display
+            function timerHandler() {
+                document.getElementById("timerText").innerHTML = (parseFloat(document.getElementById("timerText").innerHTML) + 0.01).toFixed(2);
+            }
+
+            function resetTimer() {
+                document.getElementById("timerText").innerHTML = 0.00;
+            }
+
+            function resetLastTimer() {
+                document.getElementById("lastRoundText").innerHTML = 0.00;
+            }
+
+            // Timer button functionality
+            function startTimer() {
+                timer = setInterval(function () { timerHandler() }, 10);
+            }
+
+            function stopTimer() {
+                start.style.display = "inline";
+                stop.style.display = "none";
+                document.getElementById("lastRoundText").innerHTML = timerText.innerHTML;
+                clearInterval(timer);
+                clearTimeout(wait);
+                wait = null;
+                timer = null;
+                resetShapeDiv();
+            }
+
+            // Shape generating functions.
+            function generateShape() {
+                recalculateShape();
+                recalculateDimensions();
+                recalculateColor();
+                recalculateCoords();
+                startTimer();
+            }
+
+            function recalculateShape() {
+                squareOrCircleCalculator = Math.floor(Math.random() * 2);
+
+                // If 1, generate circle. If 0, generate square.
+                if (squareOrCircleCalculator === 1) {
+                    shapeDiv.style.borderRadius = "50%";
+                }
+                else if (squareOrCircleCalculator === 0) {
+                    shapeDiv.style.borderRadius = "0%";
+                }
+            }
+
+            function recalculateDimensions() {
+                var minSize = 20, maxSize = 200;
+
+                shapeDiv.style.height = shapeDiv.style.width = (Math.random() * maxSize) + minSize + "px";
+            }
+
+            function recalculateColor() {
+                shapeDiv.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 180) + ',' + Math.floor(Math.random() * 180) + ',' + Math.floor(Math.random() * 180) + ')';
+            }
+
+            function recalculateCoords() {
+                var heightBuffer = 0;
+
+                // X-Value
+                shapeDiv.style.left = Math.random() * (window.innerWidth - shapeDiv.clientWidth - 16) + "px";
+
+                // Y-Value
+                // Shape must appear within the window.
+                do {
+                    heightBuffer = Math.random() * (window.innerHeight - shapeDiv.clientHeight);
+                }
+                while (heightBuffer > (window.innerHeight - shapeDiv.clientHeight - firstSectionHeight));
+
+                shapeDiv.style.top = heightBuffer + "px";
+            }
+
+            function resetShapeDiv() {
+                shapeDiv.style.left = "0";
+                shapeDiv.style.top = "0";
+                shapeDiv.style.height = "0";
+                shapeDiv.style.width = "0";
+                shapeDiv.style.backgroundColor = "";
+                shapeDiv.style.borderRadius = "0%";
+            }
+
+            // Game functionality
+            function startGame() {
+                stop.style.display = "inline";
+                start.style.display = "none";
+                resetTimer();
+                wait = setTimeout(function () { generateShape(); }, Math.floor(Math.random() * 5000));
+            }
+
+            // Events
+            start.onclick = function () { startGame(); }
+            stop.onclick = function () {
+                stopTimer();
+                resetTimer();
+                setTimeout(function () { resetLastTimer(); }, 2000);
+            }
+            shapeDiv.onclick = function () {
+                stopTimer();
+                startGame();
+            }
+        </script>
+    </body>
+</html>

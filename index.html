@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115894536-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115894536-1');
+    </script>
+    <!-- End of Analytics -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CDNs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Custom Styles and Icon -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.ico">
+
+    <title>Napper Web Development</title>
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar" data-offset="60">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md fixed-top" id="navbar">
+      <a class="navbar-brand" href="#"><i class="fas fa-code" id="brandIcon"></i><span id="brand">Napper Web Dev<span class="shortTextHide">elopment</span></span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section4">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section 1: Home -->
+    <div class="jumbotron jumbotron-fluid" id="section1">
+      <div class="container">
+        <h1 class="display-4">Begin Anywhere</h1>
+        <p class="lead">Let your passion guide you.</p>
+      </div>
+    </div>
+
+    <!-- Section 2: Projects -->
+    <div id="section2">
+      <div class="container mb-5">
+        <h1 class="text-center mb-4"><u>Projects</u></h1>
+        <div class="card-deck">
+            <div class="card">
+              <a href="projects/bootstrap-project/app-landing-page-project.html" target="_blank">
+                <img class="card-img-top" src="img/bootstrap-project-preview.png" alt="App Landing Page">
+              </a>
+            <div class="card-body">
+              <h5 class="card-title text-center">App Landing Page</h5>
+              <p class="card-text">A beautifully styled sample landing page for a mobile application. Built using Bootstrap.</p>
+            </div>
+          </div>
+          <div class="card">
+            <a href="projects/reaction-timer-project/reaction-timer-project.html" target="_blank">
+              <img class="card-img-top" src="img/reaction-timer-project-preview2.png" alt="Reaction Timer Game">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title text-center">Reaction Timer Game</h5>
+              <p class="card-text">Test your reflexes with this simple, unstyled, reaction timer game! Built using basic JavaScript</p>
+            </div>
+          </div>
+          <div class="card">
+            <a href="projects/weather-project/weather.html" target="_blank">
+              <img class="card-img-top" src="img/weather-project-preview.png" alt="Weather App">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title text-center">Weather Application</h5>
+              <p class="card-text">Find out the current weather. Built using Google Maps API and Weather Unlocked API.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: About Me -->
+    <div id="section3">
+      <div class="container">
+        <h1 class="text-center mb-4"><u>Skills At-A-Glance</u></h1>
+        <div class="row mb-5">
+          <div class="col-4" id="tabs-col">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-A+-list" data-toggle="list" href="#list-A+" role="tab"><span class="shortTextHide">CompTIA</span> A+ <span class="shortTextHide">Certification</span></a>
+              <a class="list-group-item list-group-item-action" id="list-C++-list" data-toggle="list" href="#list-C++" role="tab"><span class="shortTextHide">Basic </span>C++</a>
+              <a class="list-group-item list-group-item-action" id="list-HTML5-list" data-toggle="list" href="#list-HTML5" role="tab">HTML5</a>
+              <a class="list-group-item list-group-item-action" id="list-CSS3-list" data-toggle="list" href="#list-CSS3" role="tab">CSS3</a>
+              <a class="list-group-item list-group-item-action" id="list-JS-list" data-toggle="list" href="#list-JS" role="tab"><span class="shortTextHide">Basic </span>J<span class="shortTextHide">ava</span>S<span class="shortTextHide">cript</span></a>
+              <a class="list-group-item list-group-item-action" id="list-jQuery-list" data-toggle="list" href="#list-jQuery" role="tab"><span class="shortTextHide">Basic </span>jQuery</a>
+              <a class="list-group-item list-group-item-action" id="list-BS4-list" data-toggle="list" href="#list-BS4" role="tab"><span class="shortTextHide">Basic </span>B<span class="shortTextHide">oot</span><span class="shortTextShow">S</span><span class="shortTextHide">strap </span>4</a>
+              <a class="list-group-item list-group-item-action" id="list-WordPress-list" data-toggle="list" href="#list-WordPress" role="tab"><span class="shortTextHide">Basic </span>W<span class="shortTextHide">ord</span>P<span class="shortTextHide">ress</span></a>
+              <a class="list-group-item list-group-item-action" id="list-PHP-list" data-toggle="list" href="#list-PHP" role="tab"><span class="shortTextHide">Basic </span>PHP</a>              
+            </div>
+          </div>
+          <div class="col-8" id="content-col">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-A+" role="tabpanel">The CompTIA A+ Certification is awarded for demonstrating knowledge of computer
+                hardware and software diagnostics. As well as an understanding of standard networking technologies, protocols, and standards. Those who receive
+                this certification, must constantly update their knowledge in order to keep it current. More information
+                <a href="https://certification.comptia.org/certifications/a" target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-C++" role="tabpanel">C++ is a programming language used (primarily) for developing applications where
+                efficiency is critical. Such applications involve video games and power processing. More information <a href="https://en.wikipedia.org/wiki/C%2B%2B"
+                target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-HTML5" role="tabpanel">HTML (Hypertext Markup Language) is a markup language that is used to declare the structure of a webpage for
+                web browsers to interpret. HTML5 being the most modern version. When used in conjunction with CSS (Cascading Style Sheets), it creates the basic building blocks of the
+                entire internet. More information <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-CSS3" role="tabpanel">CSS (Cascading Style Sheets) is a stylesheet language that is used to define the appearance of a markup language,
+                such as HTML. When used, it allows a programmer to describe how elements in a website should be displayed to a user. CSS3 is the most modern version. When used in
+                conjunction with HTML, it creates the basic building blocks of the entire internet. More information <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+                target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-JS" role="tabpanel">JavaScript is a high-level programming language that is used in a very wide variety of applications. This is due to its
+                simplicity and flexibility. Such flexibility allows for quicker development of video games and websites than would be possible using low-level languages.
+                JavaScript is used in nearly all websites to provide a user interactive experience. More information <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-jQuery" role="tabpanel">jQuery is a very popular JavaScript library. This means that JavaScript developers have created a set of tools for
+                other developers to use, that solve common problems web developers may run into. Thus, allowing web developers to spend less time reinventing the wheel and more time finding
+                new and interesting places to use those wheels. More information <a href="https://jquery.com/" target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-BS4" role="tabpanel">Bootstrap is an HTML, CSS, and JavaScript framework. Bootstrap 4 is the latest iteration. Frameworks are similar to
+                libraries and allow developers to focus more on their products, instead of resolving problems unnecessarily. Bootstrap focuses on a "mobile first" approach to web development,
+                helping to ensure websites built with it are responsive and look beautiful on mobile devices, tablets, and desktop computers. More information <a href="https://getbootstrap.com/"
+                target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-WordPress" role="tabpanel">WordPress was built with average users in mind. It allows them to create their own beautiful websites with
+                relatively little technical knowledge. The primary advantage of this is to give users the tools they need to update their websites independent of a web developer. WordPress
+                has a thriving community with many people creating website themes which anyone can use to make their site feel unique. More information <a href="https://wordpress.com/"
+                target="_blank">available here</a>.
+              </div>
+              <div class="tab-pane fade" id="list-PHP" role="tabpanel">PHP (PHP: Hypertext Preprocesser) is a server-side language used to provide resources to web browsers. Resources such
+                as information from databases, APIs, or even just handling sensitive processing in the background. More information <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">available here</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="mt-5 mb-4" id="aboutMe">
+            <h2 class="text-center">
+                <u>Who am I?</u>
+            </h2>
+
+            <p>
+                I'm fueled by my passion to learn about technology and constantly challenge myself. I love exploring new technologies and 
+                implementing the latest tech in my projects and hobbies. I cherish the opportunity to learn something new every day and use 
+                that knowledge to improve myself and the work I create. Though I primarily work in web development, my interests expand to 
+                many other areas in tech including: cyber-security; video game development; computer repair; and computer maintenance.
+            </p>
+
+            <h2 class="text-center">
+                <u>How do I know what I know?</u>
+            </h2>
+
+            <p>
+                I studied computer science at the University of Lethbridge, which provided me the basis for my knowledge. While deciding 
+                where to focus my efforts, I studied and received my CompTIA A+ certification. I have since learned that educating myself 
+                is one of the most valuable skills I can have. Because of this, nearly everything I've learned has been on my own esteem. 
+                This works to your advantage, because it demonstrates for you the drive and determination that I bring to each project I 
+                pursue.
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Contact -->
+    <div id="section4">
+      <div class="container py-5">
+        <h1 class="text-center">
+            <u>Contact Me</u>
+        </h1>
+
+        <p>
+            I'm currently not accepting any new projects, but if you have any questions please feel free to email me at <a href="mailto:contact@chadnapper.ca" target="_top">contact@chadnapper.ca</a> or contact me using the form below.
+        </p>
+      </div>
+
+      <div class="container pb-5">
+        <div class="alert" id="formAlert" role="alert"></div>
+          
+        <form class="needs-validation" action="./php/main.php" method="POST">
+          <div class="form-group">
+            <label for="inputEmail">Email Address</label>
+            <input type="email" class="form-control" name="inputEmail" placeholder="example@domain.com" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" name="inputName" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="inputMessage">Message</label>
+            <textarea class="form-control" name="inputMessage" rows="5" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" name="submitButton" class="btn" id="submitButton">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <!-- Footer is added via JS -->
+    </footer>
+
+    <!-- Bootstrap, FontAwesome and jQuery JavaScript CDNs -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

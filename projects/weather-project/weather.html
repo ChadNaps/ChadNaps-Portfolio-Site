@@ -1,0 +1,124 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <title>Weather Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS CDNs -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <style>
+            body {
+                background-image: url('background.jpg');
+                background-color: black;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 94vw;
+                min-height: 75vh;
+            }
+
+            #mainContent {
+                margin-top: 25vh;
+            }
+
+            #cityText {
+                max-width: 300px;
+                margin: 0 auto 16px;
+            }
+
+            #responseText {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container text-center" id="mainContent">
+            <h1>What's the Weather?</h1>
+            <p>Enter the name of a city:</p>
+            <form class="mt-4">
+                <div class="form-group" id="cityText">
+                    <input type="text" class="form-control" id="search_term">
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            </form>
+
+            <div class="alert text-left" id="responseText">
+            </div>
+        </div>
+
+    <!-- Bootstrap and jQuery JavaScript CDNs -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        var latLng = "";
+        var locality = "";
+        var responseText = $("#responseText");
+
+        function activatePlacesSearch(){
+            var input = document.getElementById("search_term");
+            var options = {
+                types: ['(cities)']
+            }
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+            autocomplete.addListener('place_changed', function() {
+                var temp = autocomplete.getPlace();
+                latLng = temp.geometry.location.toUrlValue(3);
+                locality = temp.address_components[0].long_name;
+            });
+        }
+
+        $("form").submit(function(event) {
+            event.preventDefault();
+
+            $("form button").text("Sending...");
+
+            if(responseText.attr("class") != "alert text-left") {
+                responseText.attr("class", "alert text-left");
+                responseText.empty();
+            }
+
+            $.ajax({
+                url: "./php/get-weather.php",
+                type: "GET",
+                data: {"latLng": latLng},
+                success: function (apiResponse, statusText, jqXhr) {
+                    successTextPopulate(apiResponse);
+                },
+                error: function (error) {
+                    failTextPopulate();
+                },
+                complete: function() {
+                    $("form button").text("Submit");                    
+                }
+            });
+        });
+
+        function successTextPopulate(apiResponse) {
+            responseText.addClass("alert-secondary");
+            responseText.html("The current weather in " + locality + ":<br>" +
+                "<hr>" +
+                "Sky: <span class='text-capitalize'>" + apiResponse.wx_desc + "</span><br>" +
+                "Temp: " + apiResponse.temp_c + "\u2103<br>" +
+                "Feels Like: " + apiResponse.feelslike_c + "\u2103<br>" +
+                "Visibility: " + apiResponse.vis_km + "km<br>" +
+                "The wind is blowing " + apiResponse.windspd_kmh + "km/h from the " + apiResponse.winddir_compass + "."
+            );
+        }
+
+        function failTextPopulate() {
+            responseText.addClass("alert-danger");
+            responseText.html("Something went wrong, please try again later...");
+        }
+    </script>
+
+<!-- Google Maps API -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAlYJYzdI-JVOHFNBOlqC3bDe6ZZZQotwc&libraries=places&callback=activatePlacesSearch"></script>
+    
+    </body>
+</html>

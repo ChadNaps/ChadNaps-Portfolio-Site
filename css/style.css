@@ -1,0 +1,125 @@
+/*Gold Color: #937300*/
+
+@media screen and (max-width: 380px) {
+  .shortTextHide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 381px) {
+  .shortTextShow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #section3 p {
+    text-indent: 50px;
+  }
+}
+
+@media screen and (min-width: 581px) {
+  #section3 p {
+    text-indent: 80px;
+  }
+}
+
+body {
+  margin-top: 60px; /* Make room for the nav bar */
+  position: relative;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: #937300;
+}
+
+.navbar .active {
+  color: goldenrod;
+}
+
+.navbar {
+  background-color: #000000;
+}
+
+.navbar a {
+  color: #937300;
+}
+
+.navbar-toggler {
+  border: thin solid #937300;
+  transform: translateY(2px);
+}
+
+.card-body {
+  border-top: 2px solid lightgrey;
+}
+
+#brand {
+  display: inline-block;
+  transform: translateX(7px);
+}
+
+#brandIcon {
+  font-size: 1.5em;
+  transform: translateY(4px);
+}
+
+#menuIcon {
+  color: #937300;
+}
+
+#section1 {
+  min-height: calc(100vh + 60px);
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #937300;
+  text-shadow: 1px 1px 2px black;
+}
+
+#section3 {
+  background-color: white;
+  padding: 25px;
+}
+
+#section3 h1 {
+  color: initial;
+}
+
+#section3 #list-tab .active {
+  background-color: #937300;
+  border-color: #937300;
+}
+
+#section3 .list-group-item {
+  border-color: goldenrod;
+}
+
+#aboutMe {
+  background-color: black;
+  border: 6px solid #937300;
+  border-radius: 20px;
+  padding: 20px;
+  color: #937300;
+}
+
+#section4 {
+  color: #937300;
+}
+
+#submitButton {
+  background-color: #937300;
+}
+
+footer {
+  border-top: 1px solid #937300;
+  background-color: #937300;
+  color: black;
+}
+
+footer p {
+  padding: 8px;
+  margin-bottom: 0;
+}
