@@ -18,4 +18,5 @@ body {
     color: #e6e6e6;
     padding: 3rem;
     box-sizing: border-box;
+    display: flex;
 }

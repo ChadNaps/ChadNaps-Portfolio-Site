@@ -1,0 +1,8 @@
+body {
+    align-items: center;
+}
+
+button {
+    padding: 2rem;
+    border-radius: 10%;
+}
