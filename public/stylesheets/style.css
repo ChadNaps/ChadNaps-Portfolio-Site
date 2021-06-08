@@ -11,12 +11,13 @@ html {
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", "Lato", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: #e6e6e6;
+    color: #937300;
     padding: 3rem;
     box-sizing: border-box;
     display: flex;
+    background-color: black;
 }
