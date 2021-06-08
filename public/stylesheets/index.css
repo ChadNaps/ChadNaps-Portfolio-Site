@@ -27,10 +27,12 @@ body {
 button {
     padding: 2rem;
     margin: 3rem 1rem;
-    border-radius: 10%;
+    border-radius: 1rem;
     color: #937300;
     background-color: lightgray;
     font-weight: bold;
+    font-size: 1.5rem;
+    width: 12rem;
 }
 
 #toggle-flex-container {
