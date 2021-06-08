@@ -1,8 +1,43 @@
 body {
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 button {
     padding: 2rem;
+    margin: 3rem 1rem;
     border-radius: 10%;
+    color: #937300;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+#toggle-flex-container {
+    display: flex;
+    width: 90vw;
+    justify-content: right;
+}
+
+#toggle-flex-container label {
+    margin-right: 1rem;
+}
+
+#selection-flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    width: 90vw;
+    text-align: center;
+}
+
+#selection-button-flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.switch {
+    margin-top: -5px;
 }

@@ -1,11 +1,20 @@
 <%- include("partials/header-start") %> 
 <!-- Custom CSS Imports -->
+<link rel="stylesheet" href="/stylesheets/toggle.css" />
 <link rel='stylesheet' href='/stylesheets/index.css' />
 <%- include("partials/header-end") %>
+<div id="toggle-flex-container">
+  <label>Light Mode</label>
+  <%- include("partials/toggle") %>
+</div>
 
+<div id="selection-flex-container">
   <h1>Please select which version of the site you would like to visit:</h1>
-  <button type="button">Basic</button>
-  <button type="button">Advanced</button>
+  <div id="selection-button-flex-container">
+    <button type="button">Basic</button>
+    <button type="button">Advanced</button>
+  </div>
+</div>
 
 <!-- Custom JS Imports -->
 <%- include("partials/footer") %>
