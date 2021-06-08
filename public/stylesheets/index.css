@@ -1,8 +1,27 @@
+@media screen and (min-width: 751px) {
+    #selection-bg-flex-container {
+        position: absolute;
+        display: block;
+        top: 22%;
+        left: 5%;
+        right: 5%;
+        bottom: 22%;
+        z-index: -1;
+        border-radius: 3rem;
+        border-style: solid;
+        border-color: #937300;
+        border-width: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
 body {
     align-items: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
 }
 
 button {
@@ -22,6 +41,7 @@ button {
 
 #toggle-flex-container label {
     margin-right: 1rem;
+    text-shadow: 0.5px 0.5px 2px black;
 }
 
 #selection-flex-container {
@@ -31,6 +51,7 @@ button {
     justify-content: center;
     width: 90vw;
     text-align: center;
+    text-shadow: 1px 1px 3px black;
 }
 
 #selection-button-flex-container {
