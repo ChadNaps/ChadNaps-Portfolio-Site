@@ -1,6 +1,32 @@
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+#logo {
+    grid-row: 1 / 4;
+    grid-column: 2 / 8;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo-slogan {
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: pink;
+}
+
+#logo-icon {
+    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 3;
+}
+
+#logo-icon h1 {
+    font-size: 4.0rem;
 }
