@@ -12,21 +12,28 @@ body {
     flex-direction: column;
 }
 
+#bg-img {
+    grid-row: 1 / 4;
+    grid-column: 2 / 8;
+    width: 100%;
+    height: 80%;
+    opacity: 0.40;
+}
+
 #logo-slogan {
     text-align: center;
-    font-size: 1.2rem;
-    background-color: pink;
+    font-size: 1.4rem;
+    font-family: "Satisfy", cursive;
 }
 
 #logo-icon {
-    background-color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-grow: 3;
+    flex-grow: 1;
 }
 
 #logo-icon h1 {
-    font-size: 4.0rem;
+    font-size: 3.0rem;
 }
