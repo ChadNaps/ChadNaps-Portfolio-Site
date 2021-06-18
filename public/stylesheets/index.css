@@ -1,8 +1,20 @@
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
     align-items: center;
+}
+
+@media screen and (orientation: portrait) {
+    body {
+    grid-template-columns: repeat( auto-fit, minmax(100%, 1fr) );
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+    grid-template-columns: repeat( 2, minmax(50%, 1fr) );
+    grid-gap: 2rem;
+    }
 }
 
 section {
@@ -10,10 +22,10 @@ section {
     flex-direction: column;
     height: 100%;
     position: relative;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) and (orientation: landscape) {
     #logo-section {
         grid-column: -2 / -1;
     }
@@ -69,24 +81,8 @@ section {
     z-index: 1;
 }
 
-#nav-projects-text {
-    top: 10%;
-    grid-row: 10 / 11;
-    grid-column: 2 / 8;
-}
-
-#nav-whoiam-text {
-    grid-row: 12 / 13;
-    grid-column: 2 / 8;
-}
-
-#nav-socials-text {
-    grid-row: 14 / 15;
-    grid-column: 2 / 8;
-}
-
 .nav {
-    height: 7.81vh; /* (100vh / 16rows) * 1.25 scale factor = 1.25 rows */
+    height: 50px;
     position: absolute;
 }
 
@@ -94,21 +90,40 @@ section {
     position: relative;
 }
 
-#nav-section > {
+#nav-projects-text, #nav-projects {
     position: absolute;
+    top: 15%;
+    width: 100%
 }
 
 #nav-projects {
-    top: 10%;
+    margin-top: -12.5px;
+}
+
+#nav-whoiam-text, #nav-whoiam {
+    position: absolute;
+    top: 45%;
     width: 100%;
 }
 
 #nav-whoiam {
-    transform: scaleX(-1);
+    margin-top: -12.5px;
+}
+
+#nav-socials-text, #nav-socials {
+    position: absolute;
+    bottom: 15%;
     width: 100%;
 }
 
 #nav-socials {
-    bottom: 0;
-    width: 100%; 
+    margin-bottom: -12.5px;
+}
+
+.nav-right-arrows {
+
+}
+
+.nav-left-arrows {
+    transform: scaleX(-1);
 }
