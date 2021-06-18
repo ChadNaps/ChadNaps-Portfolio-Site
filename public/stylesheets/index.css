@@ -26,11 +26,11 @@ section {
 }
 
 @media screen and (min-width: 600px) and (orientation: landscape) {
-    #logo-section {
+    #section-logo {
         grid-column: -2 / -1;
     }
 
-    #nav-section {
+    #section-nav {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
@@ -74,7 +74,7 @@ section {
 
 /* Nav Styling */
 
-#nav-section {
+#section-nav {
     display: grid;
     grid-template-rows: 1.5fr 66px 1fr 66px 1fr 66px 1fr;
     grid-template-columns: 8vw 1fr 8vw;
