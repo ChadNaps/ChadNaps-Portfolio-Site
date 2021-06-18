@@ -28,13 +28,19 @@ section {
 @media screen and (min-width: 600px) and (orientation: landscape) {
     #section-logo {
         grid-column: -2 / -1;
-        margin-bottom: 35vh;
+        margin-bottom: 20vh;
 
     }
 
     #section-nav {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+    }
+}
+
+@media screen and (min-width: 1000px) and (orientation: landscape) {
+    #section-logo {
+        margin-bottom: 35vh;
     }
 }
 
@@ -79,7 +85,7 @@ section {
 #section-nav {
     display: grid;
     grid-template-rows: 1.5fr 66px 1fr 66px 1fr 66px 1fr;
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: 20px 1fr 20px;
 }
 
 .nav-flexbox-container {
