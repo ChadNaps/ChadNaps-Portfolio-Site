@@ -28,6 +28,8 @@ section {
 @media screen and (min-width: 600px) and (orientation: landscape) {
     #section-logo {
         grid-column: -2 / -1;
+        margin-bottom: 35vh;
+
     }
 
     #section-nav {
