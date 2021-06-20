@@ -3,7 +3,7 @@ var router = Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Napper Web Development' });
+  res.render('index', { title: 'ChadNaps | Home' });
 });
 
 /* GET old site. */
