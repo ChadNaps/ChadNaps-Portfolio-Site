@@ -16,11 +16,20 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// set environment
+app.set('env', 'development');
+
+// custom middleware
+app.locals.path = path; // Used to help in routing
+app.locals.__dirname = __dirname; // Used to help in routing
+
+// boilerplate middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'site.old'), { index: false }));
 
 app.use('/', indexRouter);
 

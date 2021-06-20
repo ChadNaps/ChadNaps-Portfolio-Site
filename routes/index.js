@@ -3,7 +3,12 @@ var router = Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Select Site Version' });
+  res.render('index', { title: 'Napper Web Development' });
+});
+
+/* GET old site. */
+router.get('/old', (req, res, next) => {
+  res.sendFile(req.app.locals.path.join(req.app.locals.__dirname, 'site.old/index.html'));
 });
 
 export default router;

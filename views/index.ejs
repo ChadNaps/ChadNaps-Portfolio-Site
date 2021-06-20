@@ -1,17 +1,33 @@
 <%- include("partials/header-start") %> 
 <!-- Custom CSS Imports -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy" />
 <link rel='stylesheet' href='/stylesheets/index.css' />
 <%- include("partials/header-end") %>
 
-<div id="selection-flex-container">
-  <div id="selection-bg-flex-container"></div>
-  <h1>Please select which version of the site you would like to visit:</h1>
-  <div id="selection-button-flex-container">
-    <button id="basic-button" type="button">Basic</button>
-    <button id="advanced-button" type="button">Advanced</button>
+<section id="section-logo">
+  <img id="bg-img" src="/favicon.ico" />
+  <div id="logo">
+    <div id="logo-icon">
+      <h1>Napper Web Development</h1>
+    </div>
+    <h2 id="logo-slogan">Begin Anywhere ~ Let Your Passion Guide You</h2>
   </div>
-</div>
+</section>
 
+<section id="section-nav">
+  <img id="nav-projects-bg" src="/images/nav-arrow.png" />
+  <div id="nav-projects-text" class="nav-flexbox-container">
+    <p>Projects</p>
+  </div>
+  <img id="nav-aboutme-bg" src="/images/nav-arrow.png" />
+  <div id="nav-aboutme-text" class="nav-flexbox-container">
+    <p>About Me</p>
+  </div>
+  <img id="nav-socials-bg" src="/images/nav-arrow.png" />
+  <div id="nav-socials-text" class="nav-flexbox-container">
+    <p>Socials</p>
+  </div>
+</section>
 <!-- Custom JS Imports -->
 <script src="/scripts/index.js"></script>
 <%- include("partials/footer") %>
