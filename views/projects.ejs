@@ -2,8 +2,18 @@
 <!-- Insert custom CSS imports here -->
 <%- include("partials/header-end") %>
 
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
+<section id="section-projects">
+  <% for (project of projects) { %>
+      <div class="div-project">
+        <h3>Project Name: </h3>
+        <p><%- project.name %></p>
+        <h4>IMG URL: </h4>
+        <a href="<%- project.img %>"><%- project.img %> </a>
+        <h4>Description:</h4>
+        <p><%- project.description %></p>
+      </div>
+  <% } %> 
+</section>
 
 <!-- Insert custom JS imports here -->
 <%- include("partials/footer") %>
