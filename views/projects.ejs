@@ -1,15 +1,16 @@
 <%- include("partials/header-start") %> 
 <!-- Insert custom CSS imports here -->
+<link rel='stylesheet' href='/stylesheets/projects.css' />
 <%- include("partials/header-end") %>
 
+<h1>Projects</h1>
+<button>Delve Deeper (Advanced View)</button>
 <section id="section-projects">
   <% for (project of projects) { %>
-      <div class="div-project">
-        <h3>Project Name: </h3>
-        <p><%- project.name %></p>
+      <div class="div-projects">
+        <h3><%- project.name %></h3>
         <h4>IMG URL: </h4>
         <a href="<%- project.img %>"><%- project.img %> </a>
-        <h4>Description:</h4>
         <p><%- project.description %></p>
       </div>
   <% } %> 
