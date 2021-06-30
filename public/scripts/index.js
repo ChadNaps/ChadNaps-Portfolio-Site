@@ -4,6 +4,6 @@ const socialsBtn = document.getElementsByClassName('nav-socials');
 
 for (const element of projectsBtn) {
     element.addEventListener("click", () => {
-        window.location += "/projects";
+        window.location = "/projects";
     });
 }

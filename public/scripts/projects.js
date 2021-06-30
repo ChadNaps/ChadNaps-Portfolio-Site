@@ -8,7 +8,7 @@ for (let x = 0; x < projects.length; x++) {
     projects[x].style.backgroundColor = `hsla(0, 0%, 75%, ${alpha})`;
 }
 
-// Add event listeners to projects
+// Add click event listeners to projects
 for (let project of projects) {
     let projectName = encodeURIComponent(project.firstElementChild.innerHTML);
     
