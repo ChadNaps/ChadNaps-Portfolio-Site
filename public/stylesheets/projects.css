@@ -13,10 +13,6 @@ button {
     width: clamp(0px, 65%, 300px);
 }
 
-h1 {
-    line-height: 1rem;
-}
-
 #section-projects {
     display: grid;
     grid-gap: 3rem;
@@ -50,4 +46,5 @@ h1 {
 
 .div-projects > * {
     flex-grow: 1;
+    cursor: pointer;
 }
