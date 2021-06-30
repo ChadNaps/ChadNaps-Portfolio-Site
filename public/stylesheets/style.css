@@ -24,6 +24,7 @@ body {
 button {
     min-height: 4.5rem;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #nav {
