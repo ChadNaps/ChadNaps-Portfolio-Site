@@ -6,3 +6,12 @@ for (let x = 0; x < projects.length; x++) {
     const alpha = 1 - (x * (1 / projects.length));
     projects[x].style.backgroundColor = `hsla(0, 0%, 75%, ${alpha})`;
 }
+
+// Add event listeners to projects
+for (let project of projects) {
+    let projectName = encodeURIComponent(project.firstElementChild.innerHTML);
+    
+    project.addEventListener("click", () => {
+        window.location = `/projects/${projectName}`;
+    });
+}
