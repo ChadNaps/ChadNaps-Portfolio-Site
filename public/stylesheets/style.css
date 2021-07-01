@@ -27,6 +27,18 @@ button {
     cursor: pointer;
 }
 
+@media screen and (orientation: portrait) {
+    #nav {
+        font-size-adjust: 0.5;    
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #nav {
+        font-size-adjust: 0.7; 
+    }
+}
+
 #nav {
     display: flex;
     justify-content: space-around;
@@ -40,7 +52,7 @@ button {
 }
 
 #nav .nav-current-page {
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .hidden {
