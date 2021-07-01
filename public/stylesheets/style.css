@@ -20,3 +20,41 @@ body {
     box-sizing: border-box;
     background-color: black;
 }
+
+button {
+    min-height: 4.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+    #nav {
+        font-size-adjust: 0.5;    
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #nav {
+        font-size-adjust: 0.7; 
+    }
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+}
+
+#nav > * {
+    cursor: pointer;
+}
+
+#nav .nav-current-page {
+    font-size: x-large;
+}
+
+.hidden {
+    display: none;
+}

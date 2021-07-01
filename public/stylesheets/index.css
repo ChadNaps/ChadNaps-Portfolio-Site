@@ -1,3 +1,5 @@
+/* General Styling */
+
 body {
     height: 100vh;
     display: grid;
@@ -22,7 +24,6 @@ section {
     flex-direction: column;
     height: 100%;
     position: relative;
-    /* justify-content: space-around; */
 }
 
 @media screen and (min-width: 600px) and (orientation: landscape) {
@@ -42,6 +43,11 @@ section {
     #section-logo {
         margin-bottom: 35vh;
     }
+}
+
+/* Link Styling */
+#section-nav > * {
+    cursor: pointer;
 }
 
 /* Logo Styling */
