@@ -32,6 +32,10 @@ button {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+}
+
 @media screen and (orientation: portrait) {
     #nav {
         font-size-adjust: 0.5;    

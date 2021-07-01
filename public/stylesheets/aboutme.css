@@ -1,11 +1,8 @@
 @media screen and (orientation: portrait) {
-    body{
-        grid-template-columns: 100vw;
-    }
-
     #panels{
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(7, 1fr);
+        max-width: 100%;
     }
 }
 
@@ -36,7 +33,7 @@ button {
     border-width: 1px;
     background-color: hsl(0, 0%, 25%);
     text-align: left;
-    padding: 1rem 2rem 0.5rem;
+    padding: 2rem;
 }
 
 .panel:hover {
@@ -54,23 +51,23 @@ button {
 #img-me {
     justify-self: center;
     grid-row: 3 / 4;
-    width: 100vw;
+    grid-column: 1 / -1;
 }
 
 #panel1 {
     grid-column: 1 / 6;
-    grid-row: 2 / 7;
+    grid-row: 2 / 6;
     z-index: 3;
 }
 
 #panel2 {
-    grid-column: 5 / 10;
-    grid-row: 6 / 11;
+    grid-column: 3 / -1;
+    grid-row: 4 / 10;
     z-index: 2;
 }
 
 #panel3 {
     grid-column: 1 / 6;
-    grid-row: 10 / 15;
+    grid-row: 9 / 14;
     z-index: 1;
 }
