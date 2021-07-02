@@ -13,3 +13,9 @@ for (const element of aboutmeBtn) {
         window.location = "/about me";
     });
 }
+
+for (const element of socialsBtn) {
+    element.addEventListener("click", () => {
+        window.location = "/socials";
+    });
+}
