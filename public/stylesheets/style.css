@@ -19,12 +19,21 @@ body {
     padding: 3rem;
     box-sizing: border-box;
     background-color: black;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.5rem;
 }
 
 button {
     min-height: 4.5rem;
     border-radius: 15px;
     cursor: pointer;
+}
+
+img {
+    max-width: 100%;
 }
 
 @media screen and (orientation: portrait) {

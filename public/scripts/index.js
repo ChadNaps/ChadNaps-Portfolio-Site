@@ -7,3 +7,9 @@ for (const element of projectsBtn) {
         window.location = "/projects";
     });
 }
+
+for (const element of aboutmeBtn) {
+    element.addEventListener("click", () => {
+        window.location = "/about me";
+    });
+}

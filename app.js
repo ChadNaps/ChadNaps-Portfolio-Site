@@ -8,6 +8,7 @@ import logger from 'morgan';
 // Import Routers
 import indexRouter from './routes/index.js';
 import projectsRouter from './routes/projects.js';
+import aboutmeRouter from './routes/aboutme.js';
 
 // __dirname doesn't exist in ESM, this builds a custom version of it
 import { dirname } from 'path';
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'site.old'), { index: false }));
 // Route Definitions
 app.use('/', indexRouter);
 app.use('/projects', projectsRouter);
+app.use('/about%20me', aboutmeRouter);
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
