@@ -1,0 +1,25 @@
+<%- include("partials/header-start") %> 
+<!-- Insert custom CSS imports here -->
+<link rel="stylesheet" href="/stylesheets/socials.css" />
+<%- include("partials/header-end") %>
+<%- include("partials/navbar") %>
+
+  <h1 id="title">Send Me An Email Or Find Me On Social Media!</h1>
+  <svg viewBox="0 0 100 100" class="logo" id="logo-email">
+    <rect x="10" y="17" width="80%" height="65%" />
+    <path d="M10.15 17.5 Q 50 90 89.85 17.5 Z" />
+    <line x1="10.2" y1="81.7" x2="45" y2="53" />
+    <line x1="56" y1="53" x2="89.7" y2="81.7" />
+    <text x="50" y="45" text-anchor="middle">@</text>
+  </svg>
+  <h2 id="text-email">Email</h2>
+  <img src="/images/twitter.png" class="logo" id="logo-twitter"/>
+  <h2 id="text-twitter">Twitter</h2>
+  <img src="/images/github.png" class="logo" id="logo-github"/>
+  <h2 id="text-github">GitHub</h2>
+  <img src="/images/linkedin.png" class="logo" id="logo-linkedin"/>
+  <h2 id="text-linkedin">LinkedIn</h2>
+
+<!-- Insert custom JS imports here -->
+<script src="scripts/aboutme.js"></script>
+<%- include("partials/footer") %>
