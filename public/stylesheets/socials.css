@@ -3,6 +3,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 25% 25% 25%;
+        grid-template-rows: 1fr 1fr repeat(4, 18.75%);
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -22,33 +23,60 @@
         margin: 2rem 0;
     }
 
-    #logo-twitter {
+    #logo-email {
         grid-column: 2 / 3;
         grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0%, 25%);
+        height: 100%;
+        font-size: 3.0rem;
+        font-weight: 900;
+    }
+
+    #logo-email text {
+        stroke-width: 0;
+        fill: hsl(47, 100%, 40%);
+    }
+
+    #logo-email path, #logo-email line, #logo-email {
+        stroke-width: 0.7;
+        stroke: hsl(47, 100%, 40%);
+    }
+
+    #text-email {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    #logo-twitter {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
     }
 
     #text-twitter {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
     }
 
     #logo-github {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
     }
 
     #text-github {
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
     }
 
     #logo-linkedin {
-        grid-column: 2 / 3;
-        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
     }
 
     #text-linkedin {
-        grid-column: 1 / 2;
-        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
     }
 }
