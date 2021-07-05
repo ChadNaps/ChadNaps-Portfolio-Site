@@ -1,3 +1,15 @@
+@media screen and (orientation: portrait) {
+    #section-projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #section-projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 body {
     display: grid;
     align-items: center;
@@ -16,20 +28,8 @@ button {
     grid-gap: 3rem;
 }
 
-@media screen and (orientation: portrait) {
-    #section-projects {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (orientation: landscape) {
-    #section-projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 .div-projects {
-    background-color: hsl(51, 50%, 25%);
+    background-color: var(--background-card);
     display: grid;
     grid-template-rows: max-content 2fr 1fr;
     align-items: center;
