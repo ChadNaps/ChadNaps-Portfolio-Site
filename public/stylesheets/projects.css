@@ -30,23 +30,25 @@ button {
 
 .div-projects {
     background-color: var(--background-card);
-    display: grid;
-    grid-template-rows: max-content 2fr 1fr;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .div-projects h3 {
     margin: 1rem 0;
+    flex-basis: 20px;
 }
 
 .div-projects > img {
     width: 100%;
 }
 
+.div-projects > p {
+    margin: 1rem 0;
+    flex-grow: 3;
+}
+
 .div-projects > * {
-    flex-grow: 1;
     cursor: pointer;
 }
