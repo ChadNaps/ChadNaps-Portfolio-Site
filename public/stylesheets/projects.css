@@ -28,27 +28,27 @@ button {
     grid-gap: 3rem;
 }
 
-.div-projects {
+.card {
     background-color: var(--background-card);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.div-projects h3 {
+.card h3 {
     margin: 1rem 0;
     flex-basis: 20px;
 }
 
-.div-projects > img {
+.card > img {
     width: 100%;
 }
 
-.div-projects > p {
+.card > p {
     margin: 1rem 0;
     flex-grow: 3;
 }
 
-.div-projects > * {
+.card > * {
     cursor: pointer;
 }

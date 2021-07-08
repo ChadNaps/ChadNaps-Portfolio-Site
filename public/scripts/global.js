@@ -18,3 +18,33 @@ if (document.getElementById("nav") != null) {
         });
     }
 }
+
+    // Toggle View Button logic
+
+if (document.getElementById("toggle-view-button") != null) {
+    const toggleViewButton = document.getElementById("toggle-view-button");
+    const cards = document.getElementsByClassName("card");
+    toggleViewButton.addEventListener("click", () => {
+        simpleText = "Simplify (Standard View)";
+        advancedText = "Delve Deeper (Advanced View)";
+
+        if (toggleViewButton.innerHTML === advancedText) {
+            toggleViewButton.innerHTML = simpleText;   
+        }
+        else {
+            toggleViewButton.innerHTML = advancedText;   
+        }
+
+        for (card of cards) {
+            for (child of card.children) {
+                if (child.classList.contains("view-simple")) {
+                    child.classList.toggle("hidden");
+                }
+
+                if (child.classList.contains("view-advanced")) {
+                    child.classList.toggle("hidden");
+                }
+            }
+        }
+    });
+}
