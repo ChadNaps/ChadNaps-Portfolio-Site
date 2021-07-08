@@ -26,8 +26,9 @@
     --header-3: ;
 
     /* Buttons */
-    --button-text-color: ;
-    --button-background-color: ;
+    --button-text-color: var(--secondary-medium);
+    --button-background-color: var(--secondary-dark);
+    --button-border-color: var(--secondary-medium);
     --button-hover: ;
 
     /* Links */

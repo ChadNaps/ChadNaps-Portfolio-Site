@@ -32,6 +32,20 @@ button {
     min-height: 4.5rem;
     border-radius: 15px;
     cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+@media screen and (orientation: landscape) {
+    button {
+        border: 0.2rem solid var(--button-border-color);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    button {
+        border: 0.1rem solid var(--button-border-color);
+    }
 }
 
 img {
