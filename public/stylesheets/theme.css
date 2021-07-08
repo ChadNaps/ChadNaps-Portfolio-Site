@@ -22,10 +22,9 @@
 .theme-dark {
     /* General */
     --background: black;
-    --background-card: var(--old-background-card);
-    --background-card-alt: var(--grey-dark);
     --border: ;
-    --logo-email: var(--old-gold-lighter);
+    --logo-email: var(--grey-dark);
+    --general-text: var(--secondary-medium);
 
     /* Cards */
     --background-card: var(--secondary-dark);
