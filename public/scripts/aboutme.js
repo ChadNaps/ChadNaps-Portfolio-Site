@@ -1,5 +1,7 @@
 const currentTimeSpan = document.getElementById("currentTime");
 
+// Advanced view toggle is found in global.js //
+
 // Cool little current time thingy //
 let currentTime = getTime();
 currentTimeSpan.innerHTML = `${currentTime.hours}:${currentTime.minutes}`;
