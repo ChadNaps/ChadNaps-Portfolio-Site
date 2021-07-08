@@ -55,7 +55,7 @@
     }
 
     button {
-        grid-column: 2 / 4;
+        grid-column: 1 / 4;
         grid-row: 4 / 5;
     }
 
@@ -119,12 +119,16 @@ button {
 
 #card1 {
     z-index: 3;
+    background-color: var(--aboutme-card-1);
+    text-shadow: black 1px 1px 3px;
 }
 
 #card2 {
     z-index: 2;
+    background-color: var(--aboutme-card-2);
 }
 
 #card3 {
     z-index: 1;
+    background-color: var(--aboutme-card-3);
 }
