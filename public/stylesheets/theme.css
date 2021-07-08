@@ -1,9 +1,9 @@
 :root {
     --grey-almost-black: hsl(0, 0%, 11%);
     --grey-darkest: hsl(0, 0%, 16%);
-    --grey-dark: hsl(0, 0%, 24%);
-    --grey-grey: hsl(0, 0%, 29%);
-    --grey-light: hsl(0, 0%, 60%);
+    --grey-dark: hsl(0, 0%, 35%);
+    --grey-grey: hsl(0, 0%, 50%);
+    --grey-light: hsl(0, 0%, 75%);
     --grey-lightest: hsl(0, 0%, 84%);
     --grey-almost-white: hsl(0, 0%, 95%);
 
