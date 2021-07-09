@@ -74,4 +74,5 @@
     ***************/
     --nav: ;
     --nav-index-page: ;
+    --nav-on-hover: var(--primary-medium);
 }
