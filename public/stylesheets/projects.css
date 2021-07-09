@@ -32,6 +32,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .card h3 {
