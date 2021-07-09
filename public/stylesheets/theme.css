@@ -7,12 +7,15 @@
     --grey-lightest: hsl(0, 0%, 84%);
     --grey-almost-white: hsl(0, 0%, 95%);
 
-    --primary-dark: hsl(180, 30%, 10%);
-    --primary-medium: hsl(180, 30%, 35%);
-    --primary-light: hsl(180, 30%, 50%);
+    --primary-dark: hsl(240, 100%, 15.7%);
+    --primary-medium: hsl(240, 100%, 45%);
+    --primary-light: hsl(240, 100%, 60%);
 
-    --secondary-dark: hsl(240, 100%, 15.7%);
     --secondary-medium: hsl(180, 100%, 50%);
+
+    --tertiary-darkest: hsl(180, 0%, 10%);
+    --tertiary-medium: hsl(180, 0%, 35%);
+    --tertiary-light: hsl(180, 0%, 50%);
 
     --old-gold: hsl(47, 100%, 35%);
     --old-gold-lighter: hsl(47, 100%, 40%);
