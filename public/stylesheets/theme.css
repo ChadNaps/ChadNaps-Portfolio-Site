@@ -16,6 +16,7 @@
     --tertiary-darkest: hsl(180, 0%, 10%);
     --tertiary-medium: hsl(180, 0%, 35%);
     --tertiary-light: hsl(180, 0%, 50%);
+    --tertiary-lightest: hsl(180, 0%, 90%);
 
     --old-gold: hsl(47, 100%, 35%);
     --old-gold-lighter: hsl(47, 100%, 40%);

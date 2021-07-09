@@ -36,6 +36,12 @@ button {
     color: var(--button-text-color);
 }
 
+button:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+    border-color: var(--tertiary-lightest);
+}
+
 @media screen and (orientation: landscape) {
     button {
         border: 0.2rem solid var(--button-border-color);
