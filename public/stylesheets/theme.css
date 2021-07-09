@@ -26,12 +26,15 @@
     --logo-email: var(--grey-dark);
     --general-text: var(--secondary-medium);
 
-    /* Cards */
-    --background-card: var(--secondary-dark);
-    --background-card-alt: var(--secondary-dark);
-    --aboutme-card-1: var(--primary-light);
-    --aboutme-card-2: var(--primary-medium);
-    --aboutme-card-3: var(--primary-dark);
+    /************
+    *** Cards 
+    ************/
+    /* Background for projects page cards is handled in projects.js */
+    --background-card: var(--primary-dark);
+    --background-card-alt: var(--primary-dark);
+    --aboutme-card-1: var(--tertiary-light);
+    --aboutme-card-2: var(--tertiary-medium);
+    --aboutme-card-3: var(--tertiary-darkest);
 
     /* Headers */
     --header-1: ;

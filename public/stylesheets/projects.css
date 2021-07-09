@@ -29,14 +29,13 @@ button {
 }
 
 .card {
-    background-color: var(--background-card);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 .card h3 {
-    margin: 1rem 0;
+    padding: 1rem 0;
     flex-basis: 20px;
 }
 
@@ -45,7 +44,7 @@ button {
 }
 
 .card > p {
-    margin: 1rem 0;
+    padding: 1rem 0;
     flex-grow: 3;
 }
 
