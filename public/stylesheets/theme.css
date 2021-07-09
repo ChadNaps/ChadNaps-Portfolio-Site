@@ -23,7 +23,9 @@
 }
 
 .theme-dark {
-    /* General */
+    /*************
+    *** General
+    *************/
     --background: black;
     --border: ;
     --logo-email: var(--grey-dark);
@@ -39,27 +41,37 @@
     --aboutme-card-2: var(--tertiary-medium);
     --aboutme-card-3: var(--tertiary-darkest);
 
-    /* Headers */
+    /************
+    *** Headers
+    ************/
     --header-1: ;
     --header-2: ;
     --header-3: ;
 
-    /* Buttons */
+    /************
+    *** Buttons
+    ************/
     --button-text-color: var(--secondary-medium);
-    --button-background-color: var(--secondary-dark);
+    --button-background-color: var(--primary-dark);
     --button-border-color: var(--secondary-medium);
     --button-hover: ;
 
-    /* Links */
+    /***********
+    *** Links
+    ***********/
     --links: ;
     --links-hover: ;
     --links-visited: ;
     
-    /* Text */
+    /**********
+    *** Text
+    **********/
     --paragraph: ;
     --text-hover: ;
 
-    /* Navigation */
+    /***************
+    *** Navigation
+    ***************/
     --nav: ;
     --nav-index-page: ;
 }
