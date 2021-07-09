@@ -100,7 +100,6 @@ button {
 .card {
     border-style: solid;
     border-width: 1px;
-    background-color: var(--background-card-alt);
     text-align: left;
     padding: 2rem;
 }
