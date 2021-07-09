@@ -72,6 +72,10 @@ img {
     font-weight: bold;
 }
 
+#nav > *:hover {
+    color: var(--nav-on-hover);
+}
+
 #nav > * {
     cursor: pointer;
 }
