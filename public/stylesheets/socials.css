@@ -131,6 +131,10 @@ body {
     min-width: clamp(100px, 50vw, 100%);
 }
 
+.logo:hover, .logo-text:hover {
+    cursor: pointer;
+}
+
 #logo-email {
     background-color: var(--background-card-alt);
     font-size: 3.0rem;
