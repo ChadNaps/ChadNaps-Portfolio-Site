@@ -1,15 +1,8 @@
 :root {
-    --grey-almost-black: hsl(0, 0%, 11%);
-    --grey-darkest: hsl(0, 0%, 16%);
     --grey-dark: hsl(0, 0%, 35%);
-    --grey-grey: hsl(0, 0%, 50%);
-    --grey-light: hsl(0, 0%, 75%);
-    --grey-lightest: hsl(0, 0%, 84%);
-    --grey-almost-white: hsl(0, 0%, 95%);
 
     --primary-dark: hsl(240, 100%, 15.7%);
     --primary-medium: hsl(240, 100%, 45%);
-    --primary-light: hsl(240, 100%, 60%);
 
     --secondary-medium: hsl(180, 100%, 50%);
 
@@ -17,10 +10,6 @@
     --tertiary-medium: hsl(180, 0%, 35%);
     --tertiary-light: hsl(180, 0%, 50%);
     --tertiary-lightest: hsl(180, 0%, 90%);
-
-    --old-gold: hsl(47, 100%, 35%);
-    --old-gold-lighter: hsl(47, 100%, 40%);
-    --old-background-card: hsl(51, 50%, 25%);
 }
 
 .theme-dark {
@@ -28,7 +17,6 @@
     *** General
     *************/
     --background: black;
-    --border: ;
     --logo-email: var(--grey-dark);
     --general-text: var(--secondary-medium);
 
@@ -43,37 +31,14 @@
     --aboutme-card-3: var(--tertiary-darkest);
 
     /************
-    *** Headers
-    ************/
-    --header-1: ;
-    --header-2: ;
-    --header-3: ;
-
-    /************
     *** Buttons
     ************/
     --button-text-color: var(--secondary-medium);
     --button-background-color: var(--primary-dark);
     --button-border-color: var(--secondary-medium);
-    --button-hover: ;
-
-    /***********
-    *** Links
-    ***********/
-    --links: ;
-    --links-hover: ;
-    --links-visited: ;
-    
-    /**********
-    *** Text
-    **********/
-    --paragraph: ;
-    --text-hover: ;
 
     /***************
     *** Navigation
     ***************/
-    --nav: ;
-    --nav-index-page: ;
     --nav-on-hover: var(--primary-medium);
 }
