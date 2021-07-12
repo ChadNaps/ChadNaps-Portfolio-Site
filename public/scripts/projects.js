@@ -19,7 +19,7 @@ for (let project of projects) {
     
     // On click, navigate
     project.addEventListener("click", () => {
-        window.location = `/projects/${projectName}`;
+        window.open(`/projects/${projectName}`, "_blank");
     });
 
     // On hover, invert title and description backgrounds
