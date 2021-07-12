@@ -93,7 +93,7 @@ body {
 }
 
 ul {
-    padding: 2rem 3rem;
+    padding: 0 3rem;
     list-style-type: square;
 }
 
@@ -107,6 +107,18 @@ button {
     border-width: 1px;
     text-align: left;
     padding: 2rem;
+}
+
+.card div p:first-of-type {
+    margin-top: 0;
+}
+
+.card div p {
+    margin: 2.3rem 0;
+}
+
+.card div p:last-of-type {
+    margin-bottom: 0;
 }
 
 .card:hover {
