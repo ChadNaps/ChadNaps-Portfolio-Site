@@ -70,7 +70,7 @@ section {
 #logo-slogan {
     text-align: center;
     font-size: 1.4rem;
-    font-family: "Satisfy", cursive;
+    font-family: 'Encode Sans SC', sans-serif;
 }
 
 #logo-icon {
@@ -113,6 +113,10 @@ section {
     grid-column: 2 / 3;
 }
 
+#nav-projects-text:hover {
+    color: var(--nav-on-hover);
+}
+
 #nav-aboutme-bg {
     grid-row: 4 / 5;
     grid-column: 1 / 3;
@@ -126,6 +130,10 @@ section {
     grid-column: 2 / 3;
 }
 
+#nav-aboutme-text:hover {
+    color: var(--nav-on-hover);
+}
+
 #nav-socials-bg {
     grid-row: 6 / 7;
     grid-column: 2 / 4;
@@ -136,4 +144,8 @@ section {
 #nav-socials-text {
     grid-row: 6 / 7;
     grid-column: 2 / 3;
+}
+
+#nav-socials-text:hover {
+    color: var(--nav-on-hover);
 }

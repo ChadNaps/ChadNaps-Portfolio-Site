@@ -55,7 +55,7 @@
     }
 
     button {
-        grid-column: 2 / 4;
+        grid-column: 1 / 4;
         grid-row: 4 / 5;
     }
 
@@ -100,7 +100,6 @@ button {
 .card {
     border-style: solid;
     border-width: 1px;
-    background-color: hsl(0, 0%, 25%);
     text-align: left;
     padding: 2rem;
 }
@@ -119,12 +118,16 @@ button {
 
 #card1 {
     z-index: 3;
+    background-color: var(--aboutme-card-1);
+    text-shadow: black 1px 1px 3px;
 }
 
 #card2 {
     z-index: 2;
+    background-color: var(--aboutme-card-2);
 }
 
 #card3 {
     z-index: 1;
+    background-color: var(--aboutme-card-3);
 }

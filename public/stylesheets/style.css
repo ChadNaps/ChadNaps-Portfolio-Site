@@ -1,3 +1,5 @@
+@import url("theme.css");
+
 *,
 *::after,
 *::before {
@@ -11,14 +13,14 @@ html {
 }
 
 body {
-    font-family: "Roboto", "Lato", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: hsl(47, 100%, 35%); /* #937300;*/
+    color: var(--general-text);
     padding: 3rem;
     box-sizing: border-box;
-    background-color: black;
+    background-color: var(--background);
     min-height: 100vh;
 }
 
@@ -30,6 +32,26 @@ button {
     min-height: 4.5rem;
     border-radius: 15px;
     cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+button:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+    border-color: var(--tertiary-lightest);
+}
+
+@media screen and (orientation: landscape) {
+    button {
+        border: 0.2rem solid var(--button-border-color);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    button {
+        border: 0.1rem solid var(--button-border-color);
+    }
 }
 
 img {
@@ -54,6 +76,10 @@ img {
     align-items: center;
     list-style: none;
     font-weight: bold;
+}
+
+#nav > *:hover {
+    color: var(--nav-on-hover);
 }
 
 #nav > * {

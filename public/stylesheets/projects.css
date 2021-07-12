@@ -1,3 +1,15 @@
+@media screen and (orientation: portrait) {
+    #section-projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #section-projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 body {
     display: grid;
     align-items: center;
@@ -16,37 +28,28 @@ button {
     grid-gap: 3rem;
 }
 
-@media screen and (orientation: portrait) {
-    #section-projects {
-        grid-template-columns: 1fr;
-    }
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-width: 1px;
+    border-style: solid;
 }
 
-@media screen and (orientation: landscape) {
-    #section-projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.card h3 {
+    padding: 1rem 0;
+    flex-basis: 20px;
 }
 
-.div-projects {
-    background-color: hsl(51, 50%, 25%);
-    display: grid;
-    grid-template-rows: max-content 2fr 1fr;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-    overflow-x: hidden;
-}
-
-.div-projects h3 {
-    margin: 1rem 0;
-}
-
-.div-projects > img {
+.card > img {
     width: 100%;
 }
 
-.div-projects > * {
-    flex-grow: 1;
+.card > p {
+    padding: 1rem 0;
+    flex-grow: 3;
+}
+
+.card > * {
     cursor: pointer;
 }

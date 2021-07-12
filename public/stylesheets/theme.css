@@ -1,0 +1,44 @@
+:root {
+    --grey-dark: hsl(0, 0%, 35%);
+
+    --primary-dark: hsl(240, 100%, 15.7%);
+    --primary-medium: hsl(240, 100%, 45%);
+
+    --secondary-medium: hsl(180, 100%, 50%);
+
+    --tertiary-darkest: hsl(180, 0%, 10%);
+    --tertiary-medium: hsl(180, 0%, 35%);
+    --tertiary-light: hsl(180, 0%, 50%);
+    --tertiary-lightest: hsl(180, 0%, 90%);
+}
+
+.theme-dark {
+    /*************
+    *** General
+    *************/
+    --background: black;
+    --logo-email: var(--grey-dark);
+    --general-text: var(--secondary-medium);
+
+    /************
+    *** Cards 
+    ************/
+    /* Background for projects page cards is handled in projects.js */
+    --background-card: var(--primary-dark);
+    --background-card-alt: var(--primary-dark);
+    --aboutme-card-1: var(--tertiary-light);
+    --aboutme-card-2: var(--tertiary-medium);
+    --aboutme-card-3: var(--tertiary-darkest);
+
+    /************
+    *** Buttons
+    ************/
+    --button-text-color: var(--secondary-medium);
+    --button-background-color: var(--primary-dark);
+    --button-border-color: var(--secondary-medium);
+
+    /***************
+    *** Navigation
+    ***************/
+    --nav-on-hover: var(--primary-medium);
+}
