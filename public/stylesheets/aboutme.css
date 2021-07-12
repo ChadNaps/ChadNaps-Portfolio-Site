@@ -110,7 +110,7 @@ button {
     text-decoration: underline;
 }
 
-.card div p:first-of-type {
+.card div *:first-child {
     margin-top: 0;
 }
 
@@ -118,7 +118,7 @@ button {
     margin: 2.3rem 0;
 }
 
-.card div p:last-of-type {
+.card div *:last-child {
     margin-bottom: 0;
 }
 
