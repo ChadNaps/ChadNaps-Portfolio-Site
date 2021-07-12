@@ -127,6 +127,10 @@ button {
     list-style-type: square;
 }
 
+.card ul ul {
+    list-style-type: circle;
+}
+
 .card:hover {
     z-index: 4 !important;
 }
