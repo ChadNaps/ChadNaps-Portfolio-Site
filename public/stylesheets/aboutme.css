@@ -92,11 +92,6 @@ body {
     row-gap: 3rem;
 }
 
-ul {
-    padding: 0 3rem;
-    list-style-type: square;
-}
-
 button {
     justify-self: center;
     width: min(90%, 300px);
@@ -119,6 +114,11 @@ button {
 
 .card div p:last-of-type {
     margin-bottom: 0;
+}
+
+.card ul {
+    padding: 0 3rem;
+    list-style-type: square;
 }
 
 .card:hover {
