@@ -13,13 +13,56 @@ for (let x = 0; x < projects.length; x++) {
     projectViewAdvanced[x].style.backgroundColor = `hsla(0, 0%, 30%, ${alpha})`;
 }
 
-// Add click event listeners to projects
+// Add click and hover event listeners to projects
 for (let project of projects) {
     let projectName = encodeURIComponent(project.firstElementChild.innerHTML);
     
+    // On click, navigate
     project.addEventListener("click", () => {
         window.location = `/projects/${projectName}`;
     });
+
+    // On hover, invert title and description backgrounds
+    project.addEventListener("mouseenter", () => {
+        let elementsToSwap = [];
+
+        // Find elements
+        if (elementsToSwap.length == 0) {
+            for (child of project.children) {
+                if (child.tagName == "H3" || child.tagName == "P") {
+                    elementsToSwap.push(child);
+                }
+            }
+        }
+
+        // Swap
+        elementsToSwap = swapColors(elementsToSwap);
+    });
+
+    project.addEventListener("mouseleave", () => {
+        let elementsToSwap = [];
+
+        // Find elements
+        if (elementsToSwap.length == 0) {
+            for (child of project.children) {
+                if (child.tagName == "H3" || child.tagName == "P") {
+                    elementsToSwap.push(child);
+                }
+            }
+        }
+
+        // Swap
+        elementsToSwap = swapColors(elementsToSwap);
+    });
+}
+
+// Helper Functions
+function swapColors(elements) {
+    elements[1].style.backgroundColor = elements[0].style.backgroundColor;
+    elements[0].style.backgroundColor = elements[2].style.backgroundColor;
+    elements[2].style.backgroundColor = elements[1].style.backgroundColor;
+
+    return elements;
 }
 
 // Logic for advanced view toggle is in global.js
