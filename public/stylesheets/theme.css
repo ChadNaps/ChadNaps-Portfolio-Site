@@ -4,6 +4,7 @@
     --primary-dark: hsl(240, 100%, 15.7%);
     --primary-medium: hsl(240, 100%, 45%);
 
+    --secondary-dark: hsl(180, 100%, 30%);
     --secondary-medium: hsl(180, 100%, 50%);
 
     --tertiary-darkest: hsl(180, 0%, 10%);
@@ -41,4 +42,7 @@
     *** Navigation
     ***************/
     --nav-on-hover: var(--primary-medium);
+    --anchor-tags: var(--primary-medium);
+    --anchor-tags-hover: var(--secondary-dark);
+    --anchor-tags-visited: var(--tertiary-darkest);
 }
