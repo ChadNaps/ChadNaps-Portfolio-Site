@@ -8,6 +8,7 @@
     --secondary-medium: hsl(180, 100%, 50%);
 
     --tertiary-darkest: hsl(180, 0%, 10%);
+    --tertiary-dark: hsl(180, 0%, 20%);
     --tertiary-medium: hsl(180, 0%, 35%);
     --tertiary-light: hsl(180, 0%, 50%);
     --tertiary-lightest: hsl(180, 0%, 90%);
@@ -44,5 +45,6 @@
     --nav-on-hover: var(--primary-medium);
     --anchor-tags: var(--primary-medium);
     --anchor-tags-hover: var(--secondary-dark);
-    --anchor-tags-visited: var(--tertiary-darkest);
+    --anchor-tags-visited: var(--tertiary-dark);
+    --anchor-tags-visited-alt: var(--tertiary-light);
 }
