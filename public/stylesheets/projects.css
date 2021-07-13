@@ -6,13 +6,32 @@
 
 @media screen and (orientation: landscape) {
     #section-projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+        /* I had to change the columns to 2 because, without three projects it left an empty column
+        which looked weird. Change this to 3 when there are at least three projects. The entire media
+        query should look as follows, get rid of the rest: */
 
-/* Change this until there are three projects. */
-.card {
-    grid-column: 2 / 3;
+        /* 
+        #section-projects {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        */
+
+        grid-template-columns: repeat(2, 1fr);
+        align-self: flex-start;
+    }
+
+    .card {
+        max-width: 70%;
+        justify-self: center;
+    }
+
+    .card:first-of-type {
+        grid-column: 1 / 2;
+    }
+
+    .card:last-of-type {
+        grid-column: 2 / 3;
+    }
 }
 
 body {
