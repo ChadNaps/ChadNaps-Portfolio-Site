@@ -24,6 +24,18 @@ body {
     min-height: 100vh;
 }
 
+a:link {
+    color: var(--anchor-tags);
+}
+
+a:visited {
+    color: var(--anchor-tags-visited);
+}
+
+a:hover {
+    color: var(--anchor-tags-hover);
+}
+
 h1 {
     font-size: 3.5rem;
 }
