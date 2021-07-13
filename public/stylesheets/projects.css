@@ -10,6 +10,11 @@
     }
 }
 
+/* Change this until there are three projects. */
+.card {
+    grid-column: 2 / 3;
+}
+
 body {
     display: grid;
     align-items: center;
