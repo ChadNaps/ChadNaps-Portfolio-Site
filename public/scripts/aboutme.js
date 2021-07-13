@@ -29,7 +29,7 @@ function timeHasChanged(hrs, mins) {
 function getTime() {
     const tempDate = new Date();
     return {
-        hours: tempDate.getHours() % 12,
+        hours: tempDate.getHours() % 12 == 0 ? 12 : tempDate.getHours() % 12,
         minutes: ('0' + tempDate.getMinutes()).slice(-2)
     }
 }
