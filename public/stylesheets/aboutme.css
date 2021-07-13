@@ -85,6 +85,12 @@
     }
 }
 
+@media screen and (orientation: landscape) and (max-width: 900px) {
+    .card ul li ul, .card ul {
+        margin-left: -2.75rem;
+    }
+}
+
 body {
     display: grid;
     align-items: center;
