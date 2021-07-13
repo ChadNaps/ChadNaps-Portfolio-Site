@@ -61,12 +61,13 @@
 
     #cards {
         display: grid;
-        grid-template-columns: repeat(7, 14.28%);
-        max-width: 100%;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto auto 15em auto 15em auto auto;
 
         grid-column: 4 / -1;
         grid-row: 3 / 6;
     }
+
 
     #card1 {
         grid-column: 1 / 4;
@@ -102,6 +103,7 @@ button {
     border-width: 1px;
     text-align: left;
     padding: 2rem;
+    max-width: 100%;
 }
 
 .card h2 {
