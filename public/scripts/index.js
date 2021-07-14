@@ -94,7 +94,9 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             this.style.position = "static";
         } else if (helper.direction == "right") {
             this.classList.add("nav-swipe-right");
-            window.location = encodeURIComponent(label.toLowerCase());
+            let destination = encodeURIComponent(label);
+            destination = destination.toLowerCase();
+            window.location = `/${destination}`;
         } else {
             this.classList.add("nav-swipe-left");
             window.location = encodeURIComponent(label.toLowerCase());
