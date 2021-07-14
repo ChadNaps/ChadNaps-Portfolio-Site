@@ -95,8 +95,10 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             this.style.position = "static";
         } else if (helper.direction == "right") {
             this.classList.add("nav-swipe-right");
+            window.location = encodeURIComponent(label.toLowerCase());
         } else {
             this.classList.add("nav-swipe-left");
+            window.location = encodeURIComponent(label.toLowerCase());
         }
 
         helper.setDirection();
@@ -139,8 +141,10 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
                 navBtns[buttonNumber].style.position = "static";
             } else if (helper.direction == "right") {
                 navBtns[buttonNumber].classList.add("nav-swipe-right");
+                window.location = encodeURIComponent(label.toLowerCase());
             } else {
                 navBtns[buttonNumber].classList.add("nav-swipe-left");
+                window.location = encodeURIComponent(label.toLowerCase());
             }
             // Confirm mousemove was cleared
             navBtns[buttonNumber].hasMouseMoveEL = false;
