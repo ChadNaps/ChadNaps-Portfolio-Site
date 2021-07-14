@@ -6,7 +6,6 @@ const navBtns = document.getElementsByClassName('nav-container');
 const helper = {
     // Function to call when attaching mousemove event listeners
     attachElementToCursor: function (event) {
-        event.preventDefault();
         const element = event.target.parentElement;
 
         helper.diff += event.movementX;
@@ -102,8 +101,6 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         }
 
         helper.setDirection();
-
-        e.preventDefault();
     });
 
     /********************************
@@ -112,7 +109,6 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Down Event Listener
     navBtns[buttonNumber].addEventListener("mousedown", function (e) {
-        e.preventDefault(e);
         start = e.pageX;
         this.style.position = "relative";
         helper.setDirection(buttonNumber);
@@ -124,7 +120,6 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Up Event Listener
     document.addEventListener("mouseup", function (e) {
-        e.preventDefault();
         // Optimization - Check to see if button has mousemove event listener before doing other calculations
         if (navBtns[buttonNumber].hasMouseMoveEL) {
             navBtns[buttonNumber].removeEventListener("mousemove", helper.attachElementToCursor);
