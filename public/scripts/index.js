@@ -64,6 +64,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     navBtns[buttonNumber].addEventListener("touchstart", function (e) {
         start = e.touches[0].pageX;
         this.style.left = "0px";
+        helper.setDirection(buttonNumber);
 
         this.style.position = "relative";
     });
@@ -73,19 +74,28 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         end = e.touches[0].pageX;
         diff = end - start;
 
-        if (diff > 0) {
+        if (diff > 0 && helper.direction == "right") {
+            this.style.left = diff+"px";
+        } else if (diff < 0 && helper.direction == "left") {
             this.style.left = diff+"px";
         }
     });
 
     // Touch End Event Listener
     navBtns[buttonNumber].addEventListener("touchend", function () {
-        if (diff < this.parentElement.clientWidth / 3) {
+        if (diff < this.parentElement.clientWidth / 3 && helper.direction == "right") {
+            this.style.left = "0px";
+            start = end = diff = 0;
+
+            this.style.position = "static";
+        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left") {
             this.style.left = "0px";
             start = end = diff = 0;
 
             this.style.position = "static";
         }
+
+        helper.setDirection();
 
         e.preventDefault();
     });
