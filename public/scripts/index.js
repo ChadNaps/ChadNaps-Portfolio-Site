@@ -1,7 +1,10 @@
 const navBtns = document.getElementsByClassName('nav-container');
 
-// Helper Object
+/******************
+ * Helper Object
+ *****************/ 
 const helper = {
+    // Function to call when attaching mousemove event listeners
     attachElementToCursor: function (event) {
         event.preventDefault();
         const element = event.target.parentElement;
@@ -14,8 +17,11 @@ const helper = {
             element.style.left = helper.diff+"px";
         }
     },
+    // Used to calculate x-axis movement on nav arrows
     diff: 0,
+    // Used to ensure nav arrow swipe proper directions
     direction: "",
+    // Sets/Resets nav arrow direction
     setDirection: function (buttonNumber) {
         if (typeof buttonNumber == "undefined") {
             helper.direction = "";
@@ -29,8 +35,13 @@ const helper = {
     }
 }
 
-// Find button labels
+/****************
+ * Button Logic
+ ***************/
 for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
+    /**********************
+     * Find button labels
+     *********************/ 
     let label = "";
     for (let childNumber = 0; childNumber < navBtns[buttonNumber].children.length; childNumber++) {
         for (let grandchildNumber = 0; grandchildNumber < navBtns[buttonNumber].children[childNumber].children.length; grandchildNumber++) {
@@ -44,8 +55,12 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         }
     }
     
-    // Swipe Event Listener - Touch
+    /********************************
+     * Swipe Event Listener - Touch
+     *******************************/
     let start = 0, diff = 0, end = 0;
+
+    // Touch Start Event Listener
     navBtns[buttonNumber].addEventListener("touchstart", function (e) {
         start = e.touches[0].pageX;
         this.style.left = "0px";
@@ -53,6 +68,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         this.style.position = "relative";
     });
 
+    // Touch Move Event Listener
     navBtns[buttonNumber].addEventListener("touchmove", function (e) {
         end = e.touches[0].pageX;
         diff = end - start;
@@ -62,6 +78,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         }
     });
 
+    // Touch End Event Listener
     navBtns[buttonNumber].addEventListener("touchend", function () {
         if (diff < this.parentElement.clientWidth / 3) {
             this.style.left = "0px";
@@ -73,21 +90,29 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         e.preventDefault();
     });
 
-    // Swipe Event Listener - Mouse
+    /********************************
+     * Swipe Event Listener - Mouse
+     *******************************/
+
+    // Mouse Down Event Listener
     navBtns[buttonNumber].addEventListener("mousedown", function (e) {
         e.preventDefault(e);
         start = e.pageX;
         this.style.position = "relative";
         helper.setDirection(buttonNumber);
 
+        // Mouse Move Event Listener
         this.hasMouseMoveEL = true;
         this.addEventListener("mousemove", helper.attachElementToCursor);
     });
 
+    // Mouse Up Event Listener
     document.addEventListener("mouseup", function (e) {
         e.preventDefault();
+        // Optimization - Check to see if button has mousemove event listener before doing other calculations
         if (navBtns[buttonNumber].hasMouseMoveEL) {
             navBtns[buttonNumber].removeEventListener("mousemove", helper.attachElementToCursor);
+            // If the nav button moves right/left, it must be at least 33% through the parent element to register as swiped
             if (helper.diff < navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "right") {
                 navBtns[buttonNumber].style.left = "0px";
                 helper.setDirection();
@@ -99,6 +124,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
                 start = helper.diff = 0;
                 navBtns[buttonNumber].style.position = "static";
             }
+            // Confirm mousemove was cleared
             navBtns[buttonNumber].hasMouseMoveEL = false;
         }
     });
