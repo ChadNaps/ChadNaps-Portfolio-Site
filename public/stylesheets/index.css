@@ -8,14 +8,18 @@ body {
 
 @media screen and (orientation: portrait) {
     body {
-    grid-template-columns: repeat( auto-fit, minmax(100%, 1fr) );
+        grid-template-columns: repeat( auto-fit, minmax(100%, 1fr) );
+    }
+
+    #section-nav {
+       overflow-x: hidden;
     }
 }
 
 @media screen and (orientation: landscape) {
     body {
-    grid-template-columns: repeat( 2, minmax(50%, 1fr) );
-    grid-gap: 2rem;
+        grid-template-columns: repeat( 2, minmax(50%, 1fr) );
+        grid-gap: 2rem;
     }
 }
 
@@ -93,7 +97,16 @@ section {
     grid-template-rows: 1.5fr 66px 1fr 66px 1fr 66px 1fr;
     grid-template-columns: 2.9vw 1fr 2.9vw;
     max-width: 100vw;
-    overflow-x: hidden;
+}
+
+.nav-swipe-right {
+    transform: translateX(100vw);
+    transition: transform 0.2s;
+}
+
+.nav-swipe-left {
+    transform: translateX(-100vw);
+    transition: transform 0.2s;
 }
 
 .nav-flexbox-container {
