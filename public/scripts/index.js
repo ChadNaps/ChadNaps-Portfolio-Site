@@ -19,12 +19,36 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         navBtns[buttonNumber].addEventListener("click", () => {
             // window.location = "/projects";
         });
-    });
-}
 
-for (const element of aboutmeBtn) {
-    element.addEventListener("click", () => {
-        window.location = "/about me";
+        // Swipe Event Listener - Touch
+        let start = 0, diff = 0, end = 0;
+        navBtns[buttonNumber].addEventListener("touchstart", function (e) {
+            start = e.touches[0].pageX;
+            this.style.left = "0px";
+
+            this.style.position = "relative";
+    });
+
+        navBtns[buttonNumber].addEventListener("touchmove", function (e) {
+            end = e.touches[0].pageX;
+            diff = end - start;
+
+            if (diff > 0) {
+                this.style.left = diff+"px";
+}
+        });
+
+        navBtns[buttonNumber].addEventListener("touchend", function (e) {
+            if (diff < this.parentElement.clientWidth / 3) {
+                console.log(`diff: ${diff}`);
+                console.log(`availWidth: ${this.parentElement.clientWidth}`);
+                this.style.left = "0px";
+                start = end = diff = 0;
+
+                this.style.position = "static";
+            }
+
+            e.preventDefault();
     });
 }
 
@@ -42,4 +66,5 @@ for (const element of aboutmeBtn) {
     });
     } else {
         console.error(`Path ${label} not found!`);
+}
 }
