@@ -150,22 +150,17 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             navBtns[buttonNumber].hasMouseMoveEL = false;
         }
     });
-    
-    if (label == "Projects") {
-        // Click Event Listener
-        navBtns[buttonNumber].addEventListener("click", () => {
-            // window.location = "/projects";
-        });
 
-    } else if (label == "About Me") {
-        navBtns[buttonNumber].addEventListener("click", () => {
-            // window.location = "/about%20me";
-        });
-    } else if (label == "Socials") {
-        navBtns[buttonNumber].addEventListener("click", () => {
-            // window.location = "/socials";
-        });
-    } else {
-        console.error(`Path ${label} not found!`);
-    }
+    /************************
+     * Click Event Listener
+     ***********************/
+
+    navBtns[buttonNumber].addEventListener("click", () => {
+        if (navBtns[buttonNumber].style.left == "0px") {
+            navBtns[buttonNumber].classList.add("jiggle");
+            setTimeout(() => {
+                navBtns[buttonNumber].classList.remove("jiggle");
+            }, 500);
+        }
+    });
 }
