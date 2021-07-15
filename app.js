@@ -4,6 +4,7 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import compression from 'compression';
 
 // Import Routers
 import indexRouter from './routes/index.js';
@@ -23,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Set Environment
-app.set('env', 'development');
+app.set('env', 'production');
 
 // Custom Middleware
 app.locals.path = path; // Used to help in routing
@@ -35,6 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(compression());
 
 // Route Definitions
 app.use('/', indexRouter);
