@@ -97,7 +97,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             let destination = encodeURIComponent(label);
             destination = destination.toLowerCase();
             window.location = `/${destination}`;
-        } else {
+        } else if (helper.direction == "left") {
             this.classList.add("nav-swipe-left");
             window.location = encodeURIComponent(label.toLowerCase());
         }
