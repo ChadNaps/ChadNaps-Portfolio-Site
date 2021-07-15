@@ -1,0 +1,79 @@
+@media screen and (orientation: portrait) {
+    #section-projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #section-projects {
+        /* I had to change the columns to 2 because, without three projects it left an empty column
+        which looked weird. Change this to 3 when there are at least three projects. The entire media
+        query should look as follows, get rid of the rest: */
+
+        /* 
+        #section-projects {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        */
+
+        grid-template-columns: repeat(2, 1fr);
+        align-self: flex-start;
+    }
+
+    .card {
+        max-width: 70%;
+        justify-self: center;
+    }
+
+    .card:first-of-type {
+        grid-column: 1 / 2;
+    }
+
+    .card:last-of-type {
+        grid-column: 2 / 3;
+    }
+}
+
+body {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    row-gap: 3rem;
+}
+
+button {
+    align-self: flex-start;
+    justify-self: center;
+    width: clamp(0px, 65%, 300px);
+}
+
+#section-projects {
+    display: grid;
+    grid-gap: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.card h3 {
+    padding: 1rem 0;
+    flex-basis: 20px;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.card > p {
+    padding: 1rem 0;
+    flex-grow: 3;
+}
+
+.card > * {
+    cursor: pointer;
+}

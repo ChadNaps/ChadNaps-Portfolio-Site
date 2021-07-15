@@ -1,0 +1,109 @@
+@import url("theme.css");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--general-text);
+    padding: 3rem;
+    box-sizing: border-box;
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+a:link {
+    color: var(--anchor-tags);
+}
+
+a:visited {
+    color: var(--anchor-tags-visited);
+}
+
+a:hover {
+    color: var(--anchor-tags-hover);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+button {
+    min-height: 4.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+button:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+    border-color: var(--tertiary-lightest);
+}
+
+@media screen and (orientation: landscape) {
+    button {
+        border: 0.2rem solid var(--button-border-color);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    button {
+        border: 0.1rem solid var(--button-border-color);
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (orientation: portrait) {
+    #nav {
+        font-size-adjust: 0.5;    
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #nav {
+        font-size-adjust: 0.7; 
+    }
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+}
+
+#nav > *:hover {
+    color: var(--nav-on-hover);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav > * {
+    cursor: pointer;
+}
+
+#nav .nav-current-page {
+    font-size: x-large;
+}
+
+.hidden {
+    display: none;
+}
