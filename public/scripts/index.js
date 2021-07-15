@@ -57,7 +57,9 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     /********************************
      * Swipe Event Listener - Touch
      *******************************/
+    // Initialize variables
     let start = 0, diff = 0, end = 0;
+    navBtns[buttonNumber].style.left = "0px";
 
     // Touch Start Event Listener
     navBtns[buttonNumber].addEventListener("touchstart", function (e) {
