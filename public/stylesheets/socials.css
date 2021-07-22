@@ -128,7 +128,7 @@ body {
 }
 
 .logo {
-    min-width: clamp(100px, 50vw, 100%);
+    min-width: 100px;
 }
 
 .logo:hover, .logo-text:hover {
