@@ -63,9 +63,15 @@
 @media screen and (orientation: landscape) {
     body {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto 1fr repeat(5, 11.8vw);
+        grid-template-rows: auto 1fr repeat(5, 14.29vh);
         column-gap: 4rem;
         align-items: flex-start;
+    }
+
+    .logo {
+        max-width: min(28.57vh, 100%);
+        max-height: 100%;
+        justify-self: center;
     }
 
     #nav {
