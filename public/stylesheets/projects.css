@@ -63,6 +63,7 @@ button {
 .card h3 {
     padding: 1rem 0;
     flex-basis: 20px;
+    background-color: var(--projects-cards-title);
 }
 
 .card > img {
@@ -72,6 +73,7 @@ button {
 .card > p {
     padding: 1rem 0;
     flex-grow: 3;
+    background-color: var(--projects-cards-description);
 }
 
 .card > * {

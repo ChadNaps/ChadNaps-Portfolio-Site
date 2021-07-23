@@ -31,6 +31,8 @@
     --aboutme-card-1: var(--tertiary-light);
     --aboutme-card-2: var(--tertiary-medium);
     --aboutme-card-3: var(--tertiary-darkest);
+    --projects-cards-title: hsla(240, 100%, 30%, 1);
+    --projects-cards-description: hsla(0, 0%, 30%, 1);
 
     /************
     *** Buttons

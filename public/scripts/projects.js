@@ -8,9 +8,19 @@ const toggleViewButton = document.getElementById("toggle-view-button");
 for (let x = 0; x < projects.length; x++) {
     // Calculate alpha based on number of projects
     const alpha = 1 - (x * (1 / (projects.length + 2)));
-    projectTitle[x].style.backgroundColor = `hsla(240, 100%, 30%, ${alpha})`;
-    projectViewSimple[x].style.backgroundColor = `hsla(0, 0%, 30%, ${alpha})`;
-    projectViewAdvanced[x].style.backgroundColor = `hsla(0, 0%, 30%, ${alpha})`;
+    
+    // Get default colors
+    let titleColor = getComputedStyle(projectTitle[x]).getPropertyValue('--projects-cards-title');
+    let descriptionColor = getComputedStyle(projectViewSimple[x]).getPropertyValue('--projects-cards-description');
+    
+    // Alter alpha of current colors
+    titleColor = changeAlpha(titleColor, alpha);
+    descriptionColor = changeAlpha(descriptionColor, alpha);
+
+    // Apply colors to cards
+    projectTitle[x].style.setProperty('--projects-cards-title', titleColor);
+    projectViewSimple[x].style.setProperty('--projects-cards-description', descriptionColor);
+    projectViewAdvanced[x].style.setProperty('--projects-cards-description', descriptionColor);
 }
 
 // Add click and hover event listeners to projects
@@ -63,6 +73,20 @@ function swapColors(elements) {
     elements[2].style.backgroundColor = elements[1].style.backgroundColor;
 
     return elements;
+}
+
+function changeAlpha(originalValue, newAlpha) {
+    // Check for proper input
+    if (originalValue.slice(1, 5) != "hsla") {
+        console.error(`Improper value for card header/description. 
+        Received ${originalValue.slice(1, 5)}(), was expecting hsla().`);
+
+        return;
+    }
+
+    const newValue = originalValue.slice(0, -2) + newAlpha.toString() + ')';
+
+    return newValue;
 }
 
 // Logic for advanced view toggle is in global.js
