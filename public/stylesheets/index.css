@@ -103,6 +103,10 @@ section {
     max-width: 100vw;
 }
 
+.svg-arrow {
+    fill: var(--background-card)
+}
+
 /* Nav Animations */
 .nav-swipe-right {
     transform: translateX(100vw);
