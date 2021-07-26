@@ -107,6 +107,14 @@ section {
     fill: var(--background-card)
 }
 
+.nav-text {
+    color: var(--nav-index);
+}
+
+.nav-text:hover {
+    color: var(--nav-on-hover);
+}
+
 /* Nav Animations */
 .nav-swipe-right {
     transform: translateX(100vw);
@@ -148,10 +156,6 @@ section {
     grid-row: 1 / 2;
 }
 
-#nav-projects-text:hover {
-    color: var(--nav-on-hover);
-}
-
 #container-nav-aboutme {
     grid-column: 1 / 3;
     grid-row: 4 / 5;
@@ -173,10 +177,6 @@ section {
     grid-row: 1 / 2;
 }
 
-#nav-aboutme-text:hover {
-    color: var(--nav-on-hover);
-}
-
 #container-nav-socials {
     grid-column: 2 / 4;
     grid-row: 6 / 7;
@@ -194,10 +194,6 @@ section {
     width: calc(100% - 2.9vw);
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-}
-
-#nav-socials-text:hover {
-    color: var(--nav-on-hover);
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
