@@ -4,6 +4,7 @@
     --primary-darkest: hsl(240, 100%, 15.7%);
     --primary-dark: hsla(240, 100%, 30%, 1);
     --primary-medium: hsl(240, 100%, 45%);
+    --primary-light: hsla(240, 100%, 45%, 0.7);
 
     --secondary-dark: hsl(180, 100%, 30%);
     --secondary-medium: hsl(180, 100%, 50%);
@@ -14,6 +15,43 @@
     --tertiary-medium-alt: hsla(0, 0%, 30%, 1);
     --tertiary-light: hsl(180, 0%, 50%);
     --tertiary-lightest: hsl(180, 0%, 90%);
+}
+
+.theme-light {
+    /*************
+    *** General
+    *************/
+    --background: var(--tertiary-lightest);
+    --logo-email: var(--grey-dark);
+    --general-text: var(--primary-dark);
+
+    /************
+    *** Cards 
+    ************/
+    --background-card: var(--primary-medium);
+    --background-card-alt: var(--primary-darkest);
+    --aboutme-card-1: var(--tertiary-light);
+    --aboutme-card-2: var(--tertiary-medium);
+    --aboutme-card-3: var(--tertiary-darkest);
+    --projects-cards-title: var(--primary-dark);
+    --projects-cards-description: var(--tertiary-medium-alt);
+
+    /************
+    *** Buttons
+    ************/
+    --button-text-color: var(--secondary-medium);
+    --button-background-color: var(--primary-darkest);
+    --button-border-color: var(--secondary-medium);
+
+    /***************
+    *** Navigation
+    ***************/
+    --nav-index: white;
+    --nav-on-hover: var(--secondary-medium);
+    --anchor-tags: var(--primary-medium);
+    --anchor-tags-hover: var(--secondary-dark);
+    --anchor-tags-visited: var(--tertiary-dark);
+    --anchor-tags-visited-alt: var(--tertiary-light);
 }
 
 .theme-dark {
