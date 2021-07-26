@@ -27,7 +27,6 @@
     /************
     *** Cards 
     ************/
-    /* Background for projects page cards is handled in projects.js */
     --background-card: var(--primary-darkest);
     --background-card-alt: var(--primary-darkest);
     --aboutme-card-1: var(--tertiary-light);
