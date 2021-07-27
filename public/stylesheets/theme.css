@@ -28,6 +28,7 @@
     /************
     *** Cards 
     ************/
+    /* Backgrounds */
     --background-card: var(--primary-medium);
     --background-card-alt: var(--primary-darkest);
     --aboutme-card-1: var(--tertiary-light);
@@ -35,6 +36,11 @@
     --aboutme-card-3: var(--tertiary-darkest);
     --projects-cards-title: var(--primary-dark);
     --projects-cards-description: var(--tertiary-medium-alt);
+
+    /* Text */
+    --projects-cards-text-general: var(--secondary-medium);
+    --projects-cards-text-title: var(--projects-cards-text-general);
+    --projects-cards-text-description: var(--projects-cards-text-general);
 
     /************
     *** Buttons

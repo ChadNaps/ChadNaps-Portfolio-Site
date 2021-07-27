@@ -64,6 +64,7 @@ button {
     padding: 1rem 0;
     flex-basis: 20px;
     background-color: var(--projects-cards-title);
+    color: var(--projects-cards-text-title);
 }
 
 .card > img {
@@ -74,6 +75,7 @@ button {
     padding: 1rem 0;
     flex-grow: 3;
     background-color: var(--projects-cards-description);
+    color: var(--projects-cards-text-description);
 }
 
 .card > * {
