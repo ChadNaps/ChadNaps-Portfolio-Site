@@ -10,8 +10,8 @@ for (let x = 0; x < projects.length; x++) {
     const alpha = 1 - (x * (1 / (projects.length + 2)));
     
     // Get default colors
-    let titleColor = getComputedStyle(projectTitle[x]).getPropertyValue('--projects-cards-title');
-    let descriptionColor = getComputedStyle(projectViewSimple[x]).getPropertyValue('--projects-cards-description');
+    let titleColor = getComputedStyle(projectTitle[x]).getPropertyValue('--projects-cards-title').trim();
+    let descriptionColor = getComputedStyle(projectViewSimple[x]).getPropertyValue('--projects-cards-description').trim();
     
     // Alter alpha of current colors
     titleColor = changeAlpha(titleColor, alpha);
@@ -77,16 +77,19 @@ function swapColors(elements) {
 
 function changeAlpha(originalValue, newAlpha) {
     // Check for proper input
-    if (originalValue.slice(1, 5) != "hsla") {
+    if (originalValue.slice(0, 4) == "hsl(") {
+        // Reformat to hsla(): hsl(xxx, xxx, xxx) ==> hsla(xxx, xxx, xxx, alpha)
+        return originalValue.slice(0, 3) + 'a(' + originalValue.slice(4, -1) + ', ' + newAlpha.toString() + ')';
+
+    } else if (originalValue.slice(0, 5) == "hsla(") {
+        return originalValue.slice(0, -2) + newAlpha.toString() + ')';
+
+    } else {
         console.error(`Improper value for card header/description. 
-        Received ${originalValue.slice(1, 5)}(), was expecting hsla().`);
+        Received ${originalValue}, was expecting hsla() or hsl().`);
 
         return;
     }
-
-    const newValue = originalValue.slice(0, -2) + newAlpha.toString() + ')';
-
-    return newValue;
 }
 
 // Logic for advanced view toggle is in global.js
