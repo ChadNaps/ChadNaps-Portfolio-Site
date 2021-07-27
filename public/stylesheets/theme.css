@@ -1,10 +1,11 @@
 :root {
     --grey-dark: hsl(0, 0%, 35%);
 
-    --primary-darkest: hsl(240, 100%, 15.7%);
+    --primary-darkest: hsl(240, 100%, 19%);
     --primary-dark: hsla(240, 100%, 30%, 1);
     --primary-medium: hsl(240, 100%, 45%);
     --primary-light: hsla(240, 100%, 45%, 0.7);
+    --primary-lightest: hsl(240, 100%, 60%);
 
     --secondary-dark: hsl(180, 100%, 30%);
     --secondary-medium: hsl(180, 100%, 50%);
@@ -23,7 +24,9 @@
     *************/
     --background: var(--tertiary-lightest);
     --logo-email: var(--grey-dark);
-    --general-text: var(--primary-dark);
+    --general-text: var(--primary-darkest);
+    --general-text-alt: var(--secondary-medium);
+    --general-text-shadow: var(--tertiary-light);
 
     /************
     *** Cards 
@@ -31,9 +34,9 @@
     /* Backgrounds */
     --background-card: var(--primary-medium);
     --background-card-alt: var(--primary-darkest);
-    --aboutme-card-1: var(--tertiary-light);
-    --aboutme-card-2: var(--tertiary-medium);
-    --aboutme-card-3: var(--tertiary-darkest);
+    --aboutme-card-1: var(--tertiary-medium);
+    --aboutme-card-2: var(--tertiary-medium-alt);
+    --aboutme-card-3: var(--tertiary-dark);
     --projects-cards-title: var(--primary-dark);
     --projects-cards-description: var(--tertiary-medium-alt);
 
@@ -41,6 +44,16 @@
     --projects-cards-text-general: var(--secondary-medium);
     --projects-cards-text-title: var(--projects-cards-text-general);
     --projects-cards-text-description: var(--projects-cards-text-general);
+    
+    --text-shadow-offset-x: 1px;
+    --text-shadow-offset-y: 1px;
+    --text-shadow-blur-radius: 2px;
+    --aboutme-card-1-shadow: var(--tertiary-light) var(--text-shadow-offset-x) var(--text-shadow-offset-y) var(--text-shadow-blur-radius);
+    --aboutme-card-2-shadow: ;
+    --aboutme-card-3-shadow: var(--tertiary-light) var(--text-shadow-offset-x) var(--text-shadow-offset-y) var(--text-shadow-blur-radius);
+    --aboutme-card-1-text: var(--general-text-alt);
+    --aboutme-card-2-text: var(--general-text-alt);
+    --aboutme-card-3-text: var(--general-text-alt);
 
     /************
     *** Buttons
@@ -53,7 +66,7 @@
     *** Navigation
     ***************/
     --nav-index: white;
-    --nav-on-hover: var(--secondary-medium);
+    --nav-on-hover: var(--primary-lightest);
     --anchor-tags: var(--primary-medium);
     --anchor-tags-hover: var(--secondary-dark);
     --anchor-tags-visited: var(--tertiary-dark);
@@ -67,6 +80,7 @@
     --background: black;
     --logo-email: var(--grey-dark);
     --general-text: var(--secondary-medium);
+    --general-text-shadow: black;
 
     /************
     *** Cards 

@@ -161,16 +161,21 @@ button {
 
 #card1 {
     z-index: 3;
+    color: var(--aboutme-card-1-text);
     background-color: var(--aboutme-card-1);
-    text-shadow: black 1px 1px 3px;
+    text-shadow: var(--aboutme-card-1-shadow);
 }
 
 #card2 {
     z-index: 2;
+    color: var(--aboutme-card-2-text);
     background-color: var(--aboutme-card-2);
+    text-shadow: var(--aboutme-card-2-shadow);
 }
 
 #card3 {
     z-index: 1;
+    color: var(--aboutme-card-3-text);
     background-color: var(--aboutme-card-3);
+    text-shadow: var(--aboutme-card-3-shadow);
 }
