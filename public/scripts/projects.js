@@ -68,9 +68,18 @@ for (let project of projects) {
 
 // Helper Functions
 function swapColors(elements) {
-    elements[1].style.backgroundColor = elements[0].style.backgroundColor;
-    elements[0].style.backgroundColor = elements[2].style.backgroundColor;
-    elements[2].style.backgroundColor = elements[1].style.backgroundColor;
+    const title = getComputedStyle(elements[0]).getPropertyValue("--projects-cards-title");
+    const desc = getComputedStyle(elements[1]).getPropertyValue("--projects-cards-description");
+
+    if (getComputedStyle(elements[0]).getPropertyValue("--projects-cards-title") == title) {
+        elements[0].style.setProperty("--projects-cards-title", desc);
+        elements[1].style.setProperty("--projects-cards-description", title);
+        elements[2].style.setProperty("--projects-cards-description", title);
+    } else {
+        elements[0].style.setProperty("--projects-cards-title", title);
+        elements[1].style.setProperty("--projects-cards-description", desc);
+        elements[2].style.setProperty("--projects-cards-description", desc);
+    }
 
     return elements;
 }
