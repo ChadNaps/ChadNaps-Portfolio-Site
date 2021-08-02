@@ -1,3 +1,38 @@
-.theme {
-    /* We need to plan this out better... */
+.theme-color {
+    /**************
+    *** General ***
+    **************/
+    --text-color: ;
+    --main-background-color: ;
+    --main-card-background-color: ;
+
+    /*****************
+    *** Index Page ***
+    *****************/
+    /*** General ***/
+    --index-text-color: var(--text-color);
+    --index-background-color: var(--main-background-color);
+
+    /*** Index - Logo ***/
+    /* General */
+    --index-logo-text-color: var(--index-text-color);
+
+    /* Index Logo Text */
+    --index-logo-h1-text-color: var(--index-logo-text-color);
+    --index-slogan-text-color: var(--index-logo-text-color);
+
+    /*** Index - Navigation ***/
+    /* General */
+    --index-nav-text-color: var(--text-color);
+    --index-nav-background-color: var(--main-card-background-color);
+
+    /* Index Nav Text */
+    --index-nav-arrow-1-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-2-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-3-text-color: var(--index-nav-text-color);
+
+    /* Index Nav Backgrounds */
+    --index-nav-arrow-1-background-color: var(--index-nav-background-color);
+    --index-nav-arrow-2-background-color: var(--index-nav-background-color);
+    --index-nav-arrow-3-background-color: var(--index-nav-background-color);
 }
