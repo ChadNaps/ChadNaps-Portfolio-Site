@@ -30,6 +30,9 @@
     --text-color: ;
     --text-hover-color: ;
     --text-shadow-color: ;
+    --anchor-link-color: ;
+    --anchor-hover-color: ;
+    --anchor-visited-color: ;
     --main-background-color: ;
     --main-card-background-color: ;
     --secondary-card-background-color: ;
@@ -124,6 +127,9 @@
 
     /*** About Me - General ***/
     --aboutme-text-color: var(--text-color);
+    --aboutme-anchor-link-color: var(--anchor-link-color);
+    --aboutme-anchor-hover-color: var(--anchor-hover-color);
+    --aboutme-anchor-visited-color: var(--anchor-visited-color);
     --aboutme-background-color: var(--main-background-color);
     --aboutme-buttons-background-color: var(--main-card-background-color);
     --aboutme-text-shadow-color: var(--text-shadow-color);
@@ -145,6 +151,9 @@
     /*** About Me - Cards ***/
     /* About Me - Cards - General */
     --aboutme-cards-text-color: var(--aboutme-text-color);
+    --aboutme-cards-anchor-link-color: var(--aboutme-anchor-link-color);
+    --aboutme-cards-anchor-hover-color: var(--aboutme-anchor-hover-color);
+    --aboutme-cards-anchor-visited-color: var(--aboutme-anchor-visited-color);
     --aboutme-cards-text-shadow-color: var(--aboutme-text-shadow-color);
     --aboutme-cards-background-color: var(--secondary-card-background-color);
 
@@ -152,6 +161,21 @@
     --aboutme-card-1-text-color: var(--aboutme-cards-text-color);
     --aboutme-card-2-text-color: var(--aboutme-cards-text-color);
     --aboutme-card-3-text-color: var(--aboutme-cards-text-color);
+
+    /* About Me - Cards - Anchors - Link */
+    --aboutme-card-1-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+    --aboutme-card-2-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+    --aboutme-card-3-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+
+    /* About Me - Cards - Anchors - Hover */
+    --aboutme-card-1-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+    --aboutme-card-2-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+    --aboutme-card-3-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+
+    /* About Me - Cards - Anchors - Visited */
+    --aboutme-card-1-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+    --aboutme-card-2-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+    --aboutme-card-3-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
 
     /* About Me - Cards - Text Shadow */
     --aboutme-card-1-text-shadow-color: var(--aboutme-cards-text-shadow-color);
