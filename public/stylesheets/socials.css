@@ -143,17 +143,33 @@ body {
 }
 
 #logo-email {
-    background-color: var(--background-card-alt);
+    background-color: var(--socials-logo-email-background-color);
     font-size: 3.0rem;
     font-weight: 900;
 }
 
 #logo-email text {
     stroke-width: 0;
-    fill: var(--logo-email);
+    fill: var(--socials-logo-email-icon-text-color);
 }
 
 #logo-email path, #logo-email line, #logo-email {
     stroke-width: 0.7;
-    stroke: var(--logo-email);
+    stroke: var(--socials-logo-email-outline-color);
+}
+
+#text-email {
+    color: var(--socials-logo-email-text-color);
+}
+
+#text-twitter {
+    color: var(--socials-logo-twitter-text-color);
+}
+
+#text-github {
+    color: var(--socials-logo-github-text-color);
+}
+
+#text-linkedin {
+    color: var(--socials-logo-linkedin-text-color);
 }

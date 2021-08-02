@@ -151,6 +151,42 @@ button {
     justify-self: center;
 }
 
+#card1 a {
+    color: var(--aboutme-card-1-anchor-link-color);
+}
+
+#card1 a:hover {
+    color: var(--aboutme-card-1-anchor-hover-color);
+}
+
+#card1 a:visited {
+    color: var(--aboutme-card-1-anchor-visited-color);
+}
+
+#card2 a {
+    color: var(--aboutme-card-2-anchor-link-color);
+}
+
+#card2 a:hover {
+    color: var(--aboutme-card-2-anchor-hover-color);
+}
+
+#card2 a:visited {
+    color: var(--aboutme-card-2-anchor-visited-color);
+}
+
+#card3 a {
+    color: var(--aboutme-card-3-anchor-link-color);
+}
+
+#card3 a:hover {
+    color: var(--aboutme-card-3-anchor-hover-color);
+}
+
+#card3 a:visited {
+    color: var(--aboutme-card-3-anchor-visited-color);
+}
+
 #card2 a, #card3 a {
     font-weight: 900;
 }
@@ -161,21 +197,34 @@ button {
 
 #card1 {
     z-index: 3;
-    color: var(--aboutme-card-1-text);
-    background-color: var(--aboutme-card-1);
-    text-shadow: var(--aboutme-card-1-shadow);
+    color: var(--aboutme-card-1-text-color);
+    background-color: var(--aboutme-card-1-background-color);
+    text-shadow: var(--aboutme-card-1-text-shadow-color);
 }
 
 #card2 {
     z-index: 2;
-    color: var(--aboutme-card-2-text);
-    background-color: var(--aboutme-card-2);
-    text-shadow: var(--aboutme-card-2-shadow);
+    color: var(--aboutme-card-2-text-color);
+    background-color: var(--aboutme-card-2-background-color);
+    text-shadow: var(--aboutme-card-2-text-shadow-color);
 }
 
 #card3 {
     z-index: 1;
-    color: var(--aboutme-card-3-text);
-    background-color: var(--aboutme-card-3);
-    text-shadow: var(--aboutme-card-3-shadow);
+    color: var(--aboutme-card-3-text-color);
+    background-color: var(--aboutme-card-3-background-color);
+    text-shadow: var(--aboutme-card-3-text-shadow-color);
+}
+
+#title h1 {
+    color: var(--aboutme-title-h1-color);
+}
+
+#title h2 {
+    color: var(--aboutme-title-h2-color);
+}
+
+#toggle-view-button {
+    color: var(--aboutme-buttons-change-view-text-color);
+    background-color: var(--aboutme-buttons-change-view-background-color);
 }

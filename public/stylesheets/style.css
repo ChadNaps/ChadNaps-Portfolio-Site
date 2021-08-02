@@ -90,8 +90,26 @@ img {
     font-weight: bold;
 }
 
-#nav > *:hover {
-    color: var(--nav-on-hover);
+#nav-index:hover {
+    color: var(--nav-index-text-hover-color);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-projects:hover {
+    color: var(--nav-projects-text-hover-color);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-aboutme:hover {
+    color: var(--nav-aboutme-text-hover-color);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-socials:hover {
+    color: var(--nav-socials-text-hover-color);
     transform: scale(2, 2);
     transition: transform 0.4s, color 0.2s;
 }

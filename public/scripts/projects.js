@@ -10,8 +10,8 @@ for (let x = 0; x < projects.length; x++) {
     const alpha = 1 - (x * (1 / (projects.length + 2)));
     
     // Get default colors
-    let titleColor = getComputedStyle(projectTitle[x]).getPropertyValue('--projects-cards-title').trim();
-    let descriptionColor = getComputedStyle(projectViewSimple[x]).getPropertyValue('--projects-cards-description').trim();
+    let titleColor = getComputedStyle(projectTitle[x]).getPropertyValue('--projects-cards-title-background-color').trim();
+    let descriptionColor = getComputedStyle(projectViewSimple[x]).getPropertyValue('--projects-cards-description-background-color').trim();
     
     // Alter alpha of current colors
     titleColor = changeAlpha(titleColor, alpha);

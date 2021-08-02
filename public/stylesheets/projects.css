@@ -47,6 +47,11 @@ button {
     width: clamp(0px, 65%, 300px);
 }
 
+#toggle-view-button {
+    color: var(--projects-buttons-change-view-text-color);
+    background-color: var(--projects-buttons-change-view-background-color);
+}
+
 #section-projects {
     display: grid;
     grid-gap: 3rem;
@@ -63,8 +68,8 @@ button {
 .card h3 {
     padding: 1rem 0;
     flex-basis: 20px;
-    background-color: var(--projects-cards-title);
-    color: var(--projects-cards-text-title);
+    background-color: var(--projects-cards-title-background-color);
+    color: var(--projects-cards-text-title-color);
 }
 
 .card > img {
@@ -74,8 +79,8 @@ button {
 .card > p {
     padding: 1rem 0;
     flex-grow: 3;
-    background-color: var(--projects-cards-description);
-    color: var(--projects-cards-text-description);
+    background-color: var(--projects-cards-description-background-color);
+    color: var(--projects-cards-text-description-color);
 }
 
 .card > * {
