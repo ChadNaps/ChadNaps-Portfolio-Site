@@ -28,11 +28,33 @@
     *** General ***
     **************/
     --text-color: ;
+    --text-hover-color: ;
     --text-shadow-color: ;
     --main-background-color: ;
     --main-card-background-color: ;
     --secondary-card-background-color: ;
     --svg-outline-color: ;
+
+    /***********************************
+    *** Navigation (Excluding Index) ***
+    ***********************************/
+    /*** Navigation - General ***/
+    --nav-text-color: var(--text-color);
+    --nav-text-hover-color: var(--text-hover-color);
+    
+    /*** Navigation - Text ***/
+    /* Navigation - Text - Color */
+    --nav-index-text-color: var(--nav-text-color);
+    --nav-projects-text-color: var(--nav-text-color);
+    --nav-aboutme-text-color: var(--nav-text-color);
+    --nav-socials-text-color: var(--nav-text-color);
+
+    /* Navigation - Text - Hover Color */
+    --nav-index-text-hover-color: var(--nav-text-hover-color);
+    --nav-projects-text-hover-color: var(--nav-text-hover-color);
+    --nav-aboutme-text-hover-color: var(--nav-text-hover-color);
+    --nav-socials-text-hover-color: var(--nav-text-hover-color);
+
 
     /*****************
     *** Index Page ***
