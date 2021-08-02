@@ -9,9 +9,11 @@
     /*****************
     *** Index Page ***
     *****************/
+
     /*** General ***/
     --index-text-color: var(--text-color);
     --index-background-color: var(--main-background-color);
+    --index-nav-background-color: var(--main-card-background-color);
 
     /*** Index - Logo ***/
     /* General */
@@ -23,8 +25,7 @@
 
     /*** Index - Navigation ***/
     /* General */
-    --index-nav-text-color: var(--text-color);
-    --index-nav-background-color: var(--main-card-background-color);
+    --index-nav-text-color: var(--index-text-color);
 
     /* Index Nav Text */
     --index-nav-arrow-1-text-color: var(--index-nav-text-color);
