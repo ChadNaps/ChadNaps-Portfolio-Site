@@ -36,4 +36,35 @@
     --index-nav-arrow-1-background-color: var(--index-nav-background-color);
     --index-nav-arrow-2-background-color: var(--index-nav-background-color);
     --index-nav-arrow-3-background-color: var(--index-nav-background-color);
+
+    /********************
+    *** Projects Page ***
+    ********************/
+
+    /*** Projects - General ***/
+    --projects-text-color: var(--text-color);
+    --projects-background-color: var(--main-background-color);
+    --projects-buttons-background-color: var(--main-card-background-color);
+
+    /*** Projects - Buttons ***/
+    /* Projects - Buttons - General */
+    --projects-buttons-text-color: var(--projects-text-color);
+
+    /* Projects - Buttons - Text */
+    --projects-buttons-change-view-text-color: var(--projects-buttons-text-color);
+
+    /* Projects - Buttons - Backgrounds */
+    --projects-buttons-change-view-background-color: var(--projects-buttons-background-color);
+
+    /*** Projects - Cards ***/
+    /* Projects - Cards - General */
+    --projects-cards-text-color: var(--projects-text-color);
+
+    /* Projects - Cards - Text */
+    --projects-cards-text-title-color: var(--projects-cards-text-color);
+    --projects-cards-text-description-color: var(--projects-cards-text-color);
+
+    /* Projects - Cards - Backgrounds */
+    --projects-cards-title-background-color: var(--main-card-background-color);
+    --projects-cards-description-background-color: var(--secondary-card-background-color);
 }
