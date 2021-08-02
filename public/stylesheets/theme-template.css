@@ -32,6 +32,7 @@
     --main-background-color: ;
     --main-card-background-color: ;
     --secondary-card-background-color: ;
+    --svg-outline-color: ;
 
     /*****************
     *** Index Page ***
@@ -139,4 +140,32 @@
     --aboutme-card-1-background-color: var(--aboutme-cards-background-color);
     --aboutme-card-2-background-color: var(--aboutme-cards-background-color);
     --aboutme-card-3-background-color: var(--aboutme-cards-background-color);
+
+    /*******************
+    *** Socials Page ***
+    *******************/
+
+    /*** Socials - General ***/
+    --socials-text-color: var(--text-color);
+    --socials-background-color: var(--main-background-color);
+    --socials-logos-background-color: var(--main-card-background-color);
+    --socials-logos-outline-color: var(--svg-outline-color);
+
+    /*** Socials - Title ***/
+    --socials-title-text-color: var(--socials-text-color);
+
+    /*** Socials - Logos ***/
+    /* Socials - Logos - General */
+    --socials-logos-text-color: var(--socials-text-color);
+
+    /* Socials - Logos - Text */
+    --socials-logo-email-text-color: var(--socials-logos-text-color);
+    --socials-logo-email-icon-text-color: var(--socials-logos-outline-color);
+    --socials-logo-twitter-text-color: var(--socials-logos-text-color);
+    --socials-logo-github-text-color: var(--socials-logos-text-color);
+    --socials-logo-linkedin-text-color: var(--socials-logos-text-color);
+
+    /* Socials - Logos - Backgrounds */
+    --socials-logo-email-background-color: var(--socials-logos-background-color);
+    --socials-logo-email-outline-color: var(--socials-logos-outline-color);
 }
