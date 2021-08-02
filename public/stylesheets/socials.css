@@ -132,6 +132,7 @@ body {
     display: grid;
     justify-content: center;
     text-align: center;
+    background-color: var(--socials-background-color);
 }
 
 .logo {

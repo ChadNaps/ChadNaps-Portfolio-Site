@@ -4,7 +4,7 @@ body {
     height: 100vh;
     display: grid;
     align-items: center;
-    background-color: var(--index-background);
+    background-color: var(--index-background-color);
 }
 
 @media screen and (orientation: portrait) {
@@ -149,11 +149,11 @@ section {
     width: calc(100% - 2.9vw);
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    color: var(--index-nav-arrow-1-text);
+    color: var(--index-nav-arrow-1-text-color);
 }
 
 #svg-arrow-1 {
-    fill: var(--index-nav-arrow-1-background);
+    fill: var(--index-nav-arrow-1-background-color);
 }
 
 #container-nav-aboutme {
@@ -175,11 +175,11 @@ section {
     justify-self: flex-end;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    color: var(--index-nav-arrow-2-text);
+    color: var(--index-nav-arrow-2-text-color);
 }
 
 #svg-arrow-2 {
-    fill: var(--index-nav-arrow-2-background);
+    fill: var(--index-nav-arrow-2-background-color);
 }
 
 #container-nav-socials {
@@ -199,11 +199,11 @@ section {
     width: calc(100% - 2.9vw);
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    color: var(--index-nav-arrow-3-text);
+    color: var(--index-nav-arrow-3-text-color);
 }
 
 #svg-arrow-3 {
-    fill: var(--index-nav-arrow-3-background);
+    fill: var(--index-nav-arrow-3-background-color);
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */

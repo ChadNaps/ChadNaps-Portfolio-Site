@@ -35,7 +35,7 @@
     --anchor-visited-color: ;
     --main-background-color: ;
     --main-card-background-color: ;
-    --secondary-card-background-color: ;
+    --svg-background-color: ;
     --svg-outline-color: ;
 
     /***********************************
@@ -194,7 +194,7 @@
     /*** Socials - General ***/
     --socials-text-color: var(--text-color);
     --socials-background-color: var(--main-background-color);
-    --socials-logos-background-color: var(--main-card-background-color);
+    --socials-logos-background-color: var(--svg-background-color);
     --socials-logos-outline-color: var(--svg-outline-color);
 
     /*** Socials - Title ***/

@@ -17,7 +17,6 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: var(--general-text);
     padding: 3rem;
     box-sizing: border-box;
     background-color: var(--background);
@@ -90,10 +89,18 @@ img {
     font-weight: bold;
 }
 
+#nav-index {
+    color: var(--nav-index-text-color);
+}
+
 #nav-index:hover {
     color: var(--nav-index-text-hover-color);
     transform: scale(2, 2);
     transition: transform 0.4s, color 0.2s;
+}
+
+#nav-projects {
+    color: var(--nav-projects-text-color);
 }
 
 #nav-projects:hover {
@@ -102,10 +109,18 @@ img {
     transition: transform 0.4s, color 0.2s;
 }
 
+#nav-aboutme {
+    color: var(--nav-aboutme-text-color);
+}
+
 #nav-aboutme:hover {
     color: var(--nav-aboutme-text-hover-color);
     transform: scale(2, 2);
     transition: transform 0.4s, color 0.2s;
+}
+
+#nav-socials {
+    color: var(--nav-socials-text-color);
 }
 
 #nav-socials:hover {
