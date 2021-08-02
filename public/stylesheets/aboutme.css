@@ -192,10 +192,6 @@ button {
     font-weight: 900;
 }
 
-#card3 a:visited {
-    color: var(--anchor-tags-visited-alt);
-}
-
 #card1 {
     z-index: 3;
     color: var(--aboutme-card-1-text-color);
