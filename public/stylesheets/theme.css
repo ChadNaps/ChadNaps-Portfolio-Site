@@ -1,23 +1,3 @@
-:root {
-    --grey-dark: hsl(0, 0%, 35%);
-
-    --primary-darkest: hsl(240, 100%, 19%);
-    --primary-dark: hsla(240, 100%, 30%, 1);
-    --primary-medium: hsl(240, 100%, 45%);
-    --primary-light: hsla(240, 100%, 45%, 0.7);
-    --primary-lightest: hsl(240, 100%, 60%);
-
-    --secondary-dark: hsl(180, 100%, 30%);
-    --secondary-medium: hsl(180, 100%, 50%);
-
-    --tertiary-darkest: hsl(180, 0%, 10%);
-    --tertiary-dark: hsl(180, 0%, 20%);
-    --tertiary-medium: hsl(180, 0%, 35%);
-    --tertiary-medium-alt: hsla(0, 0%, 30%, 1);
-    --tertiary-light: hsl(180, 0%, 50%);
-    --tertiary-lightest: hsl(180, 0%, 90%);
-}
-
 .theme-light {
     /*************
     *** General
@@ -74,38 +54,222 @@
 }
 
 .theme-dark {
-    /*************
-    *** General
-    *************/
-    --background: black;
-    --logo-email: var(--grey-dark);
-    --general-text: var(--secondary-medium);
-    --general-text-shadow: black;
+    /********************
+    *** Color Palette ***
+    ********************/
 
-    /************
-    *** Cards 
-    ************/
-    --background-card: var(--primary-darkest);
-    --background-card-alt: var(--primary-darkest);
-    --aboutme-card-1: var(--tertiary-light);
-    --aboutme-card-2: var(--tertiary-medium);
-    --aboutme-card-3: var(--tertiary-darkest);
-    --projects-cards-title: var(--primary-dark);
-    --projects-cards-description: var(--tertiary-medium-alt);
+    /* Variable Colors */
+    --primary-lightest: hsl(240, 100%, 60%);
+    --primary-light: hsla(240, 100%, 45%, 0.7);
+    --primary-medium: hsl(240, 100%, 45%);
+    --primary-dark: hsla(240, 100%, 30%, 1);
+    --primary-darkest: hsl(240, 100%, 19%);
 
-    /************
-    *** Buttons
-    ************/
-    --button-text-color: var(--secondary-medium);
-    --button-background-color: var(--primary-darkest);
-    --button-border-color: var(--secondary-medium);
+    --secondary-lightest: hsl(180, 0%, 90%);
+    --secondary-light: hsl(180, 0%, 50%);
+    --secondary-medium: hsl(180, 0%, 30%);
+    --secondary-dark: hsl(180, 0%, 20%);
+    --secondary-darkest: hsl(180, 0%, 10%);
 
-    /***************
-    *** Navigation
-    ***************/
-    --nav-on-hover: var(--primary-medium);
-    --anchor-tags: var(--primary-medium);
-    --anchor-tags-hover: var(--secondary-dark);
-    --anchor-tags-visited: var(--tertiary-dark);
-    --anchor-tags-visited-alt: var(--tertiary-light);
+    --accent-lightest: ;
+    --accent-light: ;
+    --accent-medium: hsl(180, 100%, 50%);
+    --accent-dark: hsl(180, 100%, 30%);
+    --accent-darkest: ;
+
+    /* Static Colors */
+    --grey-dark: hsl(0, 0%, 35%);
+    --black: hsl(0, 0%, 0%);
+
+    /**************
+    *** General ***
+    **************/
+    --text-color: var(--accent-medium);
+    --text-hover-color: var(--primary-medium);
+    --text-shadow-color: ;
+    --anchor-link-color: var(--primary-medium);
+    --anchor-hover-color: var(--accent-dark);
+    --anchor-visited-color: var(--accent-light);
+    --main-background-color: var(--black);
+    --main-card-background-color: var(--primary-dark);
+    --secondary-card-background-color: var(--secondary-medium);
+    --svg-background-color: var(--primary-darkest);
+    --svg-outline-color: var(--secondary-medium);
+
+    /***********************************
+    *** Navigation (Excluding Index) ***
+    ***********************************/
+    /*** Navigation - General ***/
+    --nav-text-color: var(--text-color);
+    --nav-text-hover-color: var(--text-hover-color);
+    
+    /*** Navigation - Text ***/
+    /* Navigation - Text - Color */
+    --nav-index-text-color: var(--nav-text-color);
+    --nav-projects-text-color: var(--nav-text-color);
+    --nav-aboutme-text-color: var(--nav-text-color);
+    --nav-socials-text-color: var(--nav-text-color);
+
+    /* Navigation - Text - Hover Color */
+    --nav-index-text-hover-color: var(--nav-text-hover-color);
+    --nav-projects-text-hover-color: var(--nav-text-hover-color);
+    --nav-aboutme-text-hover-color: var(--nav-text-hover-color);
+    --nav-socials-text-hover-color: var(--nav-text-hover-color);
+
+
+    /*****************
+    *** Index Page ***
+    *****************/
+
+    /*** Index - General ***/
+    --index-text-color: var(--text-color);
+    --index-background-color: var(--main-background-color);
+    --index-nav-background-color: var(--main-card-background-color);
+
+    /*** Index - Logo ***/
+    /* Index - Logo - General */
+    --index-logo-text-color: var(--index-text-color);
+
+    /* Index - Logo - Text */
+    --index-logo-h1-text-color: var(--index-logo-text-color);
+    --index-slogan-text-color: var(--index-logo-text-color);
+
+    /*** Index - Navigation ***/
+    /* Index - Nav - General */
+    --index-nav-text-color: var(--index-text-color);
+
+    /* Index - Nav - Text */
+    --index-nav-arrow-1-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-2-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-3-text-color: var(--index-nav-text-color);
+
+    /* Index - Nav - Backgrounds */
+    --index-nav-arrow-1-background-color: var(--index-nav-background-color);
+    --index-nav-arrow-2-background-color: var(--index-nav-background-color);
+    --index-nav-arrow-3-background-color: var(--index-nav-background-color);
+
+    /********************
+    *** Projects Page ***
+    ********************/
+
+    /*** Projects - General ***/
+    --projects-text-color: var(--text-color);
+    --projects-background-color: var(--main-background-color);
+    --projects-buttons-background-color: var(--main-card-background-color);
+
+    /*** Projects - Buttons ***/
+    /* Projects - Buttons - General */
+    --projects-buttons-text-color: var(--projects-text-color);
+
+    /* Projects - Buttons - Text */
+    --projects-buttons-change-view-text-color: var(--projects-buttons-text-color);
+
+    /* Projects - Buttons - Backgrounds */
+    --projects-buttons-change-view-background-color: var(--projects-buttons-background-color);
+
+    /*** Projects - Cards ***/
+    /* Projects - Cards - General */
+    --projects-cards-text-color: var(--projects-text-color);
+
+    /* Projects - Cards - Text */
+    --projects-cards-text-title-color: var(--projects-cards-text-color);
+    --projects-cards-text-description-color: var(--projects-cards-text-color);
+
+    /* Projects - Cards - Backgrounds */
+    --projects-cards-title-background-color: var(--main-card-background-color);
+    --projects-cards-description-background-color: var(--secondary-card-background-color);
+
+    /********************
+    *** About Me Page ***
+    ********************/
+
+    /*** About Me - General ***/
+    --aboutme-text-color: var(--text-color);
+    --aboutme-anchor-link-color: var(--anchor-link-color);
+    --aboutme-anchor-hover-color: var(--anchor-hover-color);
+    --aboutme-anchor-visited-color: var(--anchor-visited-color);
+    --aboutme-background-color: var(--main-background-color);
+    --aboutme-buttons-background-color: var(--main-card-background-color);
+    --aboutme-text-shadow-color: var(--text-shadow-color);
+
+    /*** About Me - Title ***/
+    --aboutme-title-h1-color: var(--aboutme-text-color);
+    --aboutme-title-h2-color: var(--aboutme-text-color);
+
+    /*** About Me - Buttons ***/
+    /* About Me - Buttons - General */
+    --aboutme-buttons-text-color: var(--aboutme-text-color);
+    
+    /* Projects - Buttons - Text */
+    --aboutme-buttons-change-view-text-color: var(--aboutme-buttons-text-color);
+
+    /* Projects - Buttons - Backgrounds */
+    --aboutme-buttons-change-view-background-color: var(--aboutme-buttons-background-color);
+
+    /*** About Me - Cards ***/
+    /* About Me - Cards - General */
+    --aboutme-cards-text-color: var(--aboutme-text-color);
+    --aboutme-cards-anchor-link-color: var(--aboutme-anchor-link-color);
+    --aboutme-cards-anchor-hover-color: var(--aboutme-anchor-hover-color);
+    --aboutme-cards-anchor-visited-color: var(--aboutme-anchor-visited-color);
+    --aboutme-cards-text-shadow-color: var(--aboutme-text-shadow-color);
+    --aboutme-cards-background-color: var(--secondary-card-background-color);
+
+    /* About Me - Cards - Text */
+    --aboutme-card-1-text-color: var(--aboutme-cards-text-color);
+    --aboutme-card-2-text-color: var(--aboutme-cards-text-color);
+    --aboutme-card-3-text-color: var(--aboutme-cards-text-color);
+
+    /* About Me - Cards - Anchors - Link */
+    --aboutme-card-1-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+    --aboutme-card-2-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+    --aboutme-card-3-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+
+    /* About Me - Cards - Anchors - Hover */
+    --aboutme-card-1-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+    --aboutme-card-2-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+    --aboutme-card-3-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+
+    /* About Me - Cards - Anchors - Visited */
+    --aboutme-card-1-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+    --aboutme-card-2-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+    --aboutme-card-3-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+
+    /* About Me - Cards - Text Shadow */
+    --aboutme-card-1-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+    --aboutme-card-2-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+    --aboutme-card-3-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+
+    /* About Me - Cards - Backgrounds */
+    --aboutme-card-1-background-color: var(--aboutme-cards-background-color);
+    --aboutme-card-2-background-color: var(--aboutme-cards-background-color);
+    --aboutme-card-3-background-color: var(--aboutme-cards-background-color);
+
+    /*******************
+    *** Socials Page ***
+    *******************/
+
+    /*** Socials - General ***/
+    --socials-text-color: var(--text-color);
+    --socials-background-color: var(--main-background-color);
+    --socials-logos-background-color: var(--svg-background-color);
+    --socials-logos-outline-color: var(--svg-outline-color);
+
+    /*** Socials - Title ***/
+    --socials-title-text-color: var(--socials-text-color);
+
+    /*** Socials - Logos ***/
+    /* Socials - Logos - General */
+    --socials-logos-text-color: var(--socials-text-color);
+
+    /* Socials - Logos - Text */
+    --socials-logo-email-text-color: var(--socials-logos-text-color);
+    --socials-logo-email-icon-text-color: var(--socials-logos-outline-color);
+    --socials-logo-twitter-text-color: var(--socials-logos-text-color);
+    --socials-logo-github-text-color: var(--socials-logos-text-color);
+    --socials-logo-linkedin-text-color: var(--socials-logos-text-color);
+
+    /* Socials - Logos - Backgrounds */
+    --socials-logo-email-background-color: var(--socials-logos-background-color);
+    --socials-logo-email-outline-color: var(--socials-logos-outline-color);
 }
