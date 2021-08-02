@@ -28,8 +28,10 @@
     *** General ***
     **************/
     --text-color: ;
+    --text-shadow-color: ;
     --main-background-color: ;
     --main-card-background-color: ;
+    --secondary-card-background-color: ;
 
     /*****************
     *** Index Page ***
@@ -92,4 +94,49 @@
     /* Projects - Cards - Backgrounds */
     --projects-cards-title-background-color: var(--main-card-background-color);
     --projects-cards-description-background-color: var(--secondary-card-background-color);
+
+    /********************
+    *** About Me Page ***
+    ********************/
+
+    /*** About Me - General ***/
+    --aboutme-text-color: var(--text-color);
+    --aboutme-background-color: var(--main-background-color);
+    --aboutme-buttons-background-color: var(--main-card-background-color);
+    --aboutme-text-shadow-color: var(--text-shadow-color);
+
+    /*** About Me - Title ***/
+    --aboutme-title-h1-color: var(--aboutme-text-color);
+    --aboutme-title-h2-color: var(--aboutme-text-color);
+
+    /*** About Me - Buttons ***/
+    /* About Me - Buttons - General */
+    --aboutme-buttons-text-color: var(--aboutme-text-color);
+    
+    /* Projects - Buttons - Text */
+    --aboutme-buttons-change-view-text-color: var(--aboutme-buttons-text-color);
+
+    /* Projects - Buttons - Backgrounds */
+    --aboutme-buttons-change-view-background-color: var(--aboutme-buttons-background-color);
+
+    /*** About Me - Cards ***/
+    /* About Me - Cards - General */
+    --aboutme-cards-text-color: var(--aboutme-text-color);
+    --aboutme-cards-text-shadow-color: var(--aboutme-text-shadow-color);
+    --aboutme-cards-background-color: var(--secondary-card-background-color);
+
+    /* About Me - Cards - Text */
+    --aboutme-card-1-text-color: var(--aboutme-cards-text-color);
+    --aboutme-card-2-text-color: var(--aboutme-cards-text-color);
+    --aboutme-card-3-text-color: var(--aboutme-cards-text-color);
+
+    /* About Me - Cards - Text Shadow */
+    --aboutme-card-1-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+    --aboutme-card-2-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+    --aboutme-card-3-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+
+    /* About Me - Cards - Backgrounds */
+    --aboutme-card-1-background-color: var(--aboutme-cards-background-color);
+    --aboutme-card-2-background-color: var(--aboutme-cards-background-color);
+    --aboutme-card-3-background-color: var(--aboutme-cards-background-color);
 }
