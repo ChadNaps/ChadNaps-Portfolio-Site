@@ -1,4 +1,29 @@
 .theme-color {
+    /********************
+    *** Color Palette ***
+    ********************/
+
+    /* Variable Colors */
+    --primary-lightest: ;
+    --primary-light: ;
+    --primary-medium: ;
+    --primary-dark: ;
+    --primary-darkest: ;
+
+    --secondary-lightest: ;
+    --secondary-light: ;
+    --secondary-medium: ;
+    --secondary-dark: ;
+    --secondary-darkest: ;
+
+    --accent-lightest: ;
+    --accent-light: ;
+    --accent-medium: ;
+    --accent-dark: ;
+    --accent-darkest: ;
+
+    /* Static Colors */
+
     /**************
     *** General ***
     **************/
