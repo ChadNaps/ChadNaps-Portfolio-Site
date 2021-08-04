@@ -69,9 +69,9 @@
 
     /*** Index - General ***/
     --index-text-color: var(--text-color);
-    --index-text-color-hover: var(--secondary-light);
+    --index-text-color-hover: var(--text-color-hover);
     --index-background-color: var(--main-background-color);
-    --index-nav-background-color: var(--main-card-background-color);
+    --index-nav-background-color: var(--secondary-card-background-color);
 
     /*** Index - Logo ***/
     /* Index - Logo - General */
@@ -255,7 +255,7 @@
     --socials-logo-github-text-color-hover: var(--socials-logos-text-color-hover);
     --socials-logo-linkedin-text-color: var(--socials-logos-text-color);
     --socials-logo-linkedin-text-color-hover: var(--socials-logos-text-color-hover);
-    
+
     /* Socials - Logos - Backgrounds */
     --socials-logo-email-background-color: var(--socials-logos-background-color);
     --socials-logo-email-outline-color: var(--socials-logos-outline-color);
