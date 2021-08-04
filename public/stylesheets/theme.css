@@ -17,7 +17,7 @@
     --secondary-darkest: hsl(180, 0%, 10%);
 
     --accent-lightest: ;
-    --accent-light: ;
+    --accent-light: hsl(180, 100%, 70%);
     --accent-medium: hsl(180, 100%, 50%);
     --accent-dark: hsl(180, 100%, 30%);
     --accent-darkest: ;
