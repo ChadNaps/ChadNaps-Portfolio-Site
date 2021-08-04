@@ -28,13 +28,17 @@
     *** General ***
     **************/
     --text-color: ;
-    --text-hover-color: ;
+    --text-color-hover: ;
     --text-shadow-color: ;
-    --anchor-link-color: ;
-    --anchor-hover-color: ;
-    --anchor-visited-color: ;
+    --anchor-color-link: ;
+    --anchor-color-hover: ;
+    --anchor-color-visited: ;
     --main-background-color: ;
     --main-card-background-color: ;
+    --main-card-background-color-hover: ;
+    --border-color: var(--text-color);
+    --border-color-hover: var(--main-card-background-color);
+    --secondary-card-background-color: ;
     --svg-background-color: ;
     --svg-outline-color: ;
 
@@ -43,7 +47,7 @@
     ***********************************/
     /*** Navigation - General ***/
     --nav-text-color: var(--text-color);
-    --nav-text-hover-color: var(--text-hover-color);
+    --nav-text-hover-color: var(--text-color-hover);
     
     /*** Navigation - Text ***/
     /* Navigation - Text - Color */
@@ -95,19 +99,34 @@
     ********************/
 
     /*** Projects - General ***/
-    --projects-text-color: var(--text-color);
     --projects-background-color: var(--main-background-color);
-    --projects-buttons-background-color: var(--main-card-background-color);
+    --projects-text-color: var(--text-color);
+    --projects-text-color-hover: var(--text-color-hover);
+    --projects-card-background-color: var(--main-card-background-color);
+    --projects-card-background-color-hover: var(--main-card-background-color-hover);
+    --projects-border-color: var(--border-color);
+    --projects-border-color-hover: var(--border-color-hover);
 
     /*** Projects - Buttons ***/
     /* Projects - Buttons - General */
     --projects-buttons-text-color: var(--projects-text-color);
+    --projects-buttons-text-color-hover: var(--projects-text-color-hover);
+    --projects-buttons-background-color: var(--projects-card-background-color);
+    --projects-buttons-background-color-hover: var(--projects-card-background-color-hover);
+    --projects-buttons-border-color: var(--projects-border-color);
+    --projects-buttons-border-color-hover: var(--projects-border-color-hover);
 
     /* Projects - Buttons - Text */
     --projects-buttons-change-view-text-color: var(--projects-buttons-text-color);
+    --projects-buttons-change-view-text-color-hover: var(--projects-buttons-text-color-hover);
 
     /* Projects - Buttons - Backgrounds */
     --projects-buttons-change-view-background-color: var(--projects-buttons-background-color);
+    --projects-buttons-change-view-background-color-hover: var(--projects-buttons-background-color-hover);
+
+    /* Projects - Buttons - Border */
+    --projects-buttons-change-view-border-color: var(--projects-buttons-border-color);
+    --projects-buttons-change-view-border-color-hover: var(--projects-buttons-border-color-hover);
 
     /*** Projects - Cards ***/
     /* Projects - Cards - General */
@@ -126,12 +145,16 @@
     ********************/
 
     /*** About Me - General ***/
-    --aboutme-text-color: var(--text-color);
-    --aboutme-anchor-link-color: var(--anchor-link-color);
-    --aboutme-anchor-hover-color: var(--anchor-hover-color);
-    --aboutme-anchor-visited-color: var(--anchor-visited-color);
     --aboutme-background-color: var(--main-background-color);
-    --aboutme-buttons-background-color: var(--main-card-background-color);
+    --aboutme-text-color: var(--text-color);
+    --aboutme-text-color-hover: var(--text-color-hover);
+    --aboutme-card-background-color: var(--main-card-background-color);
+    --aboutme-card-background-color-hover: var(--main-card-background-color-hover);
+    --aboutme-border-color: var(--border-color);
+    --aboutme-border-color-hover: var(--border-color-hover);
+    --aboutme-anchor-link-color: var(--anchor-color-link);
+    --aboutme-anchor-hover-color: var(--anchor-color-hover);
+    --aboutme-anchor-visited-color: var(--anchor-color-visited);
     --aboutme-text-shadow-color: var(--text-shadow-color);
 
     /*** About Me - Title ***/
@@ -141,13 +164,24 @@
     /*** About Me - Buttons ***/
     /* About Me - Buttons - General */
     --aboutme-buttons-text-color: var(--aboutme-text-color);
-    
-    /* Projects - Buttons - Text */
+    --aboutme-buttons-text-color-hover: var(--aboutme-text-color-hover);
+    --aboutme-buttons-background-color: var(--aboutme-card-background-color);
+    --aboutme-buttons-background-color-hover: var(--aboutme-card-background-color-hover);
+    --aboutme-buttons-border-color: var(--aboutme-border-color);
+    --aboutme-buttons-border-color-hover: var(--aboutme-border-color-hover);
+
+    /* About Me - Buttons - Text */
     --aboutme-buttons-change-view-text-color: var(--aboutme-buttons-text-color);
+    --aboutme-buttons-change-view-text-color-hover: var(--aboutme-buttons-text-color-hover);
 
-    /* Projects - Buttons - Backgrounds */
+    /* About Me - Buttons - Backgrounds */
     --aboutme-buttons-change-view-background-color: var(--aboutme-buttons-background-color);
+    --aboutme-buttons-change-view-background-color-hover: var(--aboutme-buttons-background-color-hover);
 
+    /* About Me - Buttons - Border */
+    --aboutme-buttons-change-view-border-color: var(--aboutme-buttons-border-color);
+    --aboutme-buttons-change-view-border-color-hover: var(--aboutme-buttons-border-color-hover);
+    
     /*** About Me - Cards ***/
     /* About Me - Cards - General */
     --aboutme-cards-text-color: var(--aboutme-text-color);
