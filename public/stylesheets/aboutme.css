@@ -225,6 +225,7 @@ button {
     color: var(--aboutme-buttons-change-view-text-color);
     background-color: var(--aboutme-buttons-change-view-background-color);
     border-color: var(--aboutme-buttons-change-view-border-color);
+    font-weight: bolder;
 }
 
 #toggle-view-button:hover {
