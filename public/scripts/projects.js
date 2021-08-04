@@ -18,9 +18,9 @@ for (let x = 0; x < projects.length; x++) {
     descriptionColor = changeAlpha(descriptionColor, alpha);
 
     // Apply colors to cards
-    projectTitle[x].style.setProperty('--projects-cards-title', titleColor);
-    projectViewSimple[x].style.setProperty('--projects-cards-description', descriptionColor);
-    projectViewAdvanced[x].style.setProperty('--projects-cards-description', descriptionColor);
+    projectTitle[x].style.setProperty('--projects-cards-title-background-color', titleColor);
+    projectViewSimple[x].style.setProperty('--projects-cards-description-background-color', descriptionColor);
+    projectViewAdvanced[x].style.setProperty('--projects-cards-description-background-color', descriptionColor);
 }
 
 // Add click and hover event listeners to projects
@@ -68,17 +68,17 @@ for (let project of projects) {
 
 // Helper Functions
 function swapColors(elements) {
-    const title = getComputedStyle(elements[0]).getPropertyValue("--projects-cards-title");
-    const desc = getComputedStyle(elements[1]).getPropertyValue("--projects-cards-description");
+    const title = getComputedStyle(elements[0]).getPropertyValue("--projects-cards-title-background-color");
+    const desc = getComputedStyle(elements[1]).getPropertyValue("--projects-cards-description-background-color");
 
-    if (getComputedStyle(elements[0]).getPropertyValue("--projects-cards-title") == title) {
-        elements[0].style.setProperty("--projects-cards-title", desc);
-        elements[1].style.setProperty("--projects-cards-description", title);
-        elements[2].style.setProperty("--projects-cards-description", title);
+    if (getComputedStyle(elements[0]).getPropertyValue("--projects-cards-title-background-color") == title) {
+        elements[0].style.setProperty("--projects-cards-title-background-color", desc);
+        elements[1].style.setProperty("--projects-cards-description-background-color", title);
+        elements[2].style.setProperty("--projects-cards-description-background-color", title);
     } else {
-        elements[0].style.setProperty("--projects-cards-title", title);
-        elements[1].style.setProperty("--projects-cards-description", desc);
-        elements[2].style.setProperty("--projects-cards-description", desc);
+        elements[0].style.setProperty("--projects-cards-title-background-color", title);
+        elements[1].style.setProperty("--projects-cards-description-background-color", desc);
+        elements[2].style.setProperty("--projects-cards-description-background-color", desc);
     }
 
     return elements;
