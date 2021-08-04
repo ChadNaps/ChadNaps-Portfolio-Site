@@ -24,7 +24,6 @@
 
     /* Static Colors */
     --grey-dark: hsl(0, 0%, 35%);
-    --black: hsl(0, 0%, 0%);
 
     /**************
     *** General ***
@@ -35,7 +34,7 @@
     --anchor-color-link: var(--accent-lightest);
     --anchor-color-hover: var(--primary-medium);
     --anchor-color-visited: var(--accent-dark);
-    --main-background-color: var(--black);
+    --main-background-color: black;
     --main-card-background-color: var(--primary-dark);
     --main-card-background-color-hover: var(--border-color);
     --border-color: var(--text-color);
