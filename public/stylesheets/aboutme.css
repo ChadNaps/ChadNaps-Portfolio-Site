@@ -224,4 +224,11 @@ button {
 #toggle-view-button {
     color: var(--aboutme-buttons-change-view-text-color);
     background-color: var(--aboutme-buttons-change-view-background-color);
+    border-color: var(--aboutme-buttons-change-view-border-color);
+}
+
+#toggle-view-button:hover {
+    color: var(--aboutme-buttons-change-view-text-color-hover);
+    background-color: var(--aboutme-buttons-change-view-background-color-hover);
+    border-color: var(--aboutme-buttons-change-view-border-color-hover);
 }
