@@ -71,6 +71,7 @@
 
     /*** Index - General ***/
     --index-text-color: var(--text-color);
+    --index-text-color-hover: var(--secondary-light);
     --index-background-color: var(--main-background-color);
     --index-nav-background-color: var(--main-card-background-color);
 
@@ -85,11 +86,15 @@
     /*** Index - Navigation ***/
     /* Index - Nav - General */
     --index-nav-text-color: var(--index-text-color);
+    --index-nav-text-color-hover: var(--index-text-color-hover);
 
     /* Index - Nav - Text */
     --index-nav-arrow-1-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-1-text-color-hover: var(--index-nav-text-color-hover);
     --index-nav-arrow-2-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-2-text-color-hover: var(--index-nav-text-color-hover);
     --index-nav-arrow-3-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-3-text-color-hover: var(--index-nav-text-color-hover);
 
     /* Index - Nav - Backgrounds */
     --index-nav-arrow-1-background-color: var(--index-nav-background-color);
