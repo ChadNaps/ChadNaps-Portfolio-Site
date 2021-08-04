@@ -1,5 +1,6 @@
 @import url("theme.css");
 
+/* Boilerplate */
 *,
 *::after,
 *::before {
@@ -23,6 +24,31 @@ body {
     min-height: 100vh;
 }
 
+img {
+    max-width: 100%;
+}
+
+/* Custom */
+@media screen and (orientation: landscape) {
+    button {
+        border: 0.2rem solid;
+    }
+    
+    #nav {
+        font-size-adjust: 0.7; 
+    }
+}
+
+@media screen and (orientation: portrait) {
+    button {
+        border: 0.1rem solid;
+    }
+    
+    #nav {
+        font-size-adjust: 0.5;    
+    }
+}
+
 h1 {
     font-size: 3.5rem;
 }
@@ -33,34 +59,7 @@ button {
     cursor: pointer;
 }
 
-@media screen and (orientation: landscape) {
-    button {
-        border: 0.2rem solid;
-    }
-}
-
-@media screen and (orientation: portrait) {
-    button {
-        border: 0.1rem solid;
-    }
-}
-
-img {
-    max-width: 100%;
-}
-
-@media screen and (orientation: portrait) {
-    #nav {
-        font-size-adjust: 0.5;    
-    }
-}
-
-@media screen and (orientation: landscape) {
-    #nav {
-        font-size-adjust: 0.7; 
-    }
-}
-
+/* Navbar */
 #nav {
     display: flex;
     justify-content: space-around;
@@ -117,6 +116,7 @@ img {
     font-size: x-large;
 }
 
+/* Classes */
 .hidden {
     display: none;
 }
