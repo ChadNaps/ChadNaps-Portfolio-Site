@@ -93,7 +93,7 @@
     --index-nav-arrow-2-text-color-hover: var(--index-nav-text-color-hover);
     --index-nav-arrow-3-text-color: var(--index-nav-text-color);
     --index-nav-arrow-3-text-color-hover: var(--index-nav-text-color-hover);
-
+    
     /* Index - Nav - Backgrounds */
     --index-nav-arrow-1-background-color: var(--index-nav-background-color);
     --index-nav-arrow-2-background-color: var(--index-nav-background-color);
@@ -232,6 +232,7 @@
 
     /*** Socials - General ***/
     --socials-text-color: var(--text-color);
+    --socials-text-color-hover: var(--text-color-hover);
     --socials-background-color: var(--main-background-color);
     --socials-logos-background-color: var(--svg-background-color);
     --socials-logos-outline-color: var(--svg-outline-color);
@@ -242,14 +243,19 @@
     /*** Socials - Logos ***/
     /* Socials - Logos - General */
     --socials-logos-text-color: var(--socials-text-color);
+    --socials-logos-text-color-hover: var(--socials-text-color-hover);
 
     /* Socials - Logos - Text */
     --socials-logo-email-text-color: var(--socials-logos-text-color);
+    --socials-logo-email-text-color-hover: var(--socials-logos-text-color-hover);
     --socials-logo-email-icon-text-color: var(--socials-logos-outline-color);
     --socials-logo-twitter-text-color: var(--socials-logos-text-color);
+    --socials-logo-twitter-text-color-hover: var(--socials-logos-text-color-hover);
     --socials-logo-github-text-color: var(--socials-logos-text-color);
+    --socials-logo-github-text-color-hover: var(--socials-logos-text-color-hover);
     --socials-logo-linkedin-text-color: var(--socials-logos-text-color);
-
+    --socials-logo-linkedin-text-color-hover: var(--socials-logos-text-color-hover);
+    
     /* Socials - Logos - Backgrounds */
     --socials-logo-email-background-color: var(--socials-logos-background-color);
     --socials-logo-email-outline-color: var(--socials-logos-outline-color);
