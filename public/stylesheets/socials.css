@@ -135,6 +135,10 @@ body {
     background-color: var(--socials-background-color);
 }
 
+#title {
+    color: var(--socials-title-text-color);
+}
+
 .logo {
     min-width: 100px;
 }
