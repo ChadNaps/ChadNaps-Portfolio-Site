@@ -71,9 +71,9 @@
 
     /*** Index - General ***/
     --index-text-color: var(--text-color);
-    --index-text-color-hover: var(--secondary-light);
+    --index-text-color-hover: var(--text-color-hover);
     --index-background-color: var(--main-background-color);
-    --index-nav-background-color: var(--main-card-background-color);
+    --index-nav-background-color: var(--secondary-card-background-color);
 
     /*** Index - Logo ***/
     /* Index - Logo - General */
