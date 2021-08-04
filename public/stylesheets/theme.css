@@ -16,11 +16,11 @@
     --secondary-dark: hsl(180, 0%, 20%);
     --secondary-darkest: hsl(180, 0%, 10%);
 
-    --accent-lightest: ;
-    --accent-light: hsl(180, 100%, 70%);
+    --accent-lightest: hsl(180, 100%, 90%);
+    --accent-light: hsl(180, 100%, 85%);
     --accent-medium: hsl(180, 100%, 50%);
     --accent-dark: hsl(180, 100%, 30%);
-    --accent-darkest: ;
+    --accent-darkest: hsl(180, 100%, 23%);
 
     /* Static Colors */
     --grey-dark: hsl(0, 0%, 35%);
@@ -32,9 +32,9 @@
     --text-color: var(--accent-medium);
     --text-color-hover: var(--primary-medium);
     --text-shadow-color: ;
-    --anchor-color-link: var(--primary-medium);
-    --anchor-color-hover: var(--accent-dark);
-    --anchor-color-visited: var(--accent-light);
+    --anchor-color-link: var(--accent-lightest);
+    --anchor-color-hover: var(--primary-medium);
+    --anchor-color-visited: var(--accent-dark);
     --main-background-color: var(--black);
     --main-card-background-color: var(--primary-dark);
     --main-card-background-color-hover: var(--border-color);
