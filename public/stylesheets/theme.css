@@ -1,3 +1,5 @@
+
+
 .theme-light {
     /********************
     *** Color Palette ***
@@ -5,7 +7,7 @@
 
     /* Variable Colors */
     --primary-lightest: hsl(240, 100%, 60%);
-    --primary-light: hsla(240, 100%, 53%, 1);
+    --primary-light: hsl(240, 100%, 53%);
     --primary-medium: hsl(240, 100%, 45%);
     --primary-dark: hsla(240, 100%, 30%, 1);
     --primary-darkest: hsl(240, 100%, 14.7%);
@@ -13,7 +15,7 @@
     --secondary-lightest: hsl(180, 0%, 90%);
     --secondary-light: hsl(180, 0%, 50%);
     --secondary-medium: hsl(180, 0%, 30%);
-    --secondary-dark: hsl(180, 0%, 20%);
+    --secondary-dark: hsl(0, 0%, 20%);
     --secondary-darkest: hsl(180, 0%, 10%);
 
     --accent-lightest: hsl(180, 100%, 90%);
@@ -33,15 +35,15 @@
     --text-shadow-color: ;
     --anchor-color-link: #ffdfff;
     --anchor-color-hover: var(--secondary-darkest);
-    --anchor-color-visited: var(--primary-darkerest);
+    --anchor-color-visited: var(--primary-darkest);
     --main-background-color: var(--secondary-lightest);
     --main-card-background-color: var(--accent-darkest);
     --main-card-background-color-hover: var(--secondary-lightest);
     --border-color: var(--text-color);
     --border-color-hover: var(--main-card-background-color);
     --secondary-card-background-color: var(--primary-lightest);
-    --svg-background-color: var(--accent-darkest);
-    --svg-outline-color: var(--secondary-lightest);
+    --svg-background-color: var(--main-card-background-color);
+    --svg-outline-color: var(--main-card-background-color-hover);
 
     /***********************************
     *** Navigation (Excluding Index) ***
