@@ -4,23 +4,29 @@
     ********************/
 
     /* Variable Colors */
-    --primary-lightest: ;
-    --primary-light: ;
-    --primary-medium: ;
-    --primary-dark: ;
-    --primary-darkest: ;
+    --primary-h: ;
+    --primary-s: ;
+    --primary-lightest: hsl(var(--primary-h), var(--primary-s), %);
+    --primary-light: hsl(var(--primary-h), var(--primary-s), %);
+    --primary-medium: hsl(var(--primary-h), var(--primary-s), %);
+    --primary-dark: hsl(var(--primary-h), var(--primary-s), %);
+    --primary-darkest: hsl(var(--primary-h), var(--primary-s), %);
 
-    --secondary-lightest: ;
-    --secondary-light: ;
-    --secondary-medium: ;
-    --secondary-dark: ;
-    --secondary-darkest: ;
+    --secondary-h: ;
+    --secondary-s: ;
+    --secondary-lightest: hsl(var(--secondary-h), var(--secondary-s), %);
+    --secondary-light: hsl(var(--secondary-h), var(--secondary-s), %);
+    --secondary-medium: hsl(var(--secondary-h), var(--secondary-s), %);
+    --secondary-dark: hsl(var(--secondary-h), var(--secondary-s), %);
+    --secondary-darkest: hsl(var(--secondary-h), var(--secondary-s), %);
 
-    --accent-lightest: ;
-    --accent-light: ;
-    --accent-medium: ;
-    --accent-dark: ;
-    --accent-darkest: ;
+    --accent-h: ;
+    --accent-s: ;
+    --accent-lightest: hsl(var(--accent-h), var(--accent-s), %);
+    --accent-light: hsl(var(--accent-h), var(--accent-s), %);
+    --accent-medium: hsl(var(--accent-h), var(--accent-s), %);
+    --accent-dark: hsl(var(--accent-h), var(--accent-s), %);
+    --accent-darkest: hsl(var(--accent-h), var(--accent-s), %);
 
     /**************
     *** General ***
@@ -28,8 +34,8 @@
     --text-color: ;
     --text-color-hover: ;
     --text-shadow-color: ;
-    --anchor-color-link: ;
-    --anchor-color-hover: ;
+    --anchor-color-link: var(--text-color);
+    --anchor-color-hover: var(--text-color-hover);
     --anchor-color-visited: ;
     --main-background-color: ;
     --main-card-background-color: ;
@@ -37,7 +43,7 @@
     --secondary-card-background-color: ;
     --border-color: var(--text-color);
     --border-color-hover: var(--main-card-background-color);
-    --svg-background-color: ;
+    --svg-background-color: var(--main-card-background-color);
     --svg-outline-color: ;
 
     /***********************************
