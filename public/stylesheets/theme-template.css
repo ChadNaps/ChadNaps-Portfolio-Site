@@ -28,6 +28,12 @@
     --accent-dark: hsl(var(--accent-h), var(--accent-s), %);
     --accent-darkest: hsl(var(--accent-h), var(--accent-s), %);
 
+    /* Colors to Build Palette From
+    
+    --primary: hsl();
+    --secondary: hsl();
+    --accent: hsl(); */
+
     /**************
     *** General ***
     **************/
