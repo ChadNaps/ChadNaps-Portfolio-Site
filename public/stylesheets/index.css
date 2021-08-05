@@ -74,7 +74,8 @@ section {
     top: 50%;
     margin-left: -125.5px;
     margin-top: -120px;
-    opacity: 0.40;
+    opacity: 0.60;
+    fill: var(--index-logo-background-color);
 }
 
 #logo-slogan {
