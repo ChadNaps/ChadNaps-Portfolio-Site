@@ -116,6 +116,37 @@ button {
     font-size: x-large;
 }
 
+/* Theme Select */
+#theme-select li {
+    color: var(--text-color);
+    list-style: none;
+}
+
+#theme-select div {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#theme-select .current-theme div {
+    border-color: var(--border-color-hover);
+}
+
+
+#theme-light div {
+    background-color: hsl(180, 0%, 90%);
+}
+
+#theme-carmine div {
+    background-color: hsl(351, 96%, 30%);
+}
+
+#theme-colorblind div {
+    background-color: hsl(310, 43%, 47%);
+}
+
 /* Classes */
 .hidden {
     display: none;

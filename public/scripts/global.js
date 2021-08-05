@@ -48,3 +48,16 @@ if (document.getElementById("toggle-view-button") != null) {
         }
     });
 }
+
+// Theme Select Logic
+const darkTheme = document.getElementById("theme-dark");
+const lightTheme = document.getElementById("theme-light");
+const carmineTheme = document.getElementById("theme-carmine");
+const colorBlindTheme = document.getElementById("theme-colorblind");
+const themes = [darkTheme, lightTheme, carmineTheme, colorBlindTheme];
+
+for (theme of themes) {
+    if (document.body.classList.contains(theme.id)) {
+        theme.classList.add("current-theme");
+    }
+}
