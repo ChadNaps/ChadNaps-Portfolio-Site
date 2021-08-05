@@ -22,8 +22,6 @@
     --accent-dark: ;
     --accent-darkest: ;
 
-    /* Static Colors */
-
     /**************
     *** General ***
     **************/
@@ -36,9 +34,9 @@
     --main-background-color: ;
     --main-card-background-color: ;
     --main-card-background-color-hover: ;
+    --secondary-card-background-color: ;
     --border-color: var(--text-color);
     --border-color-hover: var(--main-card-background-color);
-    --secondary-card-background-color: ;
     --svg-background-color: ;
     --svg-outline-color: ;
 
