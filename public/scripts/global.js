@@ -1,3 +1,4 @@
+// Navigation Logic
 if (document.getElementById("nav") != null) {
     const navItems = document.getElementById("nav").children;
 
@@ -19,8 +20,7 @@ if (document.getElementById("nav") != null) {
     }
 }
 
-    // Toggle View Button logic
-
+// Toggle View Button Logic
 if (document.getElementById("toggle-view-button") != null) {
     const toggleViewButton = document.getElementById("toggle-view-button");
     const cards = document.getElementsByClassName("card");
