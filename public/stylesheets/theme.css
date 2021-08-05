@@ -1,4 +1,275 @@
+.theme-carmine {
+    /********************
+    *** Color Palette ***
+    ********************/
 
+    /* Variable Colors */
+    --primary-h: 351;
+    --primary-s: 96%;
+    --primary-lightest: ;
+    --primary-light: ;
+    --primary-medium: hsl(var(--primary-h), 60%, 45%);
+    --primary-dark: hsl(var(--primary-h), 50%, 30%);
+    --primary-darkest: hsl(var(--primary-h), 100%, 20%);
+
+    --secondary-h: 201;
+    --secondary-s: 43%;
+    --secondary-lightest: hsl(var(--secondary-h), var(--secondary-s), 85%);
+    --secondary-light: hsl(var(--secondary-h), var(--secondary-s), 78%);
+    --secondary-medium: hsl(var(--secondary-h), var(--secondary-s), 66%);
+    --secondary-dark: hsl(var(--secondary-h), var(--secondary-s), 45%);
+    --secondary-darkest: hsl(var(--secondary-h), var(--secondary-s), 25%);
+
+    --accent-h: 39;
+    --accent-s: 96%;
+    --accent-lightest: hsl(var(--accent-h), var(--accent-s), 90%);
+    --accent-light: hsl(var(--accent-h), var(--accent-s), 65%);
+    --accent-medium: hsl(var(--accent-h), var(--accent-s), 45%);
+    --accent-dark: hsl(var(--accent-h), var(--accent-s), 30%);
+    --accent-darkest: hsl(var(--accent-h), var(--accent-s), 20%);
+    
+    --primary: hsl(351, 96%, 30%);
+    --secondary: hsl(201, 43%, 45%);
+    --accent: hsl(39, 96%, 53%);
+
+    /**************
+    *** General ***
+    **************/
+    --text-color: var(--secondary-lightest);
+    --text-color-hover: var(--accent-dark);
+    --text-shadow-color: ;
+    --anchor-color-link: var(--text-color);
+    --anchor-color-hover: var(--text-color-hover);
+    --anchor-color-visited: var(--accent-lightest);
+    --main-background-color: hsl(244, 41%, 4%);
+    --main-card-background-color: var(--primary-dark);
+    --main-card-background-color-hover: var(--text-color);
+    --secondary-card-background-color: var(--secondary-darkest);
+    --border-color: var(--text-color);
+    --border-color-hover: var(--main-card-background-color);
+    --svg-background-color: var(--main-card-background-color);
+    --svg-outline-color: var(--accent-dark);
+
+    /***********************************
+    *** Navigation (Excluding Index) ***
+    ***********************************/
+    /*** Navigation - General ***/
+    --nav-text-color: var(--text-color);
+    --nav-text-hover-color: var(--text-color-hover);
+    
+    /*** Navigation - Text ***/
+    /* Navigation - Text - Color */
+    --nav-index-text-color: var(--nav-text-color);
+    --nav-projects-text-color: var(--nav-text-color);
+    --nav-aboutme-text-color: var(--nav-text-color);
+    --nav-socials-text-color: var(--nav-text-color);
+
+    /* Navigation - Text - Hover Color */
+    --nav-index-text-hover-color: var(--nav-text-hover-color);
+    --nav-projects-text-hover-color: var(--nav-text-hover-color);
+    --nav-aboutme-text-hover-color: var(--nav-text-hover-color);
+    --nav-socials-text-hover-color: var(--nav-text-hover-color);
+
+
+    /*****************
+    *** Index Page ***
+    *****************/
+
+    /*** Index - General ***/
+    --index-text-color: var(--text-color);
+    --index-text-color-hover: var(--text-color-hover);
+    --index-background-color: var(--main-background-color);
+    --index-nav-background-color: var(--main-card-background-color);
+    --index-logo-background-color: var(--main-card-background-color);
+
+    /*** Index - Logo ***/
+    /* Index - Logo - General */
+    --index-logo-text-color: var(--index-text-color);
+
+    /* Index - Logo - Text */
+    --index-logo-h1-text-color: var(--index-logo-text-color);
+    --index-slogan-text-color: var(--index-logo-text-color);
+
+    /*** Index - Navigation ***/
+    /* Index - Nav - General */
+    --index-nav-text-color: var(--index-text-color);
+    --index-nav-text-color-hover: var(--index-text-color-hover);
+
+    /* Index - Nav - Text */
+    --index-nav-arrow-1-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-1-text-color-hover: var(--index-nav-text-color-hover);
+    --index-nav-arrow-2-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-2-text-color-hover: var(--index-nav-text-color-hover);
+    --index-nav-arrow-3-text-color: var(--index-nav-text-color);
+    --index-nav-arrow-3-text-color-hover: var(--index-nav-text-color-hover);
+    
+    /* Index - Nav - Backgrounds */
+    --index-nav-arrow-1-background-color: var(--index-nav-background-color);
+    --index-nav-arrow-2-background-color: var(--index-nav-background-color);
+    --index-nav-arrow-3-background-color: var(--index-nav-background-color);
+
+    /********************
+    *** Projects Page ***
+    ********************/
+
+    /*** Projects - General ***/
+    --projects-background-color: var(--main-background-color);
+    --projects-text-color: var(--text-color);
+    --projects-text-color-hover: var(--text-color-hover);
+    --projects-card-background-color: var(--main-card-background-color);
+    --projects-card-background-color-hover: var(--main-card-background-color-hover);
+    --projects-border-color: var(--border-color);
+    --projects-border-color-hover: var(--border-color-hover);
+
+    /*** Projects - Buttons ***/
+    /* Projects - Buttons - General */
+    --projects-buttons-text-color: var(--projects-text-color);
+    --projects-buttons-text-color-hover: var(--projects-text-color-hover);
+    --projects-buttons-background-color: var(--projects-card-background-color);
+    --projects-buttons-background-color-hover: var(--projects-card-background-color-hover);
+    --projects-buttons-border-color: var(--projects-border-color);
+    --projects-buttons-border-color-hover: var(--projects-border-color-hover);
+
+    /* Projects - Buttons - Text */
+    --projects-buttons-change-view-text-color: var(--projects-buttons-text-color);
+    --projects-buttons-change-view-text-color-hover: var(--projects-buttons-text-color-hover);
+
+    /* Projects - Buttons - Backgrounds */
+    --projects-buttons-change-view-background-color: var(--projects-buttons-background-color);
+    --projects-buttons-change-view-background-color-hover: var(--projects-buttons-background-color-hover);
+
+    /* Projects - Buttons - Border */
+    --projects-buttons-change-view-border-color: var(--projects-buttons-border-color);
+    --projects-buttons-change-view-border-color-hover: var(--projects-buttons-border-color-hover);
+
+    /*** Projects - Cards ***/
+    /* Projects - Cards - General */
+    --projects-cards-text-color: white;
+    /* var(--projects-text-color); */
+
+    /* Projects - Cards - Text */
+    --projects-cards-text-title-color: var(--projects-cards-text-color);
+    --projects-cards-text-description-color: var(--projects-cards-text-color);
+
+    /* Projects - Cards - Backgrounds */
+    --projects-cards-title-background-color: var(--main-card-background-color);
+    --projects-cards-description-background-color: var(--secondary-card-background-color);
+
+    /********************
+    *** About Me Page ***
+    ********************/
+
+    /*** About Me - General ***/
+    --aboutme-background-color: var(--main-background-color);
+    --aboutme-text-color: var(--text-color);
+    --aboutme-text-color-hover: var(--text-color-hover);
+    --aboutme-card-background-color: var(--main-card-background-color);
+    --aboutme-card-background-color-hover: var(--main-card-background-color-hover);
+    --aboutme-border-color: var(--border-color);
+    --aboutme-border-color-hover: var(--border-color-hover);
+    --aboutme-anchor-link-color: var(--anchor-color-link);
+    --aboutme-anchor-hover-color: var(--anchor-color-hover);
+    --aboutme-anchor-visited-color: var(--anchor-color-visited);
+    --aboutme-text-shadow-color: var(--text-shadow-color);
+
+    /*** About Me - Title ***/
+    --aboutme-title-h1-color: var(--aboutme-text-color);
+    --aboutme-title-h2-color: var(--aboutme-text-color);
+
+    /*** About Me - Buttons ***/
+    /* About Me - Buttons - General */
+    --aboutme-buttons-text-color: var(--aboutme-text-color);
+    --aboutme-buttons-text-color-hover: var(--aboutme-text-color-hover);
+    --aboutme-buttons-background-color: var(--aboutme-card-background-color);
+    --aboutme-buttons-background-color-hover: var(--aboutme-card-background-color-hover);
+    --aboutme-buttons-border-color: var(--aboutme-border-color);
+    --aboutme-buttons-border-color-hover: var(--aboutme-border-color-hover);
+
+    /* About Me - Buttons - Text */
+    --aboutme-buttons-change-view-text-color: var(--aboutme-buttons-text-color);
+    --aboutme-buttons-change-view-text-color-hover: var(--aboutme-buttons-text-color-hover);
+
+    /* About Me - Buttons - Backgrounds */
+    --aboutme-buttons-change-view-background-color: var(--aboutme-buttons-background-color);
+    --aboutme-buttons-change-view-background-color-hover: var(--aboutme-buttons-background-color-hover);
+
+    /* About Me - Buttons - Border */
+    --aboutme-buttons-change-view-border-color: var(--aboutme-buttons-border-color);
+    --aboutme-buttons-change-view-border-color-hover: var(--aboutme-buttons-border-color-hover);
+    
+    /*** About Me - Cards ***/
+    /* About Me - Cards - General */
+    --aboutme-cards-text-color: var(--aboutme-text-color);
+    --aboutme-cards-anchor-link-color: var(--aboutme-anchor-link-color);
+    --aboutme-cards-anchor-hover-color: var(--aboutme-anchor-hover-color);
+    --aboutme-cards-anchor-visited-color: var(--aboutme-anchor-visited-color);
+    --aboutme-cards-text-shadow-color: var(--aboutme-text-shadow-color);
+    --aboutme-cards-background-color: var(--secondary-card-background-color);
+
+    /* About Me - Cards - Text */
+    --aboutme-card-1-text-color: var(--aboutme-cards-text-color);
+    --aboutme-card-2-text-color: var(--aboutme-cards-text-color);
+    --aboutme-card-3-text-color: var(--aboutme-cards-text-color);
+
+    /* About Me - Cards - Anchors - Link */
+    --aboutme-card-1-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+    --aboutme-card-2-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+    --aboutme-card-3-anchor-link-color: var(--aboutme-cards-anchor-link-color);
+
+    /* About Me - Cards - Anchors - Hover */
+    --aboutme-card-1-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+    --aboutme-card-2-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+    --aboutme-card-3-anchor-hover-color: var(--aboutme-cards-anchor-hover-color);
+
+    /* About Me - Cards - Anchors - Visited */
+    --aboutme-card-1-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+    --aboutme-card-2-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+    --aboutme-card-3-anchor-visited-color: var(--aboutme-cards-anchor-visited-color);
+
+    /* About Me - Cards - Text Shadow */
+    --aboutme-card-1-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+    --aboutme-card-2-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+    --aboutme-card-3-text-shadow-color: var(--aboutme-cards-text-shadow-color);
+
+    /* About Me - Cards - Backgrounds */
+    --aboutme-card-1-background-color: var(--aboutme-cards-background-color);
+    --aboutme-card-2-background-color: var(--aboutme-cards-background-color);
+    --aboutme-card-3-background-color: var(--aboutme-cards-background-color);
+
+    /*******************
+    *** Socials Page ***
+    *******************/
+
+    /*** Socials - General ***/
+    --socials-text-color: var(--text-color);
+    --socials-text-color-hover: var(--text-color-hover);
+    --socials-background-color: var(--main-background-color);
+    --socials-logos-background-color: var(--svg-background-color);
+    --socials-logos-outline-color: var(--svg-outline-color);
+
+    /*** Socials - Title ***/
+    --socials-title-text-color: var(--socials-text-color);
+
+    /*** Socials - Logos ***/
+    /* Socials - Logos - General */
+    --socials-logos-text-color: var(--socials-text-color);
+    --socials-logos-text-color-hover: var(--socials-text-color-hover);
+
+    /* Socials - Logos - Text */
+    --socials-logo-email-text-color: var(--socials-logos-text-color);
+    --socials-logo-email-text-color-hover: var(--socials-logos-text-color-hover);
+    --socials-logo-email-icon-text-color: var(--socials-logos-outline-color);
+    --socials-logo-twitter-text-color: var(--socials-logos-text-color);
+    --socials-logo-twitter-text-color-hover: var(--socials-logos-text-color-hover);
+    --socials-logo-github-text-color: var(--socials-logos-text-color);
+    --socials-logo-github-text-color-hover: var(--socials-logos-text-color-hover);
+    --socials-logo-linkedin-text-color: var(--socials-logos-text-color);
+    --socials-logo-linkedin-text-color-hover: var(--socials-logos-text-color-hover);
+
+    /* Socials - Logos - Backgrounds */
+    --socials-logo-email-background-color: var(--socials-logos-background-color);
+    --socials-logo-email-outline-color: var(--socials-logos-outline-color);
+}
 
 .theme-light {
     /********************
@@ -15,7 +286,7 @@
     --secondary-lightest: hsl(180, 0%, 90%);
     --secondary-light: hsl(180, 0%, 50%);
     --secondary-medium: hsl(180, 0%, 30%);
-    --secondary-dark: hsl(0, 0%, 20%);
+    --secondary-dark: hsl(180, 0%, 20%);
     --secondary-darkest: hsl(180, 0%, 10%);
 
     --accent-lightest: hsl(180, 100%, 90%);
