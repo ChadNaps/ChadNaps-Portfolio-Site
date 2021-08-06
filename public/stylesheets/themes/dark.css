@@ -37,11 +37,21 @@
     --main-background-color: black;
     --main-card-background-color: var(--primary-dark);
     --main-card-background-color-hover: var(--border-color);
+    --secondary-card-background-color: var(--secondary-medium);
     --border-color: var(--text-color);
     --border-color-hover: var(--main-card-background-color);
-    --secondary-card-background-color: var(--secondary-medium);
     --svg-background-color: var(--primary-darkest);
     --svg-outline-color: var(--secondary-medium);
+
+    /*********************
+    *** Theme Selector ***
+    *********************/
+    --theme-select-stroke: var(--text-color);
+    --theme-select-fill: var(--secondary-card-background-color);
+    --theme-select-current-text-color: var(--text-color);
+    --theme-select-current-border-color: var(--text-color);
+    --theme-select-other-text-color: var(--secondary-lightest);
+    --theme-select-other-border-color: var(--secondary-light);
 
     /***********************************
     *** Navigation (Excluding Index) ***
