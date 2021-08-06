@@ -28,9 +28,9 @@
     --accent-dark: hsl(var(--accent-h), var(--accent-s), %);
     --accent-darkest: hsl(var(--accent-h), var(--accent-s), %);
 
-    /* Colors to Build Palette From
+    /* Colors to Build Palette From */
     
-    --primary: hsl();
+    /* --primary: hsl();
     --secondary: hsl();
     --accent: hsl(); */
 
@@ -51,6 +51,16 @@
     --border-color-hover: var(--main-card-background-color);
     --svg-background-color: var(--main-card-background-color);
     --svg-outline-color: ;
+
+    /*********************
+    *** Theme Selector ***
+    *********************/
+    --theme-select-stroke: var(--text-color);
+    --theme-select-fill: var(--secondary-card-background-color);
+    --theme-select-current-text-color: var(--text-color);
+    --theme-select-current-border-color: var(--text-color);
+    --theme-select-other-text-color: var(--secondary-lightest);
+    --theme-select-other-border-color: var(--secondary-light);
 
     /***********************************
     *** Navigation (Excluding Index) ***
