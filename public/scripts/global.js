@@ -50,6 +50,20 @@ if (document.getElementById("toggle-view-button") != null) {
 }
 
 // Theme Select Logic
+
+// Collapse Button
+const themeSelectButton = document.getElementById("theme-select-button");
+const themeSelectThemes = document.getElementById("theme-select-themes");
+
+themeSelectButton.addEventListener("click", () => {
+    if (themeSelectThemes.style.maxHeight){
+        themeSelectThemes.style.maxHeight = null;
+      } else {
+        themeSelectThemes.style.maxHeight = themeSelectThemes.scrollHeight + "px";
+      } 
+});
+
+// Highlight Current Theme
 const darkTheme = document.getElementById("theme-dark");
 const lightTheme = document.getElementById("theme-light");
 const carmineTheme = document.getElementById("theme-carmine");
