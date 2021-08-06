@@ -147,6 +147,8 @@ button {
     transition: max-height 1s cubic-bezier(0, 1, 0, 1);
     margin-top: 1rem;
     margin-right: 2rem;
+    border-color: var(--theme-select-stroke);
+    background-color: var(--theme-select-background-color);
 }
 
 #theme-select-themes li {
