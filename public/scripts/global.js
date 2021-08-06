@@ -73,5 +73,24 @@ const themes = [darkTheme, lightTheme, carmineTheme, colorBlindTheme];
 for (theme of themes) {
     if (document.body.classList.contains(theme.id)) {
         theme.classList.add("current-theme");
+    } else {
+        theme.classList.remove("current-theme");
     }
+}
+
+// Change Current Theme
+for (theme of themes) {
+    theme.addEventListener("click", function () {
+        // If the theme clicked on isn't the current theme
+        if (!document.body.classList.contains(this.id)) {
+            // Clear the body's classList
+            document.body.className = "";
+            // Clear current theme
+            document.getElementsByClassName("current-theme")[0].classList.remove("current-theme");
+            // Add selected theme
+            document.body.classList.add(this.id);
+            // Set selected theme as current
+            this.classList.add("current-theme");
+        }
+    });
 }
