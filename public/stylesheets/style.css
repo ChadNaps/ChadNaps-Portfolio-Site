@@ -147,7 +147,10 @@ button {
     position: absolute;
     top: 100%;
     overflow: hidden;
-    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+    transition: max-height 0.2s cubic-bezier(0, 0.1, 0, 0.1),
+                border-width 0.2s ease 0.1s,
+                padding-bottom 0.2s ease 0.1s,
+                padding-top 0.2s ease 0.1s;
     margin-top: 1rem;
     margin-right: 2rem;
     padding: 0 1rem;

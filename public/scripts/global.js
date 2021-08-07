@@ -58,8 +58,15 @@ const themeSelectThemes = document.getElementById("theme-select-themes");
 themeSelectButton.addEventListener("click", () => {
     if (themeSelectThemes.style.maxHeight){
         themeSelectThemes.style.maxHeight = null;
+        themeSelectThemes.style.border = null;
+        themeSelectThemes.style.paddingTop = null;
+        themeSelectThemes.style.paddingBottom = null;
       } else {
-        themeSelectThemes.style.maxHeight = themeSelectThemes.scrollHeight + "px";
+          // Get computed style of 1rem (font-size of root element) * 2 (2rem, 1 top padding and 1 bottom padding) + scrollHeight of ul
+        themeSelectThemes.style.maxHeight = parseInt(getComputedStyle(document.getElementsByTagName("body")[0]).getPropertyValue("font-size")) * 2 + themeSelectThemes.scrollHeight + "px";
+        themeSelectThemes.style.borderWidth = "2px";
+        themeSelectThemes.style.paddingTop = "1rem";
+        themeSelectThemes.style.paddingBottom = "1rem";
       } 
 });
 

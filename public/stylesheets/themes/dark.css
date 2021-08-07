@@ -48,7 +48,7 @@
     *********************/
     --theme-select-stroke: var(--text-color);
     --theme-select-fill: var(--secondary-card-background-color);
-    --theme-select-background-color: var(--secondary-card-background-color);
+    --theme-select-background-color: hsla(180, 0%, 30%, 0.97);
     --theme-select-current-text-color: var(--text-color);
     --theme-select-current-border-color: var(--text-color);
     --theme-select-other-text-color: var(--secondary-lightest);
