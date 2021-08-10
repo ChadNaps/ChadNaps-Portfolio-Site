@@ -1,10 +1,14 @@
 @media screen and (orientation: portrait) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
     #title {
-        grid-row: 2 / 3;
+        grid-row: 3 / 4;
     }
     
     #img-me {
-        grid-row: 3 / 4;
+        grid-row: 4 / 5;
         grid-column: 1 / -1;
     }
 
@@ -37,26 +41,23 @@
 @media screen and (orientation: landscape) {
     body{
         grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, auto) 1fr;
         column-gap: 3rem;
-    }
-
-    #nav {
-        grid-column: 1 / -1;
     }
 
     #title {
         grid-column: 1 / 6;
-        grid-row: 2 / 3;
+        grid-row: 3 / 4;
     }
 
     #img-me {
         grid-column: 1 / 4;
-        grid-row: 3 / 4;
+        grid-row: 4 / 5;
     }
 
     button {
         grid-column: 1 / 4;
-        grid-row: 4 / 5;
+        grid-row: 5 / 6;
     }
 
     #cards {
@@ -65,7 +66,7 @@
         grid-template-rows: auto auto 15em auto 15em auto auto;
 
         grid-column: 4 / -1;
-        grid-row: 3 / 6;
+        grid-row: 4 / 7;
     }
 
     #card1 {
@@ -142,10 +143,6 @@ button {
 
 .card:hover {
     z-index: 4 !important;
-}
-
-#nav {
-    grid-row: 1 / 2;
 }
 
 #img-me {
