@@ -76,7 +76,7 @@ button {
 
 #nav-index:hover {
     color: var(--nav-index-text-hover-color);
-    transform: scale(2, 2);
+    transform: scale(1.4);
     transition: transform 0.4s, color 0.2s;
 }
 
@@ -86,7 +86,7 @@ button {
 
 #nav-projects:hover {
     color: var(--nav-projects-text-hover-color);
-    transform: scale(2, 2);
+    transform: scale(1.4);
     transition: transform 0.4s, color 0.2s;
 }
 
@@ -96,7 +96,7 @@ button {
 
 #nav-aboutme:hover {
     color: var(--nav-aboutme-text-hover-color);
-    transform: scale(2, 2);
+    transform: scale(1.4);
     transition: transform 0.4s, color 0.2s;
 }
 
@@ -106,7 +106,7 @@ button {
 
 #nav-socials:hover {
     color: var(--nav-socials-text-hover-color);
-    transform: scale(2, 2);
+    transform: scale(1.4);
     transition: transform 0.4s, color 0.2s;
 }
 
