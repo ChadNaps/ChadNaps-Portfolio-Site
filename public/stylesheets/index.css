@@ -4,6 +4,7 @@ body {
     height: 100vh;
     display: grid;
     align-items: center;
+    background-color: var(--index-background-color);
 }
 
 @media screen and (orientation: portrait) {
@@ -13,13 +14,19 @@ body {
 
     #section-nav {
        overflow-x: hidden;
+       grid-template-columns: 5.3vw 1fr 5.3vw;
     }
 }
 
 @media screen and (orientation: landscape) {
     body {
         grid-template-columns: repeat( 2, minmax(50%, 1fr) );
+        grid-template-rows: 1fr;
         grid-gap: 2rem;
+    }
+
+    #section-nav {
+        grid-template-columns: 2.9vw 1fr 2.9vw;
     }
 }
 
@@ -33,19 +40,12 @@ section {
 @media screen and (min-width: 600px) and (orientation: landscape) {
     #section-logo {
         grid-column: -2 / -1;
-        margin-bottom: 20vh;
-
+        grid-row: 1 / 2;
     }
 
     #section-nav {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-    }
-}
-
-@media screen and (min-width: 1000px) and (orientation: landscape) {
-    #section-logo {
-        margin-bottom: 35vh;
     }
 }
 
@@ -65,16 +65,19 @@ section {
 #bg-img {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 36%;
     margin-left: -125.5px;
     margin-top: -120px;
-    opacity: 0.40;
+    opacity: 0.60;
+    fill: var(--index-logo-background-color);
 }
 
 #logo-slogan {
     text-align: center;
     font-size: 1.4rem;
     font-family: 'Encode Sans SC', sans-serif;
+    color: var(--index-slogan-text-color);
+    flex-grow: 1;
 }
 
 #logo-icon {
@@ -84,6 +87,8 @@ section {
     text-align: center;
     flex-grow: 1;
     z-index: 1;
+    color: var(--index-logo-h1-text-color);
+    flex-grow: 2;
 }
 
 #logo-icon h1 {
@@ -95,8 +100,11 @@ section {
 #section-nav {
     display: grid;
     grid-template-rows: 1.5fr 66px 1fr 66px 1fr 66px 1fr;
-    grid-template-columns: 2.9vw 1fr 2.9vw;
     max-width: 100vw;
+}
+
+.nav-text:hover {
+    color: var(--nav-on-hover);
 }
 
 /* Nav Animations */
@@ -138,10 +146,15 @@ section {
     width: calc(100% - 2.9vw);
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    color: var(--index-nav-arrow-1-text-color);
 }
 
 #nav-projects-text:hover {
-    color: var(--nav-on-hover);
+    color: var(--index-nav-arrow-1-text-color-hover);
+}
+
+#svg-arrow-1 {
+    fill: var(--index-nav-arrow-1-background-color);
 }
 
 #container-nav-aboutme {
@@ -163,10 +176,15 @@ section {
     justify-self: flex-end;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+    color: var(--index-nav-arrow-2-text-color);
 }
 
 #nav-aboutme-text:hover {
-    color: var(--nav-on-hover);
+    color: var(--index-nav-arrow-2-text-color-hover);
+}
+
+#svg-arrow-2 {
+    fill: var(--index-nav-arrow-2-background-color);
 }
 
 #container-nav-socials {
@@ -186,10 +204,15 @@ section {
     width: calc(100% - 2.9vw);
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+    color: var(--index-nav-arrow-3-text-color);
 }
 
 #nav-socials-text:hover {
-    color: var(--nav-on-hover);
+    color: var(--index-nav-arrow-3-text-color-hover);
+}
+
+#svg-arrow-3 {
+    fill: var(--index-nav-arrow-3-background-color);
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */

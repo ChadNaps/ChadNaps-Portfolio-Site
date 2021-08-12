@@ -1,5 +1,6 @@
 @import url("theme.css");
 
+/* Boilerplate */
 *,
 *::after,
 *::before {
@@ -17,23 +18,35 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: var(--general-text);
     padding: 3rem;
     box-sizing: border-box;
     background-color: var(--background);
     min-height: 100vh;
 }
 
-a:link {
-    color: var(--anchor-tags);
+img {
+    max-width: 100%;
 }
 
-a:visited {
-    color: var(--anchor-tags-visited);
+/* Custom */
+@media screen and (orientation: landscape) {
+    button {
+        border: 0.2rem solid;
+    }
+    
+    #nav {
+        font-size-adjust: 0.7; 
+    }
 }
 
-a:hover {
-    color: var(--anchor-tags-hover);
+@media screen and (orientation: portrait) {
+    button {
+        border: 0.1rem solid;
+    }
+    
+    #nav {
+        font-size-adjust: 0.5;    
+    }
 }
 
 h1 {
@@ -44,54 +57,55 @@ button {
     min-height: 4.5rem;
     border-radius: 15px;
     cursor: pointer;
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
 }
 
-button:hover {
-    background-color: var(--button-text-color);
-    color: var(--button-background-color);
-    border-color: var(--tertiary-lightest);
-}
-
-@media screen and (orientation: landscape) {
-    button {
-        border: 0.2rem solid var(--button-border-color);
-    }
-}
-
-@media screen and (orientation: portrait) {
-    button {
-        border: 0.1rem solid var(--button-border-color);
-    }
-}
-
-img {
-    max-width: 100%;
-}
-
-@media screen and (orientation: portrait) {
-    #nav {
-        font-size-adjust: 0.5;    
-    }
-}
-
-@media screen and (orientation: landscape) {
-    #nav {
-        font-size-adjust: 0.7; 
-    }
-}
-
+/* Navbar */
 #nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
     font-weight: bold;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
 }
 
-#nav > *:hover {
-    color: var(--nav-on-hover);
+#nav-index {
+    color: var(--nav-index-text-color);
+}
+
+#nav-index:hover {
+    color: var(--nav-index-text-hover-color);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-projects {
+    color: var(--nav-projects-text-color);
+}
+
+#nav-projects:hover {
+    color: var(--nav-projects-text-hover-color);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-aboutme {
+    color: var(--nav-aboutme-text-color);
+}
+
+#nav-aboutme:hover {
+    color: var(--nav-aboutme-text-hover-color);
+    transform: scale(2, 2);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-socials {
+    color: var(--nav-socials-text-color);
+}
+
+#nav-socials:hover {
+    color: var(--nav-socials-text-hover-color);
     transform: scale(2, 2);
     transition: transform 0.4s, color 0.2s;
 }
@@ -104,6 +118,93 @@ img {
     font-size: x-large;
 }
 
+/* Theme Select */
+#theme-select-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 1rem;
+    grid-column-end: -1;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+    z-index: 2;
+}
+
+#theme-select-button {
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+    stroke: var(--theme-select-stroke);
+    fill: var(--theme-select-fill);
+}
+
+#center-lines {
+    stroke: var(--text-color);
+    fill: var(--text-color);
+}
+
+#theme-select-themes {
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    transition: max-height 0.2s cubic-bezier(0, 0.1, 0, 0.1),
+                border-width 0.2s ease 0.1s,
+                padding-bottom 0.2s ease 0.1s,
+                padding-top 0.2s ease 0.1s;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    padding: 0 1rem;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--theme-select-stroke);
+    background-color: var(--theme-select-background-color);
+}
+
+#theme-select-themes li {
+    color: var(--theme-select-other-text-color);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    cursor: pointer;
+}
+
+#theme-select-themes div {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--theme-select-other-border-color);
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+#theme-select-themes .current-theme div {
+    border-color: var(--theme-select-current-border-color);
+}
+
+#theme-dark div {
+    background-color: hsl(0, 0%, 0%);
+}
+
+#theme-light div {
+    background-color: hsl(180, 0%, 90%);
+}
+
+#theme-carmine div {
+    background-color: hsl(351, 96%, 30%);
+}
+
+#theme-colorblind div {
+    background-color: hsl(310, 43%, 47%);
+}
+
+/* Classes */
 .hidden {
     display: none;
+}
+
+.current-theme {
+    color: var(--theme-select-current-text-color) !important;
+    font-weight: bolder;
 }

@@ -1,10 +1,16 @@
 @media screen and (orientation: portrait) {
-    #section-projects {
+    body {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (orientation: landscape) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr 3fr;
+        align-items: center;
+    }
+
     #section-projects {
         /* I had to change the columns to 2 because, without three projects it left an empty column
         which looked weird. Change this to 3 when there are at least three projects. The entire media
@@ -17,7 +23,15 @@
         */
 
         grid-template-columns: repeat(2, 1fr);
-        align-self: flex-start;
+
+        /* Position within parent grid */
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+    }
+
+    #toggle-view-button {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
     }
 
     .card {
@@ -39,12 +53,25 @@ body {
     align-items: center;
     text-align: center;
     row-gap: 3rem;
+    background-color: var(--projects-background-color);
 }
 
 button {
-    align-self: flex-start;
     justify-self: center;
     width: clamp(0px, 65%, 300px);
+}
+
+#toggle-view-button {
+    color: var(--projects-buttons-change-view-text-color);
+    background-color: var(--projects-buttons-change-view-background-color);
+    border-color: var(--projects-buttons-change-view-border-color);
+    font-weight: bolder;
+}
+
+#toggle-view-button:hover {
+    color: var(--projects-buttons-change-view-text-color-hover);
+    background-color: var(--projects-buttons-change-view-background-color-hover);
+    border-color: var(--projects-buttons-change-view-border-color-hover);
 }
 
 #section-projects {
@@ -63,6 +90,8 @@ button {
 .card h3 {
     padding: 1rem 0;
     flex-basis: 20px;
+    background-color: var(--projects-cards-title-background-color);
+    color: var(--projects-cards-text-title-color);
 }
 
 .card > img {
@@ -72,6 +101,8 @@ button {
 .card > p {
     padding: 1rem 0;
     flex-grow: 3;
+    background-color: var(--projects-cards-description-background-color);
+    color: var(--projects-cards-text-description-color);
 }
 
 .card > * {

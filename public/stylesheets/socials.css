@@ -1,7 +1,7 @@
 @media screen and (orientation: portrait) {
     body {
         grid-template-columns: 50% 50%;
-        grid-template-rows: auto 1fr repeat(4, 18.75%);
+        grid-template-rows: auto auto repeat(4, 18.75%);
         align-items: center;
     }
 
@@ -11,12 +11,13 @@
 
     #title {
         grid-column: 1 / -1;
-        margin: 2rem 0;
+        grid-row: 3 / 4;
+        margin-bottom: 3rem;
     }
 
     #logo-email {
         grid-column: 2 / 3;
-        grid-row: 3 / 4;
+        grid-row: 4 / 5;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,46 +27,47 @@
 
     #text-email {
         grid-column: 1 / 2;
-        grid-row: 3 / 4;
+        grid-row: 4 / 5;
     }
 
     #logo-twitter {
         grid-column: 1 / 2;
-        grid-row: 4 / 5;
+        grid-row: 5 / 6;
     }
 
     #text-twitter {
         grid-column: 2 / 3;
-        grid-row: 4 / 5;
+        grid-row: 5 / 6;
     }
 
     #logo-github {
         grid-column: 2 / 3;
-        grid-row: 5 / 6;
+        grid-row: 6 / 7;
     }
 
     #text-github {
         grid-column: 1 / 2;
-        grid-row: 5 / 6;
+        grid-row: 6 / 7;
     }
 
     #logo-linkedin {
         grid-column: 1 / 2;
-        grid-row: 6 / 7;
+        grid-row: 7 / 8;
     }
 
     #text-linkedin {
         grid-column: 2 / 3;
-        grid-row: 6 / 7;
+        grid-row: 7 / 8;
     }
 }
 
 @media screen and (orientation: landscape) {
     body {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto 1fr repeat(5, 14.29vh);
-        column-gap: 4rem;
+        /* 14.29vh */
+        grid-template-rows: auto auto repeat(5, 1fr);
         align-items: flex-start;
+        max-height: 100vh;
     }
 
     .logo {
@@ -132,6 +134,15 @@ body {
     display: grid;
     justify-content: center;
     text-align: center;
+    background-color: var(--socials-background-color);
+}
+
+#nav {
+    margin: 3rem 0;
+}
+
+#title {
+    color: var(--socials-title-text-color);
 }
 
 .logo {
@@ -143,17 +154,33 @@ body {
 }
 
 #logo-email {
-    background-color: var(--background-card-alt);
+    background-color: var(--socials-logo-email-background-color);
     font-size: 3.0rem;
     font-weight: 900;
 }
 
 #logo-email text {
     stroke-width: 0;
-    fill: var(--logo-email);
+    fill: var(--socials-logo-email-icon-text-color);
 }
 
 #logo-email path, #logo-email line, #logo-email {
     stroke-width: 0.7;
-    stroke: var(--logo-email);
+    stroke: var(--socials-logo-email-outline-color);
+}
+
+#text-email {
+    color: var(--socials-logo-email-text-color);
+}
+
+#text-twitter {
+    color: var(--socials-logo-twitter-text-color);
+}
+
+#text-github {
+    color: var(--socials-logo-github-text-color);
+}
+
+#text-linkedin {
+    color: var(--socials-logo-linkedin-text-color);
 }

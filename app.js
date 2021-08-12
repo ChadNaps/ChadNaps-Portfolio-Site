@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Set Environment
-app.set('env', 'production');
+app.set('env', 'development');
 
 // Custom Middleware
 app.locals.path = path; // Used to help in routing
