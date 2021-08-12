@@ -75,13 +75,19 @@ themeSelectThemes.addEventListener("click", (e) => {
     e.stopPropagation();
 });
 
-// Highlight Current Theme
+// Confirm Current Theme
 const darkTheme = document.getElementById("theme-dark");
 const lightTheme = document.getElementById("theme-light");
 const carmineTheme = document.getElementById("theme-carmine");
 const colorBlindTheme = document.getElementById("theme-colorblind");
 const themes = [darkTheme, lightTheme, carmineTheme, colorBlindTheme];
 
+if (localStorage.getItem("theme")) {
+    document.body.classList = "";
+    document.body.classList.add(localStorage.getItem("theme"));
+}
+
+// Highlight Current Theme
 for (theme of themes) {
     if (document.body.classList.contains(theme.id)) {
         theme.classList.add("current-theme");
@@ -103,12 +109,13 @@ for (theme of themes) {
             document.body.classList.add(this.id);
             // Set selected theme as current
             this.classList.add("current-theme");
+            // Add selected theme to localStorage
+            localStorage.setItem("theme", this.id);
         }
     });
 }
 
 // Functions
-
 function toggleThemeMenu() {
     if (themeSelectThemes.style.maxHeight) {
         themeSelectThemes.style.maxHeight = null;
