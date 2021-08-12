@@ -101,4 +101,25 @@ function changeAlpha(originalValue, newAlpha) {
     }
 }
 
+function colorTheCards() {
+    // Add progressive opacity changes to each project
+    for (let x = 0; x < projects.length; x++) {
+        // Calculate alpha based on number of projects
+        const alpha = 1 - (x * (1 / (projects.length + 2)));
+        
+        // Get default colors
+        let titleColor = getComputedStyle(document.body).getPropertyValue('--projects-cards-title-background-color').trim();
+        let descriptionColor = getComputedStyle(document.body).getPropertyValue('--projects-cards-description-background-color').trim();
+        
+        // Alter alpha of current colors
+        titleColor = changeAlpha(titleColor, alpha);
+        descriptionColor = changeAlpha(descriptionColor, alpha);
+
+        // Apply colors to cards
+        projectTitle[x].style.setProperty('--projects-cards-title-background-color', titleColor);
+        projectViewSimple[x].style.setProperty('--projects-cards-description-background-color', descriptionColor);
+        projectViewAdvanced[x].style.setProperty('--projects-cards-description-background-color', descriptionColor);
+    }
+}
+
 // Logic for advanced view toggle is in global.js
