@@ -10,7 +10,7 @@
     --primary-light: ;
     --primary-medium: hsl(var(--primary-h), 60%, 45%);
     --primary-dark: hsl(var(--primary-h), 50%, 30%);
-    --primary-darkest: hsl(var(--primary-h), 100%, 20%);
+    --primary-darkest: hsl(var(--primary-h), 100%, 2%);
 
     --secondary-h: 201;
     --secondary-s: 43%;
@@ -43,7 +43,7 @@
     --anchor-color-link: var(--text-color);
     --anchor-color-hover: var(--text-color-hover);
     --anchor-color-visited: var(--accent-lightest);
-    --main-background-color: hsl(248, 40%, 4%);
+    --main-background-color: var(--primary-darkest);
     --main-card-background-color: var(--primary-dark);
     --main-card-background-color-hover: var(--text-color);
     --secondary-card-background-color: var(--secondary-darkest);

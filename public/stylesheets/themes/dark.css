@@ -34,7 +34,7 @@
     --anchor-color-link: var(--accent-lightest);
     --anchor-color-hover: var(--primary-medium);
     --anchor-color-visited: var(--accent-dark);
-    --main-background-color: black;
+    --main-background-color: hsl(240, 100%, 2%);
     --main-card-background-color: var(--primary-dark);
     --main-card-background-color-hover: var(--border-color);
     --secondary-card-background-color: var(--secondary-medium);
