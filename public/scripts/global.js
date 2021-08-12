@@ -111,6 +111,11 @@ for (theme of themes) {
             this.classList.add("current-theme");
             // Add selected theme to localStorage
             localStorage.setItem("theme", this.id);
+
+            // Specifically for projects page cards
+            if (typeof colorTheCards != "undefined") {
+                colorTheCards();
+            }
         }
     });
 }

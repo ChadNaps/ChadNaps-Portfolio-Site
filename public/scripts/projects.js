@@ -4,24 +4,10 @@ const projectViewSimple = document.getElementsByClassName("view-simple");
 const projectViewAdvanced = document.getElementsByClassName("view-advanced");
 const toggleViewButton = document.getElementById("toggle-view-button");
 
-// Add progressive opacity changes to each project
-for (let x = 0; x < projects.length; x++) {
-    // Calculate alpha based on number of projects
-    const alpha = 1 - (x * (1 / (projects.length + 2)));
-    
-    // Get default colors
-    let titleColor = getComputedStyle(projectTitle[x]).getPropertyValue('--projects-cards-title-background-color').trim();
-    let descriptionColor = getComputedStyle(projectViewSimple[x]).getPropertyValue('--projects-cards-description-background-color').trim();
-    
-    // Alter alpha of current colors
-    titleColor = changeAlpha(titleColor, alpha);
-    descriptionColor = changeAlpha(descriptionColor, alpha);
-
-    // Apply colors to cards
-    projectTitle[x].style.setProperty('--projects-cards-title-background-color', titleColor);
-    projectViewSimple[x].style.setProperty('--projects-cards-description-background-color', descriptionColor);
-    projectViewAdvanced[x].style.setProperty('--projects-cards-description-background-color', descriptionColor);
-}
+// Initial Coloring
+window.addEventListener("load", () => {
+    colorTheCards();
+});
 
 // Add click and hover event listeners to projects
 for (let project of projects) {
