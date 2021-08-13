@@ -27,12 +27,12 @@
         grid-row: 1 / 6;
     }
 
-    #card2 {
+    #card2, #card2Clone {
         grid-column: 3 / -1;
         grid-row: 4 / 10;
     }
 
-    #card3 {
+    #card3, #card3Clone {
         grid-column: 1 / 6;
         grid-row: 9 / 14;
     }
@@ -74,12 +74,12 @@
         grid-row: 1 / 4;
     }
 
-    #card2 {
+    #card2, #card2Clone {
         grid-column: 3 / 6;
         grid-row: 3 / 6;
     }
 
-    #card3 {
+    #card3, #card3Clone {
         grid-column: 5 / 8;
         grid-row: 5 / 8;
     }
@@ -141,10 +141,6 @@ button {
     list-style-type: circle;
 }
 
-.card:hover {
-    z-index: 4 !important;
-}
-
 #img-me {
     justify-self: center;
 }
@@ -161,31 +157,31 @@ button {
     color: var(--aboutme-card-1-anchor-visited-color);
 }
 
-#card2 a {
+#card2 a, #card2Clone a {
     color: var(--aboutme-card-2-anchor-link-color);
 }
 
-#card2 a:hover {
+#card2 a:hover, #card2Clone a:hover {
     color: var(--aboutme-card-2-anchor-hover-color);
 }
 
-#card2 a:visited {
+#card2 a:visited, #card2Clone a:visited {
     color: var(--aboutme-card-2-anchor-visited-color);
 }
 
-#card3 a {
+#card3 a, #card3Clone a {
     color: var(--aboutme-card-3-anchor-link-color);
 }
 
-#card3 a:hover {
+#card3 a:hover, #card3Clone a:hover {
     color: var(--aboutme-card-3-anchor-hover-color);
 }
 
-#card3 a:visited {
+#card3 a:visited, #card3Clone a:visited {
     color: var(--aboutme-card-3-anchor-visited-color);
 }
 
-#card2 a, #card3 a {
+#card2 a, #card3 a, #card2Clone a, #card3Clone a {
     font-weight: 900;
 }
 
@@ -196,18 +192,28 @@ button {
     text-shadow: var(--aboutme-card-1-text-shadow-color);
 }
 
-#card2 {
+#card2, #card2Clone {
     z-index: 2;
     color: var(--aboutme-card-2-text-color);
     background-color: var(--aboutme-card-2-background-color);
     text-shadow: var(--aboutme-card-2-text-shadow-color);
 }
 
-#card3 {
+#card2Clone {
+    z-index: 5;
+    opacity: 0;
+}
+
+#card3, #card3Clone {
     z-index: 1;
     color: var(--aboutme-card-3-text-color);
     background-color: var(--aboutme-card-3-background-color);
     text-shadow: var(--aboutme-card-3-text-shadow-color);
+}
+
+#card3Clone {
+    z-index: 4;
+    opacity: 0;
 }
 
 #title h1 {
