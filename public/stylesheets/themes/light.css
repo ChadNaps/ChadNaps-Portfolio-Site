@@ -247,16 +247,18 @@
     --socials-text-color: var(--primary-light);
     --socials-text-color-hover: var(--text-color-hover);
     --socials-background-color: var(--main-background-color);
-    --socials-logos-background-color: var(--svg-background-color);
+    --socials-logos-background-color: var(--primary-lightest);
     --socials-logos-outline-color: var(--svg-outline-color);
+    --socials-card-background-color: var(--accent-dark);
 
     /*** Socials - Title ***/
     --socials-title-text-color: var(--socials-text-color);
 
     /*** Socials - Logos ***/
     /* Socials - Logos - General */
-    --socials-logos-text-color: var(--socials-text-color);
+    --socials-logos-text-color: var(--secondary-darkest);
     --socials-logos-text-color-hover: var(--socials-text-color-hover);
+    --socials-logo-card-background-color: var(--socials-card-background-color);
 
     /* Socials - Logos - Text */
     --socials-logo-email-text-color: var(--socials-logos-text-color);
@@ -272,4 +274,10 @@
     /* Socials - Logos - Backgrounds */
     --socials-logo-email-background-color: var(--socials-logos-background-color);
     --socials-logo-email-outline-color: var(--socials-logos-outline-color);
+
+    /* Socials - Logos - Cards - Backgrounds */
+    --socials-logo-email-card-background-color: var(--socials-logo-card-background-color);
+    --socials-logo-twitter-card-background-color: var(--socials-logo-card-background-color);
+    --socials-logo-github-card-background-color: var(--socials-logo-card-background-color);
+    --socials-logo-linkedin-card-background-color: var(--socials-logo-card-background-color);
 }
