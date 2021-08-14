@@ -5,21 +5,33 @@
 <%- include("partials/navbar") %>
 
   <h1 id="title">Send Me An Email Or Find Me On Social Media!</h1>
-  <svg viewBox="0 0 100 100" class="logo" id="logo-email">
-    <rect x="10" y="17" width="80%" height="65%" />
-    <path d="M10.15 17.5 Q 50 90 89.85 17.5 Z" />
-    <line x1="10.2" y1="81.7" x2="45" y2="53" />
-    <line x1="56" y1="53" x2="89.7" y2="81.7" />
-    <text x="50" y="45" text-anchor="middle">@</text>
-  </svg>
-  <h2 class="logo-text" id="text-email">Email</h2>
-  <img src="/images/twitter.png" class="logo" id="logo-twitter"/>
-  <h2 class="logo-text" id="text-twitter">Twitter</h2>
-  <img src="/images/github.png" class="logo" id="logo-github"/>
-  <h2 class="logo-text" id="text-github">GitHub</h2>
-  <img src="/images/linkedin.png" class="logo" id="logo-linkedin"/>
-  <h2 class="logo-text" id="text-linkedin">LinkedIn</h2>
-
+  
+  <div id="card-email" class="card">
+    <svg viewBox="0 0 100 100" class="logo" id="logo-email">
+      <rect x="10" y="17" width="80%" height="65%" />
+      <path d="M10.15 17.5 Q 50 90 89.85 17.5 Z" />
+      <line x1="10.2" y1="81.7" x2="45" y2="53" />
+      <line x1="56" y1="53" x2="89.7" y2="81.7" />
+      <text x="50" y="45" text-anchor="middle">@</text>
+    </svg>
+    <h2 class="logo-text">Email</h2>
+  </div>
+  
+  <div id="card-twitter" class="card">
+    <img src="/images/twitter.png" class="logo" id="logo-twitter"/>
+    <h2 class="logo-text">Twitter</h2>
+  </div>
+  
+  <div id="card-github" class="card">
+    <img src="/images/github.png" class="logo" id="logo-github"/>
+    <h2 class="logo-text">GitHub</h2>
+  </div>
+  
+  <div id="card-linkedin" class="card">
+    <img src="/images/linkedin.png" class="logo" id="logo-linkedin"/>
+    <h2 class="logo-text">LinkedIn</h2>
+  </div>
+  
 <!-- Insert custom JS imports here -->
 <script src="scripts/socials.js"></script>
 <%- include("partials/footer") %>
