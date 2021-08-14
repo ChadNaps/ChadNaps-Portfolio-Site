@@ -1,8 +1,8 @@
 const navBtns = document.getElementsByClassName('nav-container');
 
-/******************
- * Helper Object
- *****************/ 
+/*********************
+ *** Helper Object ***
+ ********************/ 
 const helper = {
     // Function to call when attaching mousemove event listeners
     attachElementToCursor: function (event) {
@@ -35,11 +35,11 @@ const helper = {
 }
 
 /****************
- * Button Logic
+ * Button Logic *
  ***************/
 for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     /**********************
-     * Find button labels
+     * Find button labels *
      *********************/ 
     let label = "";
     for (let childNumber = 0; childNumber < navBtns[buttonNumber].children.length; childNumber++) {
@@ -108,7 +108,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     });
 
     /********************************
-     * Swipe Event Listener - Mouse
+     * Swipe Event Listener - Mouse *
      *******************************/
 
     // Mouse Down Event Listener
@@ -151,7 +151,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     });
 
     /************************
-     * Click Event Listener
+     * Click Event Listener *
      ***********************/
 
     // In order to get the transition-duration automatically and avoid manually updating it when .nav-swipe-right/left
