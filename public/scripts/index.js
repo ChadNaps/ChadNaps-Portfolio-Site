@@ -185,3 +185,26 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         }
     });
 }
+
+/***************************
+ *** UI Addon Glitch Fix ***
+ **************************/
+// Some addons add 0 height divs to the body, but this causes the index page to realign
+// sporadically, so this adds the hidden class to any elements added beyond the original
+
+const body = document.getElementsByTagName("BODY")[0];
+
+function logMutations(mutations, observer) {
+    if (body.children.length > 8) {
+        for (x = 8; x < body.children.length; x++) {
+            body.children[x].style.all = "";
+            body.children[x].classList.add("hidden");
+        }
+    }
+}
+
+// Create an observer instance
+const observer = new MutationObserver(logMutations);
+
+// Start observing body
+observer.observe(body, { childList: true });
