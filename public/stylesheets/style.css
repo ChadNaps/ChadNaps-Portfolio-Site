@@ -84,9 +84,15 @@ button {
     color: var(--nav-projects-text-color);
 }
 
-#nav-projects:hover {
+#nav-projects:hover:not(.nav-current-page) {
     color: var(--nav-projects-text-hover-color);
     transform: scale(1.4);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-projects.nav-current-page:hover {
+    color: var(--nav-projects-text-hover-color);
+    transform: scale(1.1);
     transition: transform 0.4s, color 0.2s;
 }
 
@@ -94,9 +100,15 @@ button {
     color: var(--nav-aboutme-text-color);
 }
 
-#nav-aboutme:hover {
+#nav-aboutme:hover:not(.nav-current-page) {
     color: var(--nav-aboutme-text-hover-color);
     transform: scale(1.4);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-aboutme.nav-current-page:hover {
+    color: var(--nav-aboutme-text-hover-color);
+    transform: scale(1.1);
     transition: transform 0.4s, color 0.2s;
 }
 
@@ -104,9 +116,15 @@ button {
     color: var(--nav-socials-text-color);
 }
 
-#nav-socials:hover {
+#nav-socials:hover:not(.nav-current-page) {
     color: var(--nav-socials-text-hover-color);
     transform: scale(1.4);
+    transition: transform 0.4s, color 0.2s;
+}
+
+#nav-socials.nav-current-page:hover {
+    color: var(--nav-socials-text-hover-color);
+    transform: scale(1.1);
     transition: transform 0.4s, color 0.2s;
 }
 
