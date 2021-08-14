@@ -154,12 +154,34 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
      * Click Event Listener
      ***********************/
 
-    navBtns[buttonNumber].addEventListener("click", () => {
-        if (navBtns[buttonNumber].style.left == "0px") {
-            navBtns[buttonNumber].classList.add("jiggle");
-            setTimeout(() => {
-                navBtns[buttonNumber].classList.remove("jiggle");
-            }, 500);
+    // In order to get the transition-duration automatically and avoid manually updating it when .nav-swipe-right/left
+    // changes, I had to create an empty div and attach it to the body. window.getComputedStyle would hold blank values
+    // otherwise.
+    emptyDiv = document.createElement("DIV");
+    emptyDiv.classList.add("nav-swipe-right", "hidden");
+    document.getElementsByTagName("body")[0].appendChild(emptyDiv);
+    navDelay = getComputedStyle(emptyDiv).getPropertyValue("transition-duration");
+
+    // Doesn't quite look right, extending the delay a tiny bit longer before navigating
+    const additionalDelay = 0.4;
+
+    if (navDelay.slice(-2) == "ms") {
+        navDelay = parseInt(navDelay) + additionalDelay * 1000;
+    } else {
+        navDelay = parseFloat(navDelay) + additionalDelay + "s";
+    }
+
+    navBtns[buttonNumber].addEventListener("click", function () {
+        helper.setDirection(buttonNumber);
+        console.log(helper);
+        if (helper.direction == "right") {
+            this.classList.add("nav-swipe-right");
+            let destination = encodeURIComponent(label);
+            destination = destination.toLowerCase();
+            setTimeout(() => {window.location = `/${destination}`}, navDelay);
+        } else if (helper.direction == "left") {
+            this.classList.add("nav-swipe-left");
+            setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase())}, navDelay);
         }
     });
 }

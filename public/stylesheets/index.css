@@ -110,12 +110,12 @@ section {
 /* Nav Animations */
 .nav-swipe-right {
     transform: translateX(100vw);
-    transition: transform 0.2s;
+    transition: transform 0.5s;
 }
 
 .nav-swipe-left {
     transform: translateX(-100vw);
-    transition: transform 0.2s;
+    transition: transform 0.5s;
 }
 
 .jiggle {
