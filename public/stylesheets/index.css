@@ -76,6 +76,7 @@ section {
     text-align: center;
     font-size: 1.4rem;
     font-family: 'Encode Sans SC', sans-serif;
+    z-index: 1;
     color: var(--index-slogan-text-color);
     flex-grow: 1;
 }
