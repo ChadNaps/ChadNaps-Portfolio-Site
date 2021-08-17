@@ -9,6 +9,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr 3fr;
         align-items: center;
+        max-height: 100vh;
     }
 
     #section-projects {
