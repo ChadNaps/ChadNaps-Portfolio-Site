@@ -71,7 +71,7 @@ section, nav {
 
 #logo-background-img {
     flex-grow: 2;
-    transform: translateY(-2rem);
+    transform: translateY(-3rem);
 }
 
 #logo-slogan, #logo-background-empty-div {
