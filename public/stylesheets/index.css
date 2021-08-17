@@ -37,7 +37,7 @@ body {
     }
 }
 
-section {
+section, nav {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -71,7 +71,7 @@ section {
 
 #logo-background-img {
     flex-grow: 2;
-    transform: translateY(-3rem);
+    transform: translateY(-2rem);
 }
 
 #logo-slogan, #logo-background-empty-div {
@@ -215,19 +215,4 @@ section {
 
 #svg-arrow-3 {
     fill: var(--index-nav-arrow-3-background-color);
-}
-
-/* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
-@keyframes jiggle {
-    0% { transform: translate(1px, 1px); }
-    10% { transform: translate(-1px, -2px); }
-    20% { transform: translate(-3px, 0px); }
-    30% { transform: translate(3px, 2px); }
-    40% { transform: translate(1px, -1px); }
-    50% { transform: translate(-1px, 2px); }
-    60% { transform: translate(-3px, 1px); }
-    70% { transform: translate(3px, 1px); }
-    80% { transform: translate(-1px, -1px); }
-    90% { transform: translate(1px, 2px); }
-    100% { transform: translate(1px, -2px); }
 }

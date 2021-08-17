@@ -147,6 +147,7 @@ button {
     grid-row: 1 / 2;
     align-self: flex-start;
     z-index: 2;
+    height: auto;
 }
 
 #theme-select-button {
