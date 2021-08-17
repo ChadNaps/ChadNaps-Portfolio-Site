@@ -53,6 +53,26 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             }
         }
     }
+
+    /*****************
+     * Set Nav Delay *
+     ****************/
+    // In order to get the transition-duration automatically and avoid manually updating it when .nav-swipe-right/left
+    // changes, I had to create an empty div and attach it to the body. window.getComputedStyle would hold blank values
+    // otherwise.
+    emptyDiv = document.createElement("DIV");
+    emptyDiv.classList.add("nav-swipe-right", "hidden");
+    document.getElementsByTagName("body")[0].appendChild(emptyDiv);
+    navDelay = getComputedStyle(emptyDiv).getPropertyValue("transition-duration");
+
+    // Doesn't quite look right, extending the delay a tiny bit longer before navigating
+    const additionalDelay = 0.4;
+
+    if (navDelay.slice(-2) == "ms") {
+        navDelay = parseInt(navDelay) + additionalDelay * 1000;
+    } else {
+        navDelay = (parseFloat(navDelay) + additionalDelay) * 1000;
+    }
     
     /********************************
      * Swipe Event Listener - Touch
@@ -84,12 +104,12 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Touch End Event Listener
     navBtns[buttonNumber].addEventListener("touchend", function () {
-        if (diff < this.parentElement.clientWidth / 3 && helper.direction == "right") {
+        if (diff < this.parentElement.clientWidth / 3 && helper.direction == "right" && diff > 0) {
             this.style.left = "0px";
             start = end = diff = 0;
 
             this.style.position = "static";
-        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left") {
+        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left" && diff > 0) {
             this.style.left = "0px";
             start = end = diff = 0;
 
@@ -98,10 +118,10 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             this.classList.add("nav-swipe-right");
             let destination = encodeURIComponent(label);
             destination = destination.toLowerCase();
-            window.location = `/${destination}`;
+            setTimeout(() => {window.location = `/${destination}`;}, navDelay); 
         } else if (helper.direction == "left") {
             this.classList.add("nav-swipe-left");
-            window.location = encodeURIComponent(label.toLowerCase());
+            setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
         }
 
         helper.setDirection();
@@ -128,60 +148,25 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         if (navBtns[buttonNumber].hasMouseMoveEL) {
             navBtns[buttonNumber].removeEventListener("mousemove", helper.attachElementToCursor);
             // If the nav button moves right/left, it must be at least 33% through the parent element to register as swiped
-            if (helper.diff < navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "right") {
+            if (helper.diff < navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "right" && helper.diff > 0) {
                 navBtns[buttonNumber].style.left = "0px";
                 helper.setDirection();
                 start = helper.diff = 0;
                 navBtns[buttonNumber].style.position = "static";
-            } else if (helper.diff > -navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "left") {
+            } else if (helper.diff > -navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "left" && helper.diff > 0) {
                 navBtns[buttonNumber].style.left = "0px";
                 helper.setDirection();
                 start = helper.diff = 0;
                 navBtns[buttonNumber].style.position = "static";
             } else if (helper.direction == "right") {
                 navBtns[buttonNumber].classList.add("nav-swipe-right");
-                window.location = encodeURIComponent(label.toLowerCase());
+                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay); 
             } else {
                 navBtns[buttonNumber].classList.add("nav-swipe-left");
-                window.location = encodeURIComponent(label.toLowerCase());
+                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
             }
             // Confirm mousemove was cleared
             navBtns[buttonNumber].hasMouseMoveEL = false;
-        }
-    });
-
-    /************************
-     * Click Event Listener *
-     ***********************/
-
-    // In order to get the transition-duration automatically and avoid manually updating it when .nav-swipe-right/left
-    // changes, I had to create an empty div and attach it to the body. window.getComputedStyle would hold blank values
-    // otherwise.
-    emptyDiv = document.createElement("DIV");
-    emptyDiv.classList.add("nav-swipe-right", "hidden");
-    document.getElementsByTagName("body")[0].appendChild(emptyDiv);
-    navDelay = getComputedStyle(emptyDiv).getPropertyValue("transition-duration");
-
-    // Doesn't quite look right, extending the delay a tiny bit longer before navigating
-    const additionalDelay = 0.4;
-
-    if (navDelay.slice(-2) == "ms") {
-        navDelay = parseInt(navDelay) + additionalDelay * 1000;
-    } else {
-        navDelay = parseFloat(navDelay) + additionalDelay + "s";
-    }
-
-    navBtns[buttonNumber].addEventListener("click", function () {
-        helper.setDirection(buttonNumber);
-        console.log(helper);
-        if (helper.direction == "right") {
-            this.classList.add("nav-swipe-right");
-            let destination = encodeURIComponent(label);
-            destination = destination.toLowerCase();
-            setTimeout(() => {window.location = `/${destination}`}, navDelay);
-        } else if (helper.direction == "left") {
-            this.classList.add("nav-swipe-left");
-            setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase())}, navDelay);
         }
     });
 }
