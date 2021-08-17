@@ -154,7 +154,12 @@ button {
     height: 50px;
     cursor: pointer;
     stroke: var(--theme-select-stroke);
+    stroke-width: 1%;
     fill: var(--theme-select-fill);
+}
+
+#color-wheel {
+    stroke: hsl(0, 0%, 15%);
 }
 
 #center-lines {
