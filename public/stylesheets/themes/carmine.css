@@ -58,8 +58,8 @@
     --theme-select-stroke: var(--text-color);
     --theme-select-fill: var(--secondary-card-background-color);
     --theme-select-background-color: var(--secondary-card-background-color);
-    --theme-select-current-text-color: var(--accent-medium);
-    --theme-select-current-border-color: var(--accent-medium);
+    --theme-select-current-text-color: var(--accent-light);
+    --theme-select-current-border-color: var(--accent-light);
     --theme-select-other-text-color: var(--secondary-lightest);
     --theme-select-other-border-color: var(--secondary-light);
     
