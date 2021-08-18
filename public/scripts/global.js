@@ -1,6 +1,6 @@
 // Navigation Logic
 if (document.getElementById("nav") != null) {
-    const navItems = document.getElementById("nav").children;
+    const navItems = document.getElementById("nav").firstElementChild.children;
 
     // Add click event listeners to nav
     for (let item of navItems) {

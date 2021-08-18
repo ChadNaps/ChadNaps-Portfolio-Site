@@ -60,7 +60,7 @@ button {
 }
 
 /* Navbar */
-#nav {
+#nav, #nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -68,6 +68,10 @@ button {
     font-weight: bold;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+}
+
+#nav > ul {
+    width: 100%;
 }
 
 #nav-index {
