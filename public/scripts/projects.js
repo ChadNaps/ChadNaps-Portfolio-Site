@@ -25,8 +25,14 @@ for (let project of projects) {
         // Find elements
         if (elementsToSwap.length == 0) {
             for (child of project.children) {
-                if (child.tagName == "H3" || child.tagName == "P") {
+                if (child.tagName == "H1" || child.tagName == "P") {
                     elementsToSwap.push(child);
+                }
+
+                for (grandchild of child.children) {
+                    if (grandchild.tagName == "H1" || grandchild.tagName == "P") {
+                        elementsToSwap.push(grandchild);
+                    }
                 }
             }
         }
@@ -41,8 +47,14 @@ for (let project of projects) {
         // Find elements
         if (elementsToSwap.length == 0) {
             for (child of project.children) {
-                if (child.tagName == "H3" || child.tagName == "P") {
+                if (child.tagName == "H1" || child.tagName == "P") {
                     elementsToSwap.push(child);
+                }
+                
+                for (grandchild of child.children) {
+                    if (grandchild.tagName == "H1" || grandchild.tagName == "P") {
+                        elementsToSwap.push(grandchild);
+                    }
                 }
             }
         }

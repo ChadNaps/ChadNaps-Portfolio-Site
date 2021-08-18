@@ -4,17 +4,23 @@
 <%- include("partials/header-end") %>
 <%- include("partials/navbar") %>
 
-<button id="toggle-view-button">Delve Deeper (Advanced View)</button>
-<section id="section-projects">
-  <% for (project of projects) { %>
-      <div class="card">
-        <h3 class="card-title"><%= project.name %></h3>
-        <img src="<%- project.img %>" alt="">
-        <p class="view-simple"><%= project.descriptionSimple %></p>
-        <p class="view-advanced hidden"><%= project.descriptionAdvanced %></p>
-      </div>
-  <% } %> 
-</section>
+<main>
+  <button id="toggle-view-button">Delve Deeper (Advanced View)</button>
+  <section id="section-projects">
+    <% for (project of projects) { %>
+        <div class="card">
+          <header>
+            <h1 class="card-title"><%= project.name %></h1>
+          </header>
+          <img src="<%- project.img %>" alt="">
+          <footer>
+            <p class="view-simple"><%= project.descriptionSimple %></p>
+            <p class="view-advanced hidden"><%= project.descriptionAdvanced %></p>
+          </footer>
+        </div>
+    <% } %> 
+  </section>
+</main>
 
 <!-- Insert custom JS imports here -->
 <script src="/scripts/projects.js"></script>

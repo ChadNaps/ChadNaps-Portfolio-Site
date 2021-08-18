@@ -7,9 +7,18 @@
 @media screen and (orientation: landscape) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr 3fr;
+        grid-template-rows: auto auto 1fr;
         align-items: center;
         max-height: 100vh;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr;
+        align-items: center;
+        grid-row: 3 / 4;
+        height: 100%;
     }
 
     #section-projects {
@@ -26,12 +35,12 @@
         grid-template-columns: repeat(2, 1fr);
 
         /* Position within parent grid */
-        grid-row: 4 / 5;
+        grid-row: 2 / 3;
         grid-column: 1 / -1;
     }
 
     #toggle-view-button {
-        grid-row: 3 / 4;
+        grid-row: 1 / 2;
         grid-column: 1 / -1;
     }
 
@@ -88,9 +97,9 @@ button {
     border-style: solid;
 }
 
-.card h3 {
+.card h1 {
     padding: 1rem 0;
-    flex-basis: 20px;
+    font-size: 1.17em;
     background-color: var(--projects-cards-title-background-color);
     color: var(--projects-cards-text-title-color);
 }
@@ -99,7 +108,7 @@ button {
     width: 100%;
 }
 
-.card > p {
+.card p {
     padding: 1rem 0;
     flex-grow: 3;
     background-color: var(--projects-cards-description-background-color);
