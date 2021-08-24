@@ -2,7 +2,6 @@ const projects = document.getElementsByClassName("card");
 const projectTitle = document.getElementsByClassName("card-title");
 const projectViewSimple = document.getElementsByClassName("view-simple");
 const projectViewAdvanced = document.getElementsByClassName("view-advanced");
-const toggleViewButton = document.getElementById("toggle-view-button");
 
 // Initial Coloring
 window.addEventListener("load", () => {
