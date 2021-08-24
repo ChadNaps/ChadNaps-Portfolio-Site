@@ -162,6 +162,25 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             e.returnValue = false;
         
             const target = e.currentTarget;
+
+            
+            setTimeout(() => {target.click()}, navDelay);
+        }
+    });
+    
+    navBtns[buttonNumber].firstElementChild.addEventListener("keypress", (e) => {
+        if (e.isTrusted == true) {
+            e.returnValue = false;
+        
+            const target = e.currentTarget;
+            
+            helper.setDirection(buttonNumber);
+
+            if (helper.direction == "right") {
+                navBtns[buttonNumber].classList.add("nav-swipe-right");
+            } else {
+                navBtns[buttonNumber].classList.add("nav-swipe-left");
+            }
             setTimeout(() => {target.click()}, navDelay);
         }
     });
