@@ -64,7 +64,7 @@
     main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, minmax(78px, 1fr));
+        grid-template-rows: 0.5fr repeat(5, 1fr);
         grid-row: 3 / 4;
         align-items: flex-start;
         justify-items: center;
