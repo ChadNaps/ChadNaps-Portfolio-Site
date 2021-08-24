@@ -2,6 +2,10 @@
     body {
         grid-template-columns: 1fr;
     }
+
+    #toggle-view-button {
+        margin-bottom: 3rem;
+    }
 }
 
 @media screen and (orientation: landscape) {
