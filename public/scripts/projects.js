@@ -9,15 +9,8 @@ window.addEventListener("load", () => {
     colorTheCards();
 });
 
-// Add click and hover event listeners to projects
+// Add hover event listeners to projects
 for (let project of projects) {
-    let projectName = encodeURIComponent(project.firstElementChild.innerHTML);
-    
-    // On click, navigate
-    project.addEventListener("click", () => {
-        window.open(`/projects/${projectName}`, "_blank");
-    });
-
     // On hover, invert title and description backgrounds
     project.addEventListener("mouseenter", () => {
         let elementsToSwap = [];
