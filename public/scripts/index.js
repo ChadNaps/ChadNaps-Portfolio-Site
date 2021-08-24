@@ -1,4 +1,4 @@
-const navBtns = document.getElementsByClassName('nav-container');
+const navBtns = document.getElementById('section-nav').firstElementChild.children;
 
 /*********************
  *** Helper Object ***
@@ -6,7 +6,9 @@ const navBtns = document.getElementsByClassName('nav-container');
 const helper = {
     // Function to call when attaching mousemove event listeners
     attachElementToCursor: function (event) {
-        const element = event.target.parentElement;
+        event.preventDefault();
+        
+        const element = this;
 
         helper.diff += event.movementX;
 
@@ -133,6 +135,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Down Event Listener
     navBtns[buttonNumber].addEventListener("mousedown", function (e) {
+        e.preventDefault();
         start = e.pageX;
         this.style.position = "relative";
         helper.setDirection(buttonNumber);
@@ -144,8 +147,10 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Up Event Listener
     document.addEventListener("mouseup", function (e) {
+        e.preventDefault();
         // Optimization - Check to see if button has mousemove event listener before doing other calculations
         if (navBtns[buttonNumber].hasMouseMoveEL) {
+            console.log(helper.diff);
             navBtns[buttonNumber].removeEventListener("mousemove", helper.attachElementToCursor);
             // If the nav button moves right/left, it must be at least 33% through the parent element to register as swiped
             if (helper.diff < navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "right" && helper.diff > 0) {
@@ -160,14 +165,23 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
                 navBtns[buttonNumber].style.position = "static";
             } else if (helper.direction == "right") {
                 navBtns[buttonNumber].classList.add("nav-swipe-right");
-                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay); 
+                // setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay); 
             } else {
                 navBtns[buttonNumber].classList.add("nav-swipe-left");
-                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
+                // setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
             }
             // Confirm mousemove was cleared
             navBtns[buttonNumber].hasMouseMoveEL = false;
         }
+    });
+
+    navBtns[buttonNumber].firstElementChild.addEventListener("click", (e) => {
+        console.log(e.currentTarget);
+        e.returnValue = false;
+        
+        const target = e.currentTarget;
+
+        setTimeout(() => {console.log(target); target.click()}, 4000);
     });
 }
 
