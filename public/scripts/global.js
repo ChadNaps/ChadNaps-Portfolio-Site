@@ -23,7 +23,8 @@ if (document.getElementById("nav") != null) {
 // Toggle View Button Logic
 if (document.getElementById("toggle-view-button") != null) {
     const toggleViewButton = document.getElementById("toggle-view-button");
-    const cards = document.getElementsByClassName("card");
+    const viewSimple = document.getElementsByClassName("view-simple");
+    const viewAdvanced = document.getElementsByClassName("view-advanced");
     toggleViewButton.addEventListener("click", () => {
         simpleText = "Simplify (Standard View)";
         advancedText = "Delve Deeper (Advanced View)";
@@ -35,16 +36,12 @@ if (document.getElementById("toggle-view-button") != null) {
             toggleViewButton.innerHTML = advancedText;   
         }
 
-        for (card of cards) {
-            for (child of card.children) {
-                if (child.classList.contains("view-simple")) {
-                    child.classList.toggle("hidden");
-                }
+        for (element of viewSimple) {
+            element.classList.toggle("hidden");
+        }
 
-                if (child.classList.contains("view-advanced")) {
-                    child.classList.toggle("hidden");
-                }
-            }
+        for (element of viewAdvanced) {
+            element.classList.toggle("hidden");
         }
     });
 }
