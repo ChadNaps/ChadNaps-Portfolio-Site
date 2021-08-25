@@ -23,8 +23,11 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Disable ETags
+app.set('etag', false);
+
 // Set Environment
-app.set('env', 'production');
+app.set('env', 'development');
 
 // Custom Middleware
 app.locals.path = path; // Used to help in routing
@@ -37,6 +40,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store');
+  next();
+});
 
 // Route Definitions
 app.use('/', indexRouter);
