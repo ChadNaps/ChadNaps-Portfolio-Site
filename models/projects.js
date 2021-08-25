@@ -8,6 +8,12 @@ const projects = [
                                     enable a sole proprietor to offer online scheduling to their clients"
         },
         {
+            "name": "Ant Rush",
+            "img": "/images/ant-rush.png",
+            "descriptionSimple": "An arcade style video game for Windows",
+            "descriptionAdvanced": "An isometric action-arcade video game built with the Unity Engine, playable in Microsoft Windows"
+        },
+        {
             "name": "Reaction Timer",
             "img": "/images/reaction-timer-project-preview.png",
             "URL": "",

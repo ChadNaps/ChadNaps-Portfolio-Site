@@ -24,6 +24,21 @@ router.get('/Reaction%20Timer', (req, res, next) => {
   next();
 });
 
+/* GET Ant Rush project */
+router.get('/Ant%20Rush', (req, res, next) => {
+  for (const project of projects) {
+    if (project.name == "Ant Rush") {
+      res.sendFile(req.app.locals.path.join(req.app.locals.__dirname, 'public/local-projects/Ant Rush 1.4.zip'), (err) => {
+        if (err) {
+          next(err);
+        } else {
+          console.log("Sent Ant Rush!");
+        }
+      });
+    }
+  }
+});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('projects', { title: 'ChadNaps | Projects', projects: projects });
