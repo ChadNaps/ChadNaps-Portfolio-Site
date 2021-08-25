@@ -13,9 +13,17 @@ body {
         grid-template-rows: auto 1fr 1fr;
     }
 
+    body * {
+        overflow: hidden;
+    }
+
     #section-nav > ul {
        grid-template-columns: 5.3vw 1fr 5.3vw;
        grid-template-rows: 0 80px 0.5fr 80px 0.5fr 80px 0;
+    }
+
+    #section-nav > ul > *{
+        overflow: hidden;
     }
 }
 
