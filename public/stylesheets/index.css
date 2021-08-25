@@ -13,7 +13,7 @@ body {
         grid-template-rows: auto 1fr 1fr;
     }
 
-    body * {
+    body *:not(#theme-select-container) {
         overflow: hidden;
     }
 
