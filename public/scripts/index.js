@@ -96,7 +96,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             start = end = diff = 0;
 
             this.style.position = "static";
-        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left" && diff > 0) {
+        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left" && diff < 0) {
             this.style.left = "0px";
             start = end = diff = 0;
 
