@@ -4,9 +4,8 @@
 <%- include("partials/header-end") %>
 
 <section id="section-logo">
-  <figure id="logo-background">
-    <svg id="logo-background-img" width="257.15491" height="207.81142" viewBox="0 0 257.15491 207.81142" aria-labelledby="logo-title" role="img">
-      <title id="logo-title">Logo with the appearance: < / ></title>
+  <figure id="logo-background" role="banner">
+    <svg id="logo-background-img" width="257.15491" height="207.81142" viewBox="0 0 257.15491 207.81142" role="banner">
       <path
         d="M 78.287694,189.14915 135.12719,-0.51705501 173.06043,10.850845 116.22093,200.51706 Z"
         id="path956" />
@@ -29,41 +28,56 @@
 </section>
 
 <nav id="section-nav">
-  <div class="nav-container" id="container-nav-projects">
-    <svg viewBox="0 0 600 66" preserveAspectRatio="none" id="nav-projects-bg" class="nav-projects">
-      <path
-      style="fill-opacity:1;stroke-width:0.825992"
-      d="M 0,32.999209 V 0 l 281.54499,0.03024 281.545,0.03024 18.53443,16.052469 c 10.19391,8.82886 18.46265,16.32092 18.37489,16.649 -0.0877,0.32822 -8.58905,7.94089 -18.8919,16.91731 l -18.73243,16.32075 H 281.18749 0 Z"
-      id="svg-arrow-1"/>
-    </svg>
-    <div id="nav-projects-text" class="nav-projects nav-text nav-flexbox-container">
-      <p class="unselectable">Projects</p>
-    </div>
-  </div>
+  <ul>
+    <li id="nav-projects-index" aria-labelledby="nav-projects-text-aria">
+      <a href="/projects">
+        <svg>
+          <title id="nav-projects-text-aria">Projects</title>
+          <svg viewBox="0 0 600 66"
+            version="1.1"
+            preserveAspectRatio="none"
+            id="nav-projects-svg"
+            href="/projects">
+            <path class="svg-wrapper" style="fill-opacity:1;stroke-width:0.825992"
+            d="M 0,32.999209 V 0 l 281.54499,0.03024 281.545,0.03024 18.53443,16.052469 c 10.19391,8.82886 18.46265,16.32092 18.37489,16.649 -0.0877,0.32822 -8.58905,7.94089 -18.8919,16.91731 l -18.73243,16.32075 H 281.18749 0 Z" />
+          </svg>
+          <text id="nav-projects-text" class="unselectable" x="47%" y="50%" text-anchor="middle" dominant-baseline="middle">Projects</text>
+        </svg>
+      </a>
+    </li>
 
-  <div class="nav-container" id="container-nav-aboutme">
-    <svg viewBox="0 0 600 66" preserveAspectRatio="none" id="nav-aboutme-bg" class="nav-aboutme">
-      <path
-      style="fill-opacity:1;stroke-width:0.825992"
-      d="M 0,32.999209 V 0 l 281.54499,0.03024 281.545,0.03024 18.53443,16.052469 c 10.19391,8.82886 18.46265,16.32092 18.37489,16.649 -0.0877,0.32822 -8.58905,7.94089 -18.8919,16.91731 l -18.73243,16.32075 H 281.18749 0 Z"
-      id="svg-arrow-2"/>
-    </svg>
-    <div id="nav-aboutme-text" class="nav-aboutme nav-text nav-flexbox-container">
-      <p class="unselectable">About Me</p>
-    </div>
-  </div>
+    <li id="nav-aboutme-index" aria-labelledby="nav-aboutme-text-aria">
+      <a href="/about me">
+        <svg class="svg-wrapper">
+          <title id="nav-aboutme-text-aria">About Me</title>
+          <svg viewBox="0 0 600 66"
+            version="1.1"
+            preserveAspectRatio="none"
+            id="nav-aboutme-svg">
+            <path style="fill-opacity:1;stroke-width:0.825992"
+            d="M 0,32.999209 V 0 l 281.54499,0.03024 281.545,0.03024 18.53443,16.052469 c 10.19391,8.82886 18.46265,16.32092 18.37489,16.649 -0.0877,0.32822 -8.58905,7.94089 -18.8919,16.91731 l -18.73243,16.32075 H 281.18749 0 Z" />
+          </svg>
+          <text id="nav-aboutme-text" class="unselectable" x="53%" y="50%" text-anchor="middle" dominant-baseline="middle">About Me</text>
+        </svg>
+      </a>
+    </li>
 
-  <div class="nav-container" id="container-nav-socials">
-    <svg viewBox="0 0 600 66" preserveAspectRatio="none" id="nav-socials-bg" class="nav-socials">
-      <path
-      style="fill-opacity:1;stroke-width:0.825992"
-      d="M 0,32.999209 V 0 l 281.54499,0.03024 281.545,0.03024 18.53443,16.052469 c 10.19391,8.82886 18.46265,16.32092 18.37489,16.649 -0.0877,0.32822 -8.58905,7.94089 -18.8919,16.91731 l -18.73243,16.32075 H 281.18749 0 Z"
-      id="svg-arrow-3"/>
-    </svg>
-    <div id="nav-socials-text" class="nav-socials nav-text nav-flexbox-container">
-      <p class="unselectable">Socials</p>
-    </div>
-  </div>
+    <li id="nav-socials-index" aria-labelledby="nav-socials-text-aria">
+      <a href="/socials">
+        <svg class="svg-wrapper">
+          <title id="nav-socials-text-aria">Socials</title>
+          <svg viewBox="0 0 600 66"
+            version="1.1"
+            preserveAspectRatio="none"
+            id="nav-socials-svg">
+            <path style="fill-opacity:1;stroke-width:0.825992"
+            d="M 0,32.999209 V 0 l 281.54499,0.03024 281.545,0.03024 18.53443,16.052469 c 10.19391,8.82886 18.46265,16.32092 18.37489,16.649 -0.0877,0.32822 -8.58905,7.94089 -18.8919,16.91731 l -18.73243,16.32075 H 281.18749 0 Z" />
+          </svg>
+          <text id="nav-socials-text" class="unselectable" x="47%" y="50%" text-anchor="middle" dominant-baseline="middle">Socials</text>
+        </svg>
+      </a>
+    </li>
+  </ul>
 </nav>
 <!-- Custom JS Imports -->
 <script src="/scripts/index.js"></script>

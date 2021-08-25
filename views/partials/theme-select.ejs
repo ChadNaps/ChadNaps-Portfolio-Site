@@ -5,7 +5,9 @@
    viewBox="0 0 15.875 13.229167"
    version="1.1"
    id="theme-select-button"
-   aria-labelledby="theme-select-title">
+   aria-labelledby="theme-select-title"
+   role="button"
+   tabindex="0">
     <title id="theme-select-title">Select Color Scheme</title>
     <g
       id="layer1"
@@ -53,16 +55,16 @@
 
   <aside id="theme-select-themes">
     <ul>
-      <li id="theme-dark">
-        <div></div>Dark
+      <li id="theme-dark" name="theme-dark" tabindex="0" aria-labelledby="theme-select-themes theme-dark-label">
+        <div></div><span id="theme-dark-label">Dark</span>
       </li>
-      <li id="theme-light">
+      <li id="theme-light" tabindex="0">
         <div></div>Light
       </li>
-      <li id="theme-carmine">
+      <li id="theme-carmine" tabindex="0">
         <div></div>Carmine
       </li>
-      <li id="theme-colorblind">
+      <li id="theme-colorblind" tabindex="0">
         <div></div>Colorblind
       </li>
     </ul>

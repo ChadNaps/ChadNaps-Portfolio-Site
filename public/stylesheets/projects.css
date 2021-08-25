@@ -2,6 +2,10 @@
     body {
         grid-template-columns: 1fr;
     }
+
+    #toggle-view-button {
+        margin-bottom: 3rem;
+    }
 }
 
 @media screen and (orientation: landscape) {
@@ -56,6 +60,11 @@
     .card:last-of-type {
         grid-column: 2 / 3;
     }
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--projects-buttons-change-view-border-color)
 }
 
 body {

@@ -154,6 +154,10 @@ button {
     height: auto;
 }
 
+#theme-select-container *:focus-visible {
+    border: solid 2px var(--theme-select-current-border-color);
+}
+
 #theme-select-button {
     width: 60px;
     height: 50px;

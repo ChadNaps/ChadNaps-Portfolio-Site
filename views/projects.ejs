@@ -8,7 +8,7 @@
   <button id="toggle-view-button">Delve Deeper (Advanced View)</button>
   <section id="section-projects">
     <% for (project of projects) { %>
-        <div class="card">
+        <a class="card" href="/projects/<%= project.name %>" target="_blank">
           <header>
             <h1 class="card-title"><%= project.name %></h1>
           </header>
@@ -17,7 +17,7 @@
             <p class="view-simple"><%= project.descriptionSimple %></p>
             <p class="view-advanced hidden"><%= project.descriptionAdvanced %></p>
           </footer>
-        </div>
+        </a>
     <% } %> 
   </section>
 </main>

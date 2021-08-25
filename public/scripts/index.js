@@ -1,4 +1,4 @@
-const navBtns = document.getElementsByClassName('nav-container');
+const navBtns = document.getElementById('section-nav').firstElementChild.children;
 
 /*********************
  *** Helper Object ***
@@ -6,7 +6,9 @@ const navBtns = document.getElementsByClassName('nav-container');
 const helper = {
     // Function to call when attaching mousemove event listeners
     attachElementToCursor: function (event) {
-        const element = event.target.parentElement;
+        event.preventDefault();
+        
+        const element = this;
 
         helper.diff += event.movementX;
 
@@ -38,21 +40,6 @@ const helper = {
  * Button Logic *
  ***************/
 for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
-    /**********************
-     * Find button labels *
-     *********************/ 
-    let label = "";
-    for (let childNumber = 0; childNumber < navBtns[buttonNumber].children.length; childNumber++) {
-        for (let grandchildNumber = 0; grandchildNumber < navBtns[buttonNumber].children[childNumber].children.length; grandchildNumber++) {
-            const tempLabel = navBtns[buttonNumber].children[childNumber].children[grandchildNumber].innerHTML;
-
-            if (tempLabel == "Projects" ||
-                tempLabel == "About Me" ||
-                tempLabel == "Socials") {
-                label = tempLabel;
-            }
-        }
-    }
 
     /*****************
      * Set Nav Delay *
@@ -69,7 +56,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     const additionalDelay = 0.4;
 
     if (navDelay.slice(-2) == "ms") {
-        navDelay = parseInt(navDelay) + additionalDelay * 1000;
+        navDelay = parseInt(navDelay) + additionalDelay;
     } else {
         navDelay = (parseFloat(navDelay) + additionalDelay) * 1000;
     }
@@ -109,19 +96,17 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
             start = end = diff = 0;
 
             this.style.position = "static";
-        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left" && diff > 0) {
+        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left" && diff < 0) {
             this.style.left = "0px";
             start = end = diff = 0;
 
             this.style.position = "static";
         } else if (helper.direction == "right") {
             this.classList.add("nav-swipe-right");
-            let destination = encodeURIComponent(label);
-            destination = destination.toLowerCase();
-            setTimeout(() => {window.location = `/${destination}`;}, navDelay); 
+            setTimeout(() => {navBtns[buttonNumber].firstElementChild.click();}, navDelay); 
         } else if (helper.direction == "left") {
             this.classList.add("nav-swipe-left");
-            setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
+            setTimeout(() => {navBtns[buttonNumber].firstElementChild.click();}, navDelay); 
         }
 
         helper.setDirection();
@@ -133,6 +118,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Down Event Listener
     navBtns[buttonNumber].addEventListener("mousedown", function (e) {
+        e.preventDefault();
         start = e.pageX;
         this.style.position = "relative";
         helper.setDirection(buttonNumber);
@@ -144,6 +130,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Up Event Listener
     document.addEventListener("mouseup", function (e) {
+        e.preventDefault();
         // Optimization - Check to see if button has mousemove event listener before doing other calculations
         if (navBtns[buttonNumber].hasMouseMoveEL) {
             navBtns[buttonNumber].removeEventListener("mousemove", helper.attachElementToCursor);
@@ -160,13 +147,41 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
                 navBtns[buttonNumber].style.position = "static";
             } else if (helper.direction == "right") {
                 navBtns[buttonNumber].classList.add("nav-swipe-right");
-                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay); 
+                setTimeout(() => {navBtns[buttonNumber].firstElementChild.click();}, navDelay); 
             } else {
                 navBtns[buttonNumber].classList.add("nav-swipe-left");
-                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
+                setTimeout(() => {navBtns[buttonNumber].firstElementChild.click();}, navDelay); 
             }
             // Confirm mousemove was cleared
             navBtns[buttonNumber].hasMouseMoveEL = false;
+        }
+    });
+
+    navBtns[buttonNumber].firstElementChild.addEventListener("click", (e) => {
+        if (e.isTrusted == true) {
+            e.returnValue = false;
+        
+            const target = e.currentTarget;
+
+            
+            setTimeout(() => {target.click()}, navDelay);
+        }
+    });
+    
+    navBtns[buttonNumber].firstElementChild.addEventListener("keypress", (e) => {
+        if (e.isTrusted == true) {
+            e.returnValue = false;
+        
+            const target = e.currentTarget;
+            
+            helper.setDirection(buttonNumber);
+
+            if (helper.direction == "right") {
+                navBtns[buttonNumber].classList.add("nav-swipe-right");
+            } else {
+                navBtns[buttonNumber].classList.add("nav-swipe-left");
+            }
+            setTimeout(() => {target.click()}, navDelay);
         }
     });
 }
