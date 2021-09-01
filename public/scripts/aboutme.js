@@ -19,9 +19,7 @@ setInterval(() => {
 
 // Card Hover Effects
 // Card 2
-let card2Clone = card2.cloneNode(true);
-card2Clone.id = "card2Clone";
-card2.parentElement.appendChild(card2Clone);
+const card2Clone = cloneCard(card2);
 card2Clone.addEventListener("mouseover", () => {
     card2Clone.style.opacity = 1;
     card2Clone.style.transition = "opacity ease 0.6s"
@@ -32,9 +30,7 @@ card2Clone.addEventListener("mouseleave", () => {
 });
 
 // Card 3
-let card3Clone = card3.cloneNode(true);
-card3Clone.id = "card3Clone";
-card3.parentElement.appendChild(card3Clone);
+const card3Clone = cloneCard(card3);
 card3Clone.addEventListener("mouseover", () => {
     card3Clone.style.opacity = 1;
     card3Clone.style.transition = "opacity ease 0.6s"
@@ -44,8 +40,17 @@ card3Clone.addEventListener("mouseleave", () => {
     card3Clone.style.transition = "opacity ease 0.6s"
 });
 
+// Global functions //
 
-// Helper functions //
+function cloneCard(card) {
+    let cardClone = card.cloneNode(true);
+    if (card.id.match(/card\d{1,2}/gm)) {
+        cardClone.id = `card${card.id.slice(4)}Clone`;
+    }
+    card.parentElement.appendChild(cardClone);
+    return cardClone;
+}
+
 function timeHasChanged(hrs, mins) {
     const newCurrentTime = getTime();
     if (newCurrentTime.hours != hrs || newCurrentTime.minutes != mins) {
@@ -54,6 +59,8 @@ function timeHasChanged(hrs, mins) {
 
     return false;
 }
+
+// Helper functions //
 
 // Get formatted time object
 function getTime() {
