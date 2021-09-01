@@ -20,27 +20,27 @@ setInterval(() => {
 // Card Hover Effects
 // Card 2
 const card2Clone = cloneCard(card2);
-card2Clone.addEventListener("mouseover", () => {
-    card2Clone.style.opacity = 1;
-    card2Clone.style.transition = "opacity ease 0.6s"
-});
-card2Clone.addEventListener("mouseleave", () => {
-    card2Clone.style.opacity = 0;
-    card2Clone.style.transition = "opacity ease 0.6s"
-});
+card2Clone.addEventListener("mouseenter", toggleCardOpacity);
+card2Clone.addEventListener("mouseleave", toggleCardOpacity);
 
 // Card 3
 const card3Clone = cloneCard(card3);
-card3Clone.addEventListener("mouseover", () => {
-    card3Clone.style.opacity = 1;
-    card3Clone.style.transition = "opacity ease 0.6s"
-});
-card3Clone.addEventListener("mouseleave", () => {
-    card3Clone.style.opacity = 0;
-    card3Clone.style.transition = "opacity ease 0.6s"
-});
+card3Clone.addEventListener("mouseenter", toggleCardOpacity);
+card3Clone.addEventListener("mouseleave", toggleCardOpacity);
 
 // Global functions //
+
+function toggleCardOpacity(event) {
+    event.stopPropagation();
+    
+    if (this.style.opacity) {
+        this.style.opacity = "";
+    } else {
+        this.style.opacity = "1";
+    }
+
+    this.style.transition = "opacity ease 0.6s";
+}
 
 function cloneCard(card) {
     let cardClone = card.cloneNode(true);
