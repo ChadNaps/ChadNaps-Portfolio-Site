@@ -99,7 +99,7 @@ button {
 }
 
 .card > p {
-    padding: 1rem 0;
+    padding: 1rem;
     flex-grow: 3;
     background-color: var(--projects-cards-description-background-color);
     color: var(--projects-cards-text-description-color);
