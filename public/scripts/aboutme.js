@@ -2,7 +2,7 @@
 *** Notes ***
 ************/
 
-// Advanced view toggle is found in global.js
+// Logic for advanced view toggle is in global.js
 
 /**************
 *** Classes ***

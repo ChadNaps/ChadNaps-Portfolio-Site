@@ -8,6 +8,7 @@ import ThemeSelect from "./ThemeSelectClass.js";
 /****************
 *** Variables ***
 ****************/
+
 const toggleViewButtonExists = document.getElementById("toggle-view-button") != null;
 const navbarExists = document.getElementById("nav") != null;
 
