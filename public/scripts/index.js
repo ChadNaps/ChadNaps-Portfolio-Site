@@ -1,4 +1,5 @@
 const navBtns = document.getElementsByClassName('nav-container');
+const additionalNavDelay = 400; // Milliseconds
 
 /*********************
  *** Helper Object ***
@@ -38,41 +39,9 @@ const helper = {
  * Button Logic *
  ***************/
 for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
-    /**********************
-     * Find button labels *
-     *********************/ 
-    let label = "";
-    for (let childNumber = 0; childNumber < navBtns[buttonNumber].children.length; childNumber++) {
-        for (let grandchildNumber = 0; grandchildNumber < navBtns[buttonNumber].children[childNumber].children.length; grandchildNumber++) {
-            const tempLabel = navBtns[buttonNumber].children[childNumber].children[grandchildNumber].innerHTML;
-
-            if (tempLabel == "Projects" ||
-                tempLabel == "About Me" ||
-                tempLabel == "Socials") {
-                label = tempLabel;
-            }
-        }
-    }
-
-    /*****************
-     * Set Nav Delay *
-     ****************/
-    // In order to get the transition-duration automatically and avoid manually updating it when .nav-swipe-right/left
-    // changes, I had to create an empty div and attach it to the body. window.getComputedStyle would hold blank values
-    // otherwise.
-    emptyDiv = document.createElement("DIV");
-    emptyDiv.classList.add("nav-swipe-right", "hidden");
-    document.getElementsByTagName("body")[0].appendChild(emptyDiv);
-    navDelay = getComputedStyle(emptyDiv).getPropertyValue("transition-duration");
-
-    // Doesn't quite look right, extending the delay a tiny bit longer before navigating
-    const additionalDelay = 0.4;
-
-    if (navDelay.slice(-2) == "ms") {
-        navDelay = parseInt(navDelay) + additionalDelay * 1000;
-    } else {
-        navDelay = (parseFloat(navDelay) + additionalDelay) * 1000;
-    }
+    /* Local Variables */
+    let label = findButtonLabel(buttonNumber);
+    let navDelay = getNavDelay();
     
     /********************************
      * Swipe Event Listener - Touch
@@ -133,9 +102,7 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Mouse Down Event Listener
     navBtns[buttonNumber].addEventListener("mousedown", function (e) {
-        start = e.pageX;
-        this.style.position = "relative";
-        helper.setDirection(buttonNumber);
+        start = trackStartingValues(start, e, buttonNumber);
 
         // Mouse Move Event Listener
         this.hasMouseMoveEL = true;
@@ -147,34 +114,123 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
         // Optimization - Check to see if button has mousemove event listener before doing other calculations
         if (navBtns[buttonNumber].hasMouseMoveEL) {
             navBtns[buttonNumber].removeEventListener("mousemove", helper.attachElementToCursor);
+
+            /* Local Variables */
+            const wasMovedRightNotJustClicked = helper.diff > 0;
+            const wasMovedLeftNotJustClicked = helper.diff < 0;
+            const leftFacingNavArrowWasMovedByMouse = helper.diff > -navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "left";
+            const rightFacingNavArrowWasMovedByMouse = helper.diff < navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "right";
+            const leftFacingArrowWasNotMovedFarEnough = leftFacingNavArrowWasMovedByMouse && wasMovedLeftNotJustClicked;
+            const rightFacingArrowWasNotMovedFarEnough = rightFacingNavArrowWasMovedByMouse && wasMovedRightNotJustClicked;
+
+            /* Main */
             // If the nav button moves right/left, it must be at least 33% through the parent element to register as swiped
-            if (helper.diff < navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "right" && helper.diff > 0) {
-                navBtns[buttonNumber].style.left = "0px";
-                helper.setDirection();
-                start = helper.diff = 0;
-                navBtns[buttonNumber].style.position = "static";
-            } else if (helper.diff > -navBtns[buttonNumber].parentElement.clientWidth / 3 && helper.direction == "left" && helper.diff > 0) {
-                navBtns[buttonNumber].style.left = "0px";
-                helper.setDirection();
-                start = helper.diff = 0;
-                navBtns[buttonNumber].style.position = "static";
-            } else if (helper.direction == "right") {
-                navBtns[buttonNumber].classList.add("nav-swipe-right");
-                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay); 
+            if (rightFacingArrowWasNotMovedFarEnough) {
+                start = resetButtonState(buttonNumber, start);
+            } else if (leftFacingArrowWasNotMovedFarEnough) {
+                start = resetButtonState(buttonNumber, start);
             } else {
-                navBtns[buttonNumber].classList.add("nav-swipe-left");
-                setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
+                navigate(buttonNumber, label, navDelay); 
             }
+
             // Confirm mousemove was cleared
             navBtns[buttonNumber].hasMouseMoveEL = false;
         }
     });
 }
 
+
+/*****************
+ *** Functions ***
+ ****************/ 
+
+function trackStartingValues(start, e, buttonNumber) {
+    start = e.pageX;
+    navBtns[buttonNumber].style.position = "relative";
+    helper.setDirection(buttonNumber);
+    return start;
+}
+
+function navigate(buttonNumber, destination, navDelay) {
+    /* Main */
+    addNavSwipeAnimation();
+    navigateAfterAnimationEnds();
+
+    /* Local Functions */
+    function navigateAfterAnimationEnds() {
+        setTimeout(() => { window.location = encodeURIComponent(destination.toLowerCase()); }, navDelay);
+    }
+
+    function addNavSwipeAnimation() {
+        const isRightFacingNavArrow = helper.direction == "right";
+
+        if (isRightFacingNavArrow) {
+            navBtns[buttonNumber].classList.add("nav-swipe-right");
+        } else {
+            navBtns[buttonNumber].classList.add("nav-swipe-left");
+        }
+    }
+}
+
+function resetButtonState(buttonNumber, startingPosition) {
+    navBtns[buttonNumber].style.left = "0px";
+    helper.setDirection();
+    startingPosition = helper.diff = 0;
+    navBtns[buttonNumber].style.position = "static";
+    return startingPosition;
+}
+
+function getNavDelay() {
+    // In order to get the transition-duration automatically and avoid manually updating it when .nav-swipe-right/left
+    // changes, I had to create an empty div and attach it to the body. window.getComputedStyle would hold blank values
+    // otherwise.
+    const dummyNavArrow = createDummyNavArrow();
+    navDelay = getComputedStyle(dummyNavArrow).getPropertyValue("transition-duration");
+    navDelay = cleanInput(navDelay);
+
+    // Doesn't quite look right, extending the delay a tiny bit longer before navigating
+    navDelay += additionalNavDelay;
+
+    return navDelay;
+
+    /* Local Functions */
+    function createDummyNavArrow() {
+        const dummyNavArrow = document.createElement("DIV");
+        dummyNavArrow.classList.add("nav-swipe-right", "hidden");
+        document.getElementsByTagName("body")[0].appendChild(dummyNavArrow);
+        return dummyNavArrow;
+    }
+
+    function cleanInput(input) {
+        // Returns value in milliseconds
+        if (input.slice(-2) == "ms") {
+            return navDelay = parseInt(navDelay);
+        } else {
+            return navDelay = parseFloat(navDelay) * 1000;
+        }
+    }
+}
+
+function findButtonLabel(buttonNumber) {
+    let label = "";
+    for (let childNumber = 0; childNumber < navBtns[buttonNumber].children.length; childNumber++) {
+        for (let grandchildNumber = 0; grandchildNumber < navBtns[buttonNumber].children[childNumber].children.length; grandchildNumber++) {
+            const tempLabel = navBtns[buttonNumber].children[childNumber].children[grandchildNumber].innerHTML;
+
+            if (tempLabel == "Projects" ||
+            tempLabel == "About Me" ||
+            tempLabel == "Socials") {
+                label = tempLabel;
+            }
+        }
+    }
+    return label;
+}
+
 /***************************
  *** UI Addon Glitch Fix ***
  **************************/
-// Some addons add 0 height divs to the body, but this causes the index page to realign
+// Some addons add 0 height <div>s to the body, but this causes the index page to realign
 // sporadically, so this adds the hidden class to any elements added beyond the original
 
 const body = document.getElementsByTagName("BODY")[0];
