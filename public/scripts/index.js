@@ -1,9 +1,15 @@
+/*****************
+ *** Variables ***
+ ****************/
+
 const navBtns = document.getElementsByClassName('nav-container');
 const additionalNavDelay = 400; // Milliseconds
+
 
 /*********************
  *** Helper Object ***
  ********************/ 
+
 const helper = {
     // Function to call when attaching mousemove event listeners
     attachElementToCursor: function (event) {
@@ -35,21 +41,20 @@ const helper = {
     }
 }
 
-/****************
- * Button Logic *
- ***************/
+
+/************
+ *** Main ***
+ ***********/ 
 for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
     /* Local Variables */
     let label = findButtonLabel(buttonNumber);
     let navDelay = getNavDelay();
     
-    /********************************
-     * Swipe Event Listener - Touch
-     *******************************/
     // Initialize variables
     let start = 0, diff = 0, end = 0;
     navBtns[buttonNumber].style.left = "0px";
-
+    
+    /* Swipe Event Listener - Touch */
     // Touch Start Event Listener
     navBtns[buttonNumber].addEventListener("touchstart", function (e) {
         start = e.touches[0].pageX;
@@ -73,32 +78,27 @@ for (let buttonNumber = 0; buttonNumber < navBtns.length; buttonNumber++) {
 
     // Touch End Event Listener
     navBtns[buttonNumber].addEventListener("touchend", function () {
-        if (diff < this.parentElement.clientWidth / 3 && helper.direction == "right" && diff > 0) {
-            this.style.left = "0px";
-            start = end = diff = 0;
-
-            this.style.position = "static";
-        } else if (diff > -this.parentElement.clientWidth / 3 && helper.direction == "left" && diff > 0) {
-            this.style.left = "0px";
-            start = end = diff = 0;
-
-            this.style.position = "static";
-        } else if (helper.direction == "right") {
-            this.classList.add("nav-swipe-right");
-            let destination = encodeURIComponent(label);
-            destination = destination.toLowerCase();
-            setTimeout(() => {window.location = `/${destination}`;}, navDelay); 
-        } else if (helper.direction == "left") {
-            this.classList.add("nav-swipe-left");
-            setTimeout(() => {window.location = encodeURIComponent(label.toLowerCase());}, navDelay);
+        /* Local Variables */
+        const rightFacingArrowWasMovedByTouch = diff < this.parentElement.clientWidth / 3 && helper.direction == "right";
+        const wasMovedRightNotJustTapped = diff > 0;
+        const rightFacingArrowWasNotMovedFarEnough = rightFacingArrowWasMovedByTouch && wasMovedRightNotJustTapped;
+        const leftFacingArrowWasMovedByTouch = diff > -this.parentElement.clientWidth / 3 && helper.direction == "left";
+        const wasMovedLeftNotJustTapped = diff < 0;
+        const leftFacingArrowWasNotMovedFarEnough = leftFacingArrowWasMovedByTouch && wasMovedLeftNotJustTapped;
+        
+        /* Main */
+        if (rightFacingArrowWasNotMovedFarEnough) {
+            start = resetButtonState(buttonNumber, start);
+        } else if (leftFacingArrowWasNotMovedFarEnough) {
+            start = resetButtonState(buttonNumber, start);
+        } else {
+            navigate(buttonNumber, label, navDelay);
         }
 
         helper.setDirection();
     });
 
-    /********************************
-     * Swipe Event Listener - Mouse *
-     *******************************/
+    /* Swipe Event Listener - Mouse */
 
     // Mouse Down Event Listener
     navBtns[buttonNumber].addEventListener("mousedown", function (e) {
@@ -157,18 +157,18 @@ function navigate(buttonNumber, destination, navDelay) {
     navigateAfterAnimationEnds();
 
     /* Local Functions */
-    function navigateAfterAnimationEnds() {
-        setTimeout(() => { window.location = encodeURIComponent(destination.toLowerCase()); }, navDelay);
-    }
-
     function addNavSwipeAnimation() {
         const isRightFacingNavArrow = helper.direction == "right";
-
+        
         if (isRightFacingNavArrow) {
             navBtns[buttonNumber].classList.add("nav-swipe-right");
         } else {
             navBtns[buttonNumber].classList.add("nav-swipe-left");
         }
+    }
+
+    function navigateAfterAnimationEnds() {
+        setTimeout(() => { window.location = encodeURIComponent(destination.toLowerCase()); }, navDelay);
     }
 }
 
