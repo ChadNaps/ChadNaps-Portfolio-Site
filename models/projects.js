@@ -34,6 +34,14 @@ const projects = [
                                     commands I don't want to continue looking up over and over; and a digital zettelkasten"
         },
         {
+            "name": "Custom Smart TV",
+            "img": "/images/RPi4.png",
+            "URL": "https://osmc.tv",
+            "descriptionSimple": "A custom smart TV, built from a Raspberry Pi",
+            "descriptionAdvanced": "A custom smart TV on the Raspberry Pi 4 using the Open Source Media Center. With a few hours of \
+                                    configuration, it's now able to watch YouTube, Twitch, and media from my Plex server"
+        },
+        {
             "name": "Ant Rush",
             "img": "/images/ant-rush.png",
             "descriptionSimple": "An arcade style video game for Windows",
