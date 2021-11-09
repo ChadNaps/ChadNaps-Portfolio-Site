@@ -24,6 +24,16 @@ const projects = [
                                     then assemble, all relevant video and audio channels for any given stream on https://twitch.tv"
         },
         {
+            "name": "Personal Knowledge Base",
+            "img": "/images/knowledge-base.png",
+            "URL": "https://obsidian.md",
+            "descriptionSimple": "An archive of my interests",
+            "descriptionAdvanced": "Using a combination of Obsidian.md (to dynamically link everything), GitHub (for storage), and \
+                                    markdown flat files (to have an aesthetic display), I was able to create a \
+                                    knowledge base that contains a multitude of things including: my personal journal; study notes; \
+                                    commands I don't want to continue looking up over and over; and a digital zettelkasten"
+        },
+        {
             "name": "Ant Rush",
             "img": "/images/ant-rush.png",
             "descriptionSimple": "An arcade style video game for Windows",
