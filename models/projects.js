@@ -8,6 +8,14 @@ const projects = [
                                     enable a sole proprietor to offer online scheduling to their clients"
         },
         {
+            "name": "Private Plex Server",
+            "img": "/images/plex.png",
+            "URL": "https://www.plex.tv/",
+            "descriptionSimple": "My private implementation of the Plex Media Server, click to visit the creators of Plex",
+            "descriptionAdvanced": "My private implementation of the Plex Media Server, configured to allow me and my \
+                                    friends access to media I archive through my website via reverse proxy"
+        },
+        {
             "name": "Ant Rush",
             "img": "/images/ant-rush.png",
             "descriptionSimple": "An arcade style video game for Windows",
