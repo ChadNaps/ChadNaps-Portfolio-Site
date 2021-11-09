@@ -12,6 +12,9 @@ const projects = [
             "img": "/images/plex.png",
             "URL": "https://www.plex.tv/",
             "descriptionSimple": "My private implementation of the Plex Media Server, click to visit the creators of Plex",
+            "descriptionAdvanced": "My private implementation of the Plex Media Server, configured to allow my friends and I \
+                                    to have access to media I archive through my website. Routing handled via reverse proxy"
+        },
         {
             "name": "Twitch Recorder",
             "img": "/images/recorder.png",
