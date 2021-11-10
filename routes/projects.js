@@ -2,17 +2,6 @@ import { Router } from 'express';
 import projects from '../models/projects.js'; // List of projects
 const router = Router();
 
-/* GET Generic Software Receptionist redirect */
-router.get('/Generic%20Software%20Receptionist', (req, res, next) => {
-  for (const project of projects) {
-    if (project.name == "Generic Software Receptionist") {
-      res.redirect(project.URL);
-    }
-  }
-
-  next();
-});
-
 /* GET Reaction Timer project */
 router.get('/Reaction%20Timer', (req, res, next) => {
   for (const project of projects) {
@@ -20,8 +9,6 @@ router.get('/Reaction%20Timer', (req, res, next) => {
       res.redirect("../local-projects/reaction-timer-project.html");
     }
   }
-
-  next();
 });
 
 /* GET Ant Rush project */
@@ -37,6 +24,16 @@ router.get('/Ant%20Rush', (req, res, next) => {
       });
     }
   }
+});
+
+/* GET externally linked projects */
+router.get(/\/.+/, (req, res, next) => {
+  for (const project of projects) {
+    if ('/' + encodeURI(project.name) == req.path) {
+      res.redirect(project.URL);
+    }
+  }
+
 });
 
 /* GET home page. */
