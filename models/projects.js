@@ -42,6 +42,14 @@ const projects = [
                                     configuration, it's now able to watch YouTube, Twitch, and media from my Plex server"
         },
         {
+            "name": "Spell Checker",
+            "img": "/images/dictionary.png",
+            "URL": "https://github.com/ChadNaps/odds-and-ends/tree/main/dictionary",
+            "descriptionSimple": "A programming tool defining the use of a dictionary",
+            "descriptionAdvanced": "An API, written in C, that allows a developer to implement the functions of a dictionary in their \
+                                    application without having to worry about hash functions or tables"
+        },
+        {
             "name": "Ant Rush",
             "img": "/images/ant-rush.png",
             "descriptionSimple": "An arcade style video game for Windows",
