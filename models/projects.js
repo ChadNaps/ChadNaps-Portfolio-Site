@@ -50,6 +50,14 @@ const projects = [
                                     application without having to worry about hash functions or tables"
         },
         {
+            "name": "Merge Sort",
+            "img": "/images/merge-sort.jpg",
+            "URL": "https://github.com/ChadNaps/odds-and-ends/tree/main/tideman",
+            "descriptionSimple": "An example of how to efficiently sort items",
+            "descriptionAdvanced": "A demonstration of how to implement the merge sort algorithm in a \"Tideman\" or Ranked Pairs \
+                                    electoral system, written in C"
+        },
+        {
             "name": "Ant Rush",
             "img": "/images/ant-rush.png",
             "descriptionSimple": "An arcade style video game for Windows",
