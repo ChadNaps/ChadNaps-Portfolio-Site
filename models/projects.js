@@ -6,6 +6,20 @@ const projects = [
             "descriptionSimple": "Scheduling software for a sole proprietorship",
             "descriptionAdvanced": "Open source (MIT License) software built in Node.js using SQLite3 to \
                                     enable a sole proprietor to offer online scheduling to their clients"
+                                },
+                                {
+            "name": "Twitch Recorder",
+            "img": "/images/recorder.png",
+            "URL": "https://github.com/ancalentari/twitch-stream-recorder",
+            "descriptionSimple": "A script written by Ancalentari allowing downloading of live video from https://twitch.tv",
+            "descriptionAdvanced": "A python script written by Ancalentari which uses Oauth2, streamlink and ffmpeg to download, \
+            then assemble, all relevant video and audio channels for any given stream on https://twitch.tv"
+        },
+        {
+            "name": "Ant Rush",
+            "img": "/images/ant-rush.png",
+            "descriptionSimple": "An arcade style video game for Windows",
+            "descriptionAdvanced": "An isometric action-arcade video game built with the Unity Engine, playable in Microsoft Windows"
         },
         {
             "name": "Private Plex Server",
@@ -14,14 +28,6 @@ const projects = [
             "descriptionSimple": "My private implementation of the Plex Media Server, click to visit the creators of Plex",
             "descriptionAdvanced": "My private implementation of the Plex Media Server, configured to allow my friends and I \
                                     to have access to media I archive through my website. Routing handled via reverse proxy"
-        },
-        {
-            "name": "Twitch Recorder",
-            "img": "/images/recorder.png",
-            "URL": "https://github.com/ancalentari/twitch-stream-recorder",
-            "descriptionSimple": "A script written by Ancalentari allowing downloading of live video from https://twitch.tv",
-            "descriptionAdvanced": "A python script written by Ancalentari which uses Oauth2, streamlink and ffmpeg to download, \
-                                    then assemble, all relevant video and audio channels for any given stream on https://twitch.tv"
         },
         {
             "name": "Personal Knowledge Base",
@@ -56,12 +62,6 @@ const projects = [
             "descriptionSimple": "An example of how to efficiently sort items",
             "descriptionAdvanced": "A demonstration of how to implement the merge sort algorithm in a \"Tideman\" or Ranked Pairs \
                                     electoral system, written in C"
-        },
-        {
-            "name": "Ant Rush",
-            "img": "/images/ant-rush.png",
-            "descriptionSimple": "An arcade style video game for Windows",
-            "descriptionAdvanced": "An isometric action-arcade video game built with the Unity Engine, playable in Microsoft Windows"
         },
         {
             "name": "Reaction Timer",
